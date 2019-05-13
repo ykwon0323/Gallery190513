@@ -16,11 +16,19 @@ public interface IRequestService {
 	RequestDto selectRequest(int r_no);			//U , M
 
 
-	List<RequestDto> selectR_receiveRequestList(int r_receive);
+	List<RequestDto> selectR_receiveRequestList(RequestDto requestDto);
 	
-	List<RequestDto> selectR_sendRequestList(int r_send);
+	List<RequestDto> selectR_sendRequestList(RequestDto requestDto);
 	
 	List<RequestDto> selectRequestList();			//M
 
+	
+	public int requestpagenum_r(int r_send);
+	public int requestpagenum_s(int r_receive);
+	
+	
+	
+	
+	
 
 }

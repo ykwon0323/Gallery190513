@@ -13,11 +13,32 @@ public class RequestDto {
 	private String r_content;
 	private Date r_regdate;
 	private int r_agree;
+	private String r_pcount;
 	
 	
 	public RequestDto() {
 		super();
 	}
+
+	
+	
+	
+
+	public String getR_pcount() {
+		return r_pcount;
+	}
+
+
+
+
+
+	public RequestDto setR_pcount(String r_pcount) {
+		this.r_pcount = r_pcount;
+		return this;
+	}
+
+
+
 
 
 	public int getR_no() {

@@ -46,19 +46,29 @@ public class RequestDao implements IRequestDao {
    }
 
    @Override
-   public List<RequestDto> selectR_receiveRequestList(int r_receive){
+   public List<RequestDto> selectR_receiveRequestList(RequestDto requestDto){
      
-      return sqlSession.selectList(namespace + "selectRequestList2", r_receive);
+      return sqlSession.selectList(namespace + "selectRequestList2", requestDto);
       
    }
    
    
    @Override
-   public List<RequestDto> selectR_sendRequestList(int r_send){
+   public List<RequestDto> selectR_sendRequestList(RequestDto requestDto){
       
-      return sqlSession.selectList(namespace + "selectRequestList3", r_send);
+      return sqlSession.selectList(namespace + "selectRequestList3", requestDto);
       
    }
+@Override
+public int requestpagenum_r(int r_receive) {
+	// TODO Auto-generated method stub
+	return sqlSession.selectOne(namespace + "requestpagenum_r", r_receive);
+}
+@Override
+public int requestpagenum_s(int r_send) {
+	// TODO Auto-generated method stub
+	return sqlSession.selectOne(namespace + "requestpagenum_s", r_send);
+}
    
   
    

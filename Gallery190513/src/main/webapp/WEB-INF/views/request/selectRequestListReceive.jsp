@@ -135,6 +135,22 @@ line-height: 1.2;
 	</tr>
 	<%  }%>
 	</table>
+	
+	
+	    <div class="row" style="margin-top: 30px;">
+  			<div style="margin: 0 auto;" >
+  				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
+				<% int r_recieve = list.get(0).getR_receive();%>
+		
+		 	<%for(int i =1; i<=pagenum;i++){%>
+		 		
+		 	<a href="selectRequestListReceive.do?r_pcount=<%=i%>&r_receive=<%=r_recieve%>"><%=i%></a>
+		 	
+		 	<%}%>
+  			
+  			</div>
+  		</div>
+	
  </div>	
 
 

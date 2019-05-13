@@ -20,16 +20,27 @@
 		ORDER BY R_NO DESC
 	</select>
 	
-	<select id="selectRequestList2" resultType="RequestDto" parameterType="int">
-		SELECT R_NO, R_SEND, R_SENDNAME, R_RECEIVE, R_RECEIVENAME, R_TITLE, R_CONTENT, R_REGDATE, R_AGREE 
+	<select id="selectRequestList2" resultType="RequestDto" parameterType="RequestDto">
+		<!-- SELECT R_NO, R_SEND, R_SENDNAME, R_RECEIVE, R_RECEIVENAME, R_TITLE, R_CONTENT, R_REGDATE, R_AGREE 
 		FROM GALLERY.REQUEST
-		WHERE R_RECEIVE=#{r_receive}
+		WHERE R_RECEIVE=#{r_receive} -->
+		SELECT R_NO, R_SEND, R_SENDNAME, R_RECEIVE, R_RECEIVENAME, R_TITLE, R_CONTENT, R_REGDATE, R_AGREE 
+		FROM (SELECT ROWNUM AS RN,R_NO, R_SEND, R_SENDNAME, R_RECEIVE, 
+		R_RECEIVENAME, R_TITLE, R_CONTENT, R_REGDATE, R_AGREE FROM GALLERY.REQUEST WHERE R_RECEIVE=#{r_receive}) WHERE CEIL(RN/7) =#{r_pcount}
+		
+		
 	</select>
 	
-	<select id="selectRequestList3" resultType="RequestDto" parameterType="int">
-		SELECT R_NO, R_SEND, R_SENDNAME, R_RECEIVE, R_RECEIVENAME, R_TITLE, R_CONTENT, R_REGDATE, R_AGREE 
+	<select id="selectRequestList3" resultType="RequestDto" parameterType="RequestDto">
+		<!-- SELECT R_NO, R_SEND, R_SENDNAME, R_RECEIVE, R_RECEIVENAME, R_TITLE, R_CONTENT, R_REGDATE, R_AGREE 
 		FROM GALLERY.REQUEST
-		WHERE R_SEND=#{r_send}
+		WHERE R_SEND=#{r_send} -->
+		
+		<!-- 페이징처리 -->
+				SELECT R_NO, R_SEND, R_SENDNAME, R_RECEIVE, R_RECEIVENAME, R_TITLE, R_CONTENT, R_REGDATE, R_AGREE 
+		FROM (SELECT ROWNUM AS RN,R_NO, R_SEND, R_SENDNAME, R_RECEIVE, 
+		R_RECEIVENAME, R_TITLE, R_CONTENT, R_REGDATE, R_AGREE FROM GALLERY.REQUEST WHERE R_SEND=#{r_send}) WHERE CEIL(RN/7) =#{r_pcount}
+		
 	</select>
 	
 	<insert id="insertRequest" parameterType="RequestDto" >
@@ -49,5 +60,20 @@
 	DELETE FROM GALLERY.REQUEST WHERE R_NO=#{r_no}
 	</delete>
 	
+	
+	<select id="requestpagenum_r" resultType="int" parameterType="int">
+  
+	SELECT CEIL(COUNT(*)/7) AS COUNT FROM GALLERY.REQUEST WHERE R_RECEIVE =#{r_receive}
+  
+  </select>
+  
+  	<select id="requestpagenum_s" resultType="int" parameterType="int">
+  
+	SELECT CEIL(COUNT(*)/7) AS COUNT FROM GALLERY.REQUEST WHERE R_SEND =#{r_send}
+  
+  </select>
+	
+
+
 	
   </mapper>

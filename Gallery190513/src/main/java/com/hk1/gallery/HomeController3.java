@@ -332,11 +332,30 @@ public class HomeController3 {
 			}
 		//받은메시지함 페이지
 		@RequestMapping(value = "/selectRequestListReceive.do", method = RequestMethod.GET)
-		public String selectRequestListReceive(Locale locale, Model model , int r_receive ) {
+		public String selectRequestListReceive(Locale locale, Model model , int r_receive, String r_pcount) {
 			logger.info("받은 메시지함{}.", locale);
 			
-			List<RequestDto> list = requestService.selectR_receiveRequestList(r_receive);
-			System.out.println("list?="+list);
+			int pagenum = requestService.requestpagenum_r(r_receive);
+			
+			
+			System.out.println("r_r_page?=" + pagenum);
+			
+			model.addAttribute("pagenum", pagenum );
+			
+			if(r_pcount==null) {
+				r_pcount="1";
+			}
+			
+			RequestDto r_dto = new RequestDto();
+			
+			
+			r_dto.setR_receive(r_receive);
+			r_dto.setR_pcount(r_pcount);
+			
+			System.out.println(r_dto);
+			
+			List<RequestDto> list = requestService.selectR_receiveRequestList(r_dto);
+			System.out.println("list?sss="+list);
 			model.addAttribute("list", list);
 			
 			return "request/selectRequestListReceive";
@@ -347,11 +366,36 @@ public class HomeController3 {
 			
 		//보낸메시지함 페이지
 		@RequestMapping(value = "/selectRequestListSend.do", method = RequestMethod.GET)
-		public String selectRequestListSend(Locale locale, Model model, int r_send) {
+		public String selectRequestListSend(Locale locale, Model model, int r_send, String r_pcount) {
 			logger.info("보낸 메시지함{}.", locale);
 			
-			List<RequestDto> list  = requestService.selectR_sendRequestList(r_send);
+			
+			
+			
+			int pagenum = requestService.requestpagenum_s(r_send);
+			
+			
+			System.out.println("r_s_page?=" + pagenum);
+			
+			model.addAttribute("pagenum", pagenum );
+			
+			
+			if(r_pcount==null) {
+				r_pcount="1";
+			}
+			
+			
+			RequestDto r_dto = new RequestDto();
+			
+			
+			r_dto.setR_send(r_send);
+			r_dto.setR_pcount(r_pcount);
+			
+			
+			
+			List<RequestDto> list  = requestService.selectR_sendRequestList(r_dto);
 			model.addAttribute("list", list);
+			
 			
 			return "request/selectRequestListSend";
 		

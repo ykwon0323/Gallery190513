@@ -47,14 +47,28 @@ public class RequestService implements IRequestService {
 	}
 
 	@Override
-	public List<RequestDto> selectR_receiveRequestList(int r_receive) {
+	public List<RequestDto> selectR_receiveRequestList(RequestDto requestDto) {
 		// TODO Auto-generated method stub
-		return requestDao.selectR_receiveRequestList(r_receive);
+		return requestDao.selectR_receiveRequestList(requestDto);
 	}
 
 	@Override
-	public List<RequestDto> selectR_sendRequestList(int r_send) {
+	public List<RequestDto> selectR_sendRequestList(RequestDto requestDto) {
 		// TODO Auto-generated method stub
-		return requestDao.selectR_sendRequestList(r_send);
+		return requestDao.selectR_sendRequestList(requestDto);
 	}
+
+	@Override
+	public int requestpagenum_r(int r_receive) {
+		// TODO Auto-generated method stub
+		return requestDao.requestpagenum_r(r_receive);
+	}
+
+	@Override
+	public int requestpagenum_s(int r_send) {
+		// TODO Auto-generated method stub
+		return requestDao.requestpagenum_s(r_send);
+	}
+
+
 }
