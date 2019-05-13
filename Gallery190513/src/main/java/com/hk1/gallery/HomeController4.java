@@ -124,7 +124,7 @@ public class HomeController4 {
 				
 				MemberDto Ddto = (MemberDto) session.getAttribute("loginMember");
 				
-				
+				 
 				
 				int m_no =Ddto.getM_no();
 				System.out.println("m_no로 볼때 m_no=" + m_no);
