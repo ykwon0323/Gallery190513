@@ -359,15 +359,16 @@ function insertKyungmaeButton(i_no){
 							<%if(i==onKyungmaeList.size()-1||i%2==1){ %>
 							
 								<%if(i==onKyungmaeList.size()-1){%>
+								</div>
 								<div id="kyungmaeList_onKyungmaeList_cell_finish">
 									
 									<span  style="padding: 0; font-size:800%;font-weight: bold;">끄</span>
 									<img src="kyungmae/images/gif_106.gif" width="50%">
 									<span  style="padding: 0; font-size: 800%;font-weight: bold;">읕</span>
 								</div>
-								<%} %>
+								<%}else{ %>
 							</div>
-							<%} %>
+							<%}} %>
 							
 						<%}//for문 END%>
 						
