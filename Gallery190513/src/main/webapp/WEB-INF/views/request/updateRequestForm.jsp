@@ -11,6 +11,7 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>메시지</title>
+	<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
 <script type="text/javascript">
 </script>
 
@@ -19,10 +20,15 @@
 	*{
 		padding: 0px;
 		margin: 0px;
+		font-family: 'East Sea Dokdo', cursive;
+		background-image: url("logo/back.jpg");
+		background-size: 1000px 470px;
 	}
 	
 	.messagecontainer{
 		margin-top: 50PX;
+		
+		
 	}
 
 	#content textarea{
@@ -32,6 +38,8 @@
 	
 	.messagecontainer input{
 		font-size: 15px;
+		font-weight: bold; 
+		
 	}
 	
 	messagecontainer label{
@@ -39,7 +47,9 @@
 		font-weight: bold; 
 		
 		
+		
 	}
+	
 	
 	
 

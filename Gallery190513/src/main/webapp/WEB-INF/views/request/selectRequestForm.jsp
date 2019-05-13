@@ -10,6 +10,7 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>메시지</title>
+	<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
 <%RequestDto dto =(RequestDto)request.getAttribute("requestDto"); %>
 <script type="text/javascript">
 <%-- 	function messageclose() {
@@ -25,7 +26,13 @@
 	*{
 		padding: 0px;
 		margin: 0px;
+		font-family: 'East Sea Dokdo', cursive;
+		background-image: url("logo/back.jpg");
+		background-size: 1000px 470px;
+		
+		
 	}
+	
 	
 	
 	.messagecontainer{
@@ -39,6 +46,7 @@
 	
 	.messagecontainer input{
 		font-size: 15px;
+		font-weight: bold; 
 	}
 	
 	messagecontainer label{
@@ -55,12 +63,13 @@
 
 </head>
 <body>
+
 <div class="messagecontainer" style="text-align: center;">
 <div style="text-align: center;"><img alt="메시지 아이콘" src="requestupload/message_icon.png" width="50px" height="50px"> 
 </div>
 <br/>
 
-<form action="updateRequest.do" method="get">
+<form action="updateRequest.do" method="get" >
 <input type="hidden" value="<%=dto.getR_agree() %>" name="r_agree">
 <input type="hidden" value="<%=dto.getR_no() %>" name="r_no">
 <input type="hidden" value="<%=dto.getR_receive()%>" name="r_receive">

@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="A_detail/css/style.css">
         <link rel="stylesheet" href="A_detail/css/responsive.css" />
    		<script src="A_detail/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-   		
+<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Hi+Melody|Poor+Story|Sunflower:300" rel="stylesheet">
    
 		
 <title>상세보기</title>
@@ -30,6 +30,7 @@
 
 <style type="text/css">
 	body{
+	
 		
 	}
 	
@@ -37,11 +38,18 @@
 		display: none;
 	}
 	.artist_container{
-		display: none;	
+		display: none;
+		border: 1px solid black;
+		border-radius: 20px;
+		width: 450px;
+    	height: auto;
+    	margin: auto;
 	}
 	div.alldetail_container{
 		   width:100%;
     		margin: 0 auto;
+    		font-family: 'Poor Story', cursive;
+    	font-weight: bold;
     } 
     
     div.alldetail_container h4{
@@ -140,7 +148,7 @@ function detail_artist(){
           </div>
         </div>
 
-<h4><%=artistDto.getA_name() %>作家</h4>
+<h4><%=artistDto.getA_name() %>&nbsp&nbsp&nbsp작가</h4>
 <%-- <span>	<%if(loginMember==null||loginMember.getM_grade()!=3){ %>
 	<span></span>
 	<%}else if(loginMember.getM_grade()==3){ %>
@@ -198,14 +206,11 @@ function detail_artist(){
 	<%} %>
 	</div>
 	
-	<div class="artist_container" id="artist_container" >
-		<h5>이력</h5>
-		<p>번호:<%=artistDto.getA_no() %></p>
-		<p>이름:<%=artistDto.getA_name() %></p>
-		<p>개인:<%=artistDto.getA_solo() %></p>
-		<p>단체:<%=artistDto.getA_Squard() %></p>
-		<p>경력:<%=artistDto.getA_career() %></p>
-		<p>상태:<%=artistDto.getA_state() %></p>  
+	<div class="artist_container" id="artist_container" style="margin-top: 50px; ">
+		
+		<h3>개인</h3><p><%=artistDto.getA_solo() %></p><br/><br/>
+		<h3>단체</h3><p><%=artistDto.getA_Squard() %></p><br/><br/>
+		<h3>커리어</h3><p><%=artistDto.getA_career() %></p>
 	
 	</div>
 	</div>

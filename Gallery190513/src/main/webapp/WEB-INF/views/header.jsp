@@ -189,7 +189,7 @@ ul.oe_menu div ul li a.oe_body{}
 
 <div class="oe_wrapper" style="position:relative ; z-index: 300">
 			<div class="mainHeader" style="position: fixed; background-color: white; height: 50px; z-index: 99">
-			<div class="mainLogo" style="position: absolute; left: 50px; top: 10px; z-index: 99;background-color: transparent;" ><a href="index.jsp"><img alt="index.jsp" src="logo/logo1.png" width="150" height="auto" ></a> </div>
+			<div class="mainLogo" style="position: absolute; left: 110px; top: 10px; z-index: 99;background-color: transparent;" ><a href="index.jsp"><img alt="index.jsp" src="logo/logo1.png" width="180" height="auto" ></a> </div>
 			<div class="login_wrapper" style="position: absolute; right: 50px; top: 10px; z-index: 99;">
 			<%if(loginMember==null){ %>
 			<button style=" width: 80px; height: 40px;" class="btn btn-outline-success" onclick="location.href='loginform.do'" >LOGIN</button>

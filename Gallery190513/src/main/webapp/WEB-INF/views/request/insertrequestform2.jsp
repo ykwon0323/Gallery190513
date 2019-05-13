@@ -9,10 +9,8 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
 <title>Insert title here</title>
-<script>
+	<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
 
-
-</script>
 <%
 	String r_receivename= request.getParameter("r_receivename");
 	String r_sendname = request.getParameter("r_sendname");
@@ -28,6 +26,10 @@
 	*{
 		padding: 0px;
 		margin: 0px;
+		font-family: 'East Sea Dokdo', cursive;
+		background-image: url("logo/back.jpg");
+		background-size: 1000px 470px;
+		
 	}
 	
 	.messagecontainer{
@@ -41,6 +43,8 @@
 	
 	.messagecontainer input{
 		font-size: 15px;
+		font-weight: bold; 
+		
 	}
 	
 	messagecontainer label{
@@ -48,12 +52,13 @@
 		font-weight: bold; 
 		
 	}
-			
+		
 
 </style>
 
 </head>
 <body>
+
 <div class="messagecontainer" style="text-align: center;">
 <div style="text-align: center;"><img alt="메시지 아이콘" src="requestupload/message_icon.png" width="50px" height="50px"> 
 </div>
