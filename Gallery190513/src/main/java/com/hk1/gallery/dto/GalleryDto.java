@@ -13,12 +13,29 @@ public class GalleryDto {
 	private String g_intro;
 	private int g_state;
 	private String m_id;
-	
+	private String g_pcount;
 	
 	public GalleryDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
+
+
+
+	public String getG_pcount() {
+		return g_pcount;
+	}
+
+
+
+	public GalleryDto setG_pcount(String g_pcount) {
+		this.g_pcount = g_pcount;
+		return this;
+	}
+
 
 	public int getG_no() {
 		return g_no;

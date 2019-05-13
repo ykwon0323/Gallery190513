@@ -12,7 +12,7 @@ public interface IGalleryDao {
    List<GalleryDto> selectGalleryList();         //U , M
    
    List<GalleryDto> selectG_stateGalleryList(int g_state);
-   List<GalleryDto> selectM_noGalleryList(int m_no);
+   List<GalleryDto> selectM_noGalleryList(GalleryDto galleryDto);
    
     
    public GalleryDto selectMemberGId(int m_no);
@@ -24,4 +24,13 @@ public interface IGalleryDao {
       
     //승인창띄우기
   	GalleryDto selectGalleryapproval(int m_no);	
+  	
+	
+	//페이징
+	public int gallerypagenum();
+	
+	public int gallerypagenum_m_no(int m_no);
+	
+	List<GalleryDto> gallerypageList(String g_pcount);
 }
+

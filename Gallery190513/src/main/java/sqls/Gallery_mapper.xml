@@ -31,11 +31,40 @@
    </select>
    
    
-    <select id="selectGalleryList1" resultType="GalleryDto">
-    SELECT G_NO, M_NO, G_NAME, G_ADRESS, G_TEL, G_IMG1, G_IMG2, G_IMG3, G_IMG4, G_INTRO, G_STATE
-     FROM GALLERY.GALLERY
-     ORDER BY G_NO DESC
+     <!-- 페이지처리 -->
+  <select id="gallerypagenum" resultType="int">
+  
+	SELECT CEIL(COUNT(*)/6) AS COUNT FROM GALLERY.GALLERY
+  
+  </select>
+  
+    <select id="gallerypagenum_m_no" resultType="int" parameterType="int">
+  
+	SELECT CEIL(COUNT(*)/6) AS COUNT FROM GALLERY.GALLERY WHERE  M_NO =#{m_no}
+  
+  </select>
+  
+  
+  
+  
+   
+    <select id="gallerypageList" parameterType="String" resultType="GalleryDto">
+
+     SELECT G_NO, M_NO, G_NAME, G_ADRESS, G_TEL, G_IMG1, G_IMG2, G_IMG3, G_IMG4, G_INTRO, G_STATE
+     FROM (SELECT ROWNUM AS RN, G_NO, M_NO, G_NAME, G_ADRESS, G_TEL, G_IMG1, G_IMG2, G_IMG3, G_IMG4, G_INTRO, G_STATE
+     FROM GALLERY.GALLERY ORDER BY G_NO DESC) 
+     WHERE CEIL(RN/6) = #{g_pcount}
+     
     </select>
+    <!-- 페이징 끝 -->
+    
+     <select id="selectGalleryList1" resultType="GalleryDto">
+
+     SELECT G_NO, M_NO, G_NAME, G_ADRESS, G_TEL, G_IMG1, G_IMG2, G_IMG3, G_IMG4, G_INTRO, G_STATE
+     FROM GALLERY.GALLERY ORDER BY G_NO DESC
+    
+    </select>
+    
     
     
 
@@ -48,10 +77,17 @@
     
     
 
-     <select id="selectGalleryList3" resultType="GalleryDto" parameterType="int">
-    SELECT G_NO, M_NO, G_NAME, G_ADRESS, G_TEL, G_IMG1, G_IMG2, G_IMG3, G_IMG4, G_INTRO, G_STATE 
+     <select id="selectGalleryList3" resultType="GalleryDto" parameterType="GalleryDto">
+   <!--  SELECT G_NO, M_NO, G_NAME, G_ADRESS, G_TEL, G_IMG1, G_IMG2, G_IMG3, G_IMG4, G_INTRO, G_STATE 
     FROM GALLERY 
-    WHERE M_NO=#{m_no}
+    WHERE M_NO=#{m_no} -->
+    
+    SELECT G_NO, M_NO, G_NAME, G_ADRESS, G_TEL, G_IMG1, G_IMG2, G_IMG3, G_IMG4, G_INTRO, G_STATE 
+    FROM (SELECT ROWNUM AS RN, G_NO, M_NO, G_NAME, G_ADRESS, G_TEL, G_IMG1, G_IMG2, G_IMG3, G_IMG4, G_INTRO, G_STATE 
+    FROM GALLERY.GALLERY WHERE M_NO=#{m_no}) WHERE CEIL(RN/6) = #{g_pcount}
+    
+    
+    
     </select>
     
      <select id="selectMemberGId" parameterType="int" resultType="GalleryDto">

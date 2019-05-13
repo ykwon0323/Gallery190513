@@ -32,9 +32,9 @@
 
 </head>
 
-
-<body>
 <jsp:include page="/WEB-INF/views/header.jsp" />
+<body>
+<hr>
 
     <div class="container">
     	<div class="row justify-content-center pb-5" >
@@ -64,10 +64,10 @@
     				
     				
     				<!-- 이미지 부분  a 태그 안에는 디테일 페이지로 -->
-    					<div class="img">
+    					<div class="img" style="width: 420px; height: 336px;">
     				<!-- 		<div class="vr"><span>뭐넣을지</span></div> -->
 		    				<a href="selectGallery.do?g_no=<%=dto.getG_no()%>&g_return=one">
-		    				<img class="img-fluid" alt="대표이미지" src="galleryupload/<%=dto.getG_img1()%>" style="min-height: 280px; height: 336px;">
+		    				<img class="img-fluid" alt="대표이미지" src="galleryupload/<%=dto.getG_img1()%>" style="width: 100%; height: 336px;">
 		    				</a>
 	    				</div>
 	    				
@@ -108,6 +108,24 @@
     
     		
     			</div>
+    			
+    			
+    	<div class="row" style="margin-top: 30px;">
+  			<div style="margin: 0 auto;" >
+  				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
+	
+		
+		 	<%for(int i =1; i<=pagenum;i++){%>
+		 		
+		 	<a href="selectM_noGalleryList.do?g_pcount=<%=i%>"><%=i%></a>
+		 	
+		 	<%}%>
+  			
+  			</div>
+  		</div>
+    			
+    			
+    			
     	</div>
 
 

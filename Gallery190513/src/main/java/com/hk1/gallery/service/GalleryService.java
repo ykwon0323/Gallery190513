@@ -51,9 +51,9 @@ public class GalleryService implements IGalleryService{
    }
 
    @Override
-   public List<GalleryDto> selectM_noGalleryList(int m_no) {
+   public List<GalleryDto> selectM_noGalleryList(GalleryDto galleryDto) {
       // TODO Auto-generated method stub
-      return galleryDao.selectM_noGalleryList(m_no);
+      return galleryDao.selectM_noGalleryList(galleryDto);
    }
    
     //메일 아이디 가져오기 추가
@@ -77,6 +77,25 @@ public class GalleryService implements IGalleryService{
  		
  			
  		}
+
+		@Override
+		public int gallerypagenum() {
+		
+			return galleryDao.gallerypagenum();
+		}
+		
+		@Override
+		public int gallerypagenum_m_no(int m_no) {
+		
+			return galleryDao.gallerypagenum_m_no(m_no);
+		}
+		
+
+		@Override
+		public List<GalleryDto> gallerypageList(String g_pcount) {
+			
+			return galleryDao.gallerypageList(g_pcount);
+		}
    
    
 }

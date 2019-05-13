@@ -62,9 +62,9 @@ public class GalleryDao implements IGalleryDao {
 
    //내 갤러리 볼때  mno로 볼때 여려개 돈많은놈
    @Override
-   public List<GalleryDto> selectM_noGalleryList(int m_no) {
+   public List<GalleryDto> selectM_noGalleryList(GalleryDto galleryDto) {
       // TODO Auto-generated method stub
-      return sqlSession.selectList(namespace+"selectGalleryList3",m_no);
+      return sqlSession.selectList(namespace+"selectGalleryList3",galleryDto);
    }
    
       //메일 아이디 가져오기 추가
@@ -85,6 +85,25 @@ public class GalleryDao implements IGalleryDao {
   	      
   	      return sqlSession.selectOne(namespace+"selectGalleryapproval", m_no);
   	   }
+  	
+  	
+	@Override
+	public int gallerypagenum() {
+		
+		return sqlSession.selectOne(namespace+"gallerypagenum");
+	}
+	
+	
+	@Override
+	  public List<GalleryDto> gallerypageList(String g_pcount) {
+
+	     return sqlSession.selectList(namespace+"gallerypageList", g_pcount);
+	   }
+	@Override
+	public int gallerypagenum_m_no(int m_no) {
+		
+		return sqlSession.selectOne(namespace+"gallerypagenum_m_no", m_no);
+	}
 }
 
 

@@ -45,7 +45,7 @@
 </head>
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
-
+<hr>
 
 <!-- <h4 onclick="location.href='gallerylist.do'">갤러리목록</h4> -->
 <!--<h4 onclick="location.href='insertGalleryForm.do'">갤러리 추가로 가자 </h4>-->
@@ -68,8 +68,10 @@
             <p>All the galleries you want</p>
           </div>
         </div>
-  
+  			
     		<div class="row">
+    		
+    		
     			
     		<% 
 		if(list.size()==0){
@@ -83,16 +85,15 @@
 	for(GalleryDto dto:list){ %>
 	<%if(loginMember==null||loginMember.getM_grade()!=2){ %>	
     			
-
     			<div class="col-md-6 col-lg-4 ftco-animate">
     				<div class="project">
     				
     				
     				<!-- 이미지 부분  a 태그 안에는 디테일 페이지로 -->
-    					<div class="img">
+    					<div class="img" style="width: 420px; height: 336px;">
     				<!-- 		<div class="vr"><span>뭐넣을지</span></div> -->
 		    				<a href="selectGallery.do?g_no=<%=dto.getG_no()%>&g_return=general_one">
-		    				<img class="img-fluid" alt="대표이미지" src="galleryupload/<%=dto.getG_img1()%>" style="min-height: 280px; height: 336px;">
+		    				<img class="img-fluid" alt="대표이미지" src="galleryupload/<%=dto.getG_img1()%>" style="width: 100%; height: 336px;">
 		    				</a>
 	    				</div>
 	    				
@@ -134,10 +135,10 @@
     				
     				
    				<!-- 이미지 부분  a 태그 안에는 디테일 페이지로 -->
-    					<div class="img">
+    					<div class="img" style="width: 420px; height: 336px;">
     				<!-- 		<div class="vr"><span>뭐넣을지</span></div> -->
 		    				<a href="selectGallery.do?g_no=<%=dto.getG_no()%>&g_return=general_one">
-		    				<img class="img-fluid" alt="대표이미지" src="galleryupload/<%=dto.getG_img1()%>" style="min-height: 280px; max-height: 336px;">
+		    				<img class="img-fluid" alt="대표이미지" src="galleryupload/<%=dto.getG_img1()%>" style="width: 100%; height: 336px;">
 		    				</a>
 	    				</div>
 	    				
@@ -180,6 +181,21 @@
     
     		
     			</div>
+    			
+    			
+    	<div class="row" style="margin-top: 30px;">
+  			<div style="margin: 0 auto;" >
+  				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
+	
+		
+		 	<%for(int i =1; i<=pagenum;i++){%>
+		 		
+		 	<a href="gallerylist.do?g_pcount=<%=i%>"><%=i%></a>
+		 	
+		 	<%}%>
+  			
+  			</div>
+  			</div>
     	</div>
 
 
