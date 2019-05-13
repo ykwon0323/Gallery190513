@@ -14,11 +14,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
-<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp" crossorigin="anonymous">
-
+<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Hi+Melody|Poor+Story|Sunflower:300" rel="stylesheet">
 <title>보낸 메시지함 페이지</title>
 <%List<RequestDto> list = (List<RequestDto>)request.getAttribute("list"); %>
-
+<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
 <script type="text/javascript">
  
 	function sendpop(r_no) {
@@ -34,10 +33,60 @@
 		margin: 0px;
 		padding: 0px;
 	}
+	
+	.heading-section span{
 
-	.sendContainer{
-		
-	}
+	font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #e2c0bb;
+    letter-spacing: 2px;
+    text-align: center!important;
+      margin: 0;
+    padding: 0;
+    
+}
+
+.heading-section h2{
+font-size: 40px;
+    font-weight: 600;
+line-height: 1.2;
+    color: inherit;
+    margin-top:8px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center!important;
+
+}
+
+.heading-section p{
+   font-family: -apple-system,BlinkMacSystemFont;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+
+}
+
+	h4{
+    	    width: 25%;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(26,26,26);
+    color: rgb(50,50,50);
+    }
+    
+        .container{
+    	font-family: 'East Sea Dokdo', cursive;
+		font-family: 'Hi Melody', cursive;
+		font-family: 'Sunflower', sans-serif;
+		font-family: 'Poor Story', cursive;
+    	font-weight: bold;
+    	
+    }
+
+	
 </style>
 
 
@@ -46,10 +95,21 @@
 
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
-
-
+<hr>
 <div class="container">
-<h3 style="text-align: center;">내가 보낸 메시지함</h3>
+	
+
+	 <div class="row justify-content-center pb-5" >
+          <div class="col heading-section text-center ftco-animate" style="z-index:;">
+          	<span class="subheading">Best Message</span>
+            <h2 class="mb-4">방구석 갤러리</h2>
+            <p>Request to fulfill your dream</p>
+          </div>
+        </div>
+       <h4>보낸 메시지함</h4>
+	<br/>
+	
+
 	<table class="table table-hover">
 	<tr>
 	<th style="text-align: center;">상태</th><th style="text-align: center;">받는 사람</th><th style="text-align: center;" width="20%">제목</th><th style="text-align: center;">보낸 날짜</th><th style="text-align: center;">삭제</th>
