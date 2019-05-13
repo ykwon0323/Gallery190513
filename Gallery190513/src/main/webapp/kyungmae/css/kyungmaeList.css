@@ -1,0 +1,331 @@
+@charset "UTF-8";
+html,body{
+	margin: 0;
+	padding: 0;
+}
+
+#kyungmaelist{
+	
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	/* background: url("../images/gif_98.gif") no-repeat center center fixed;
+    background-size:  100%;  */
+   
+}
+/* 오늘 마감 경매리스트 */
+#kyungmaeList_nowKyungmaeList{
+	width:100%;
+}
+/* 오늘 마감 경매리스트-3개이상일경우 */
+
+#kyungmaeList_nowKyungmaeList_over3_table{
+	width:100%;
+	height:100%;
+	display: table;
+	
+}
+#kyungmaeList_nowKyungmaeList_over3_row{
+	
+	width: 100%;
+	
+	display: table-row;
+	background-color: black;
+	
+}
+.kyungmaeList_nowKyungmaeList_over3_cell{
+	width: 33.3%;
+	height:100%;
+	display: table-cell;
+	vertical-align: middle;
+	color: rgb(50,50,50);
+	font-weight: bold;
+	opacity: 0.8;
+	
+}
+.kyungmaeList_nowKyungmaeList_over3_cell:hover{
+	opacity: 1;
+}
+
+.kyungmaeList_nowKyungmaeList_over3_cell h4{
+	text-align: center;
+	font-weight: bold;
+	font-size: 130%;
+	color: white;
+	width:80%;
+	margin: 0 auto;
+	
+	margin-top: 5%;
+	padding: 10px;
+}
+.kyungmaeList_nowKyungmaeList_over3_cell h5{
+	text-align: center;
+	font-weight: bold;
+	font-size: 150%;
+	color: white;
+	width:80%;
+	margin: 0 auto;
+	
+	padding: 10px;
+}
+.kyungmaeList_nowKyungmaeList_over3_cell input{
+	text-align: center;
+	font-weight: bold;
+	font-size: 110%;
+	color: white;
+	width:20%;
+	
+	margin: 0 auto;
+	margin-left:40%;
+	margin-right:40%;
+	padding: 10px;
+	border: 3px solid rgba(0,0,0,0);
+	background:none;
+	border-radius: 20px;
+	cursor: pointer;
+
+}
+.kyungmaeList_nowKyungmaeList_over3_cell input:hover{
+	text-align: center;
+	font-weight: bold;
+	font-size: 110%;
+	color: white;
+	width:20%;
+	margin: 0 auto;
+	margin-left:40%;
+	margin-right:40%;
+	padding: 10px;
+	border: 3px solid white;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 20px;
+	cursor: pointer;
+	
+}
+/* 오늘 마감 경매리스트-3개미만일경우 
+* 	2개 일때 , 1개일때는 직접적용
+*/
+#kyungmaeList_nowKyungmaeList_less3_table{
+	width:100%;
+	height:100%;
+	display: table;
+	
+}
+#kyungmaeList_nowKyungmaeList_less3_row{
+	
+	width: 100%;
+	
+	display: table-row;
+	background-color: black;
+	
+}
+.kyungmaeList_nowKyungmaeList_less3_cell{
+	width: 33.3%;
+	height:100%;
+	display: table-cell;
+	vertical-align: middle;
+	color: rgb(50,50,50);
+	font-weight: bold;
+	opacity: 0.8;
+	
+}
+.kyungmaeList_nowKyungmaeList_less3_cell:hover{
+	opacity: 1;
+}
+
+.kyungmaeList_nowKyungmaeList_less3_cell h4{
+	text-align: center;
+	font-weight: bold;
+	font-size: 130%;
+	color: white;
+	width:80%;
+	margin: 0 auto;
+	
+	margin-top: 5%;
+	padding: 10px;
+}
+.kyungmaeList_nowKyungmaeList_less3_cell h5{
+	text-align: center;
+	font-weight: bold;
+	font-size: 150%;
+	color: white;
+	width:80%;
+	margin: 0 auto;
+	
+	padding: 10px;
+}
+.kyungmaeList_nowKyungmaeList_less3_cell input{
+	text-align: center;
+	font-weight: bold;
+	font-size: 110%;
+	color: white;
+	width:20%;
+	margin: 0 auto;
+	margin-left:40%;
+	margin-right:40%;
+	padding: 10px;
+	border: 3px solid rgba(0,0,0,0);
+	background:none;
+	border-radius: 20px;
+	cursor: pointer;
+
+}
+.kyungmaeList_nowKyungmaeList_less3_cell input:hover{
+	text-align: center;
+	font-weight: bold;
+	font-size: 110%;
+	color: white;
+	width:20%;
+	margin: 0 auto;
+	margin-left:40%;
+	margin-right:40%;
+	padding: 10px;
+	border: 3px solid white;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 20px;
+	cursor: pointer;
+	
+}
+/*진행중인 경매 목록(전체경매목록) */
+#kyungmaeList_onKyungmaeList{
+	width:100%;
+	
+}
+#kyungmaeList_onKyungmaeList h3{
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	padding : 20px;
+	color : rgb(51,51,51);
+}
+
+#kyungmaeList_onKyungmaeList_table{
+	width: 100%;
+	display: table;
+}
+
+.kyungmaeList_onKyungmaeList_tr{
+	width: 100%;
+		
+	display: table-row-group;
+}
+.kyungmaeList_onKyungmaeList_cell{
+	width: 50%;
+	display: table-cell;
+	padding-top:5%;
+	padding-bottom:5%; 
+	opacity: 0.8;
+	
+}
+.kyungmaeList_onKyungmaeList_cell:hover{
+	width: 50%;
+	display: table-cell;
+	padding-top:5%;
+	padding-bottom:5%; 
+	
+	opacity:1.0;
+}
+.kyungmaeList_onKyungmaeList_cell p{
+	width: 70%;
+	
+	margin:0 auto;
+	font-weight: bold;
+	font-size: 130%;
+	background-color: rgba(255,255,255,0.9);
+	text-align: center;
+	vertical-align:middle;
+	color: rgb(237,30,121);
+	padding-top:3.5%;
+	padding-bottom:3.5%; 
+
+}
+.kyungmaeList_onKyungmaeList_cell h4{
+	padding-top : 1%;
+	font-size: 100%;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	margin: 0 auto;
+}
+.kyungmaeList_onKyungmaeList_cell h5{
+	padding-top : 1%;
+	font-size: 100%;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	margin: 0 auto;
+}
+.kyungmaeList_onKyungmaeList_cell input{
+	
+	width: 15%;
+	margin-left:42.5%;
+	margin-right:42.5%;
+	margin-top: 1%;
+	border-radius: 20px;
+	padding: 2px;
+	border: 2px solid rgba(0,0,0,0);
+	background: none;
+	font-weight: bold;
+	font-size:90%;
+	color: white;
+	cursor: pointer;
+	
+	
+}
+.kyungmaeList_onKyungmaeList_cell input:hover{
+	width: 15%;
+	margin-left:42.5%;
+	margin-right:42.5%;
+	margin-top: 1%;
+	border-radius: 20px;
+	padding: 2px;
+	border: 2px solid white;
+	background-color: rgba(255,255,255,0.7);
+	font-weight: bold;
+	font-size:90%;
+	color: white;
+	cursor: pointer;
+	
+}
+#kyungmaeList_onKyungmaeList_cell_finish{
+	display: table-cell;
+	width: 50%;
+	padding: 0;
+	padding-top: 0;
+	text-align: center;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
