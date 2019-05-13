@@ -144,9 +144,10 @@ line-height: 1.2;
 	<%  }%>
 	</table>
 	
+		<% if(list.size()!=0){
+	%>
 	
-	
-		    <div class="row" style="margin-top: 30px;">
+		  <div class="row" style="margin-top: 30px;">
   			<div style="margin: 0 auto;" >
   				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
   				<% int r_send = list.get(0).getR_send();%>
@@ -161,7 +162,7 @@ line-height: 1.2;
   			</div>
   		</div>
 	
-	
+		<%} %>
 	
 	
 	
