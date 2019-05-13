@@ -1,0 +1,373 @@
+@charset "UTF-8";
+html,body{
+	margin: 0;
+	padding: 0;
+}
+#updateExhibitionForm input:focus{
+	outline: none;
+}
+#updateExhibitionForm textarea:focus{
+	outline: none;
+}
+#updateExhibitionForm_body{
+	width:100%;
+	background: url("../images/gif_95.gif") no-repeat center center fixed;
+    background-size:  100%; 
+}
+#updateExhibitionForm_blackscreen{
+	width: 100%;
+	 background-color: rgba(26,26,26,0.6); 
+}
+
+
+#updateExhibitionForm{
+	width: 80%;
+	margin:0 auto;
+	background-color: rgba(26,26,26,0.6); 
+	
+}
+/* 전시대표이미지관련
+* 기존이미지 박스
+*/
+#updateExhibitionForm_fileBox{
+	width: 100%;
+	padding-top:5%;
+	padding-bottom:5%;
+
+}
+#updateExhibitionForm_fileBox:hover{
+	width: 100%;
+	padding-top:5%;
+	padding-bottom:5%;
+	box-shadow: 0px 0px 10px rgba(199,178,153,0.5);
+}
+
+#updateExhibitionForm_fileBox h3{
+	width: 20%;
+	margin-left: 10%;
+	margin-right: 70%;
+	font-weight: bold;
+	font-size: 150%;
+	color: white;
+}
+#updateExhibitionForm_fileBox h5{
+	font-weight: bold;
+	font-size: 100%;
+	color: white;
+	padding:10px;
+}
+/* 전시대표이미지관련
+* 기존이미지 박스
+*/
+#updateExhibitionForm_nowImgBox{
+	width: 100%;
+	background-color: rgba(26,26,26,0.5);
+	text-align: center;
+	padding-top:5%;
+	padding-bottom:5%;
+}
+
+/* 전시대표이미지관련
+* 새로운이미지업로드관련
+*/
+#updateExhibitionForm_changeImgBox{
+	width: 100%;
+	background-color: rgba(26,26,26,0.5);
+	text-align: center;
+	padding-top:5%;
+	padding-bottom:5%;
+}
+#updateExhibitionForm_changeImgBox h5{
+	font-weight: bold;
+	font-size: 100%;
+	color: white;
+	padding:10px;
+}
+#updateExhibitionForm_fileupload{
+	display: none;
+}
+#updateExhibitionForm_changeImgBox label{
+	width:20%;
+	margin-top:5%;
+	margin-bottom:5%;
+	margin-left:40%;
+	margin-right:40%;
+	border:none;
+	color: white;
+	font-weight: bold;
+	font-size: 120%;
+	border:2px solid white;
+	background-color:rgba(51,51,51,0.2);
+	cursor: pointer;
+	padding: 10px;
+}
+#updateExhibitionForm_changeImgBox label:hover{
+	width:20%;
+	margin-top:5%;
+	margin-bottom:5%;
+	margin-left:40%;
+	margin-right:40%;
+	border:none;
+	color: white;
+	font-weight: bold;
+	font-size: 120%;
+	border:2px solid white;
+	background-color:rgba(0,0,0,0);
+	cursor: pointer;
+	padding: 10px;
+	box-shadow: 0px 0px 10px rgba(199,178,153,0.5);
+}
+/* 제거할 작품 */
+#updateExhibitionForm_nowItemList{
+	width: 100%;
+	padding-top:5%;
+	padding-bottom:5%;
+	
+} 
+#updateExhibitionForm_nowItemList:hover{
+	width: 100%;
+	padding-top:5%;
+	padding-bottom:5%;
+	box-shadow: 0px 0px 10px rgba(199,178,153,0.5);
+}
+#updateExhibitionForm_nowItemList h3{
+	width: 20%;
+	margin-left: 10%;
+	margin-right: 70%;
+	font-weight: bold;
+	font-size: 150%;
+	color: white;
+}
+#updateExhibitionForm_nowItemList_table p{
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+#updateExhibitionForm_nowItemList_table{
+	width: 100%;
+	display: table;
+}
+.updateExhibitionForm_nowItemList_tr{
+	width: 100%;
+	display: table-row-group;
+	background-color: rgba(26,26,26,0.8);
+}
+.updateExhibitionForm_nowItemList_cell{
+	display: table-cell;
+	width: 25%;
+}
+.updateExhibitionForm_nowItemList_checkbox{
+	display:none;
+}
+.updateExhibitionForm_nowItemList_img{
+	cursor: pointer;	
+}
+/* 추가할 작품 */
+#updateExhibitionForm_newItemList{
+	width: 100%;
+	padding-top:5%;
+	padding-bottom:5%;
+	
+} 
+#updateExhibitionForm_newItemList:hover{
+	width: 100%;
+	padding-top:5%;
+	padding-bottom:5%;
+	box-shadow: 0px 0px 10px rgba(199,178,153,0.5);
+}
+#updateExhibitionForm_newItemList h3{
+	width: 20%;
+	margin-left: 10%;
+	margin-right: 70%;
+	font-weight: bold;
+	font-size: 150%;
+	color: white;
+}
+#updateExhibitionForm_newItemList_table p{
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
+#updateExhibitionForm_newItemList_table{
+	width: 100%;
+	display: table;
+}
+.updateExhibitionForm_newItemList_tr{
+	width: 100%;
+	display: table-row-group;
+	background-color: rgba(26,26,26,0.8);
+}
+.updateExhibitionForm_newItemList_cell{
+	display: table-cell;
+	width: 25%;
+}
+.updateExhibitionForm_newItemList_checkbox{
+	display:none;
+}
+.updateExhibitionForm_newItemList_img{
+	cursor: pointer;	
+}
+/* 
+설명부분 */
+#updateExhibitionForm_explain{
+	width: 100%;
+	padding-top:5%;
+	padding-bottom:5%;
+	
+}
+#updateExhibitionForm_explain:hover{
+	width: 100%;
+	padding-top:5%;
+	padding-bottom:5%;
+	box-shadow: 0px 0px 10px rgba(199,178,153,0.5);
+}
+#updateExhibitionForm_explain h3{
+	width: 20%;
+	margin-left: 10%;
+	margin-right: 70%;
+	font-weight: bold;
+	font-size: 150%;
+	color: white;
+}
+#updateExhibitionForm_explain_table{
+	display: table;
+	width: 100%;
+}
+#updateExhibitionForm_explain_tr{
+	display: table-row-group;
+	width: 100%;
+}
+#updateExhibitionForm_explain_tr h6{
+	display: table-cell;
+	font-size:130%;
+	width:45%;
+	font-weight: bolder;
+	color: white;
+	text-align: center;
+}
+#updateExhibitionForm_explain_tr input{
+	display: table-cell;
+	width:80%;
+	margin-top:5%;
+	margin-bottom: 5%;
+	font-size: 120%;
+	font-weight: bold;
+	border: 2px solid white;
+	padding:20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color:rgba(0,0,0,0);
+	color: white;
+}
+#updateExhibitionForm_explain_tr input:hover{
+	display: table-cell;
+	width:80%;
+	margin-top:5%;
+	margin-bottom: 5%;
+	font-size: 120%;
+	font-weight: bold;
+	border: 2px solid white;
+	padding:20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color:rgba(0,0,0,0);
+	color: white;
+	box-shadow:0px 0px 10px rgba(199,178,153,0.5);
+	
+}
+#updateExhibitionForm_explain_tr input:focus{
+	display: table-cell;
+	width:80%;
+	margin-top:5%;
+	margin-bottom: 5%;
+	font-size: 120%;
+	font-weight: bold;
+	border: 2px solid white;
+	padding:20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color:rgba(0,0,0,0);
+	color: white;
+	box-shadow:0px 0px 10px rgba(199,178,153,0.5);
+	
+}
+#updateExhibitionForm_explain h5{
+	font-size:130%;
+	font-weight: bold;
+	padding-bottom: 5px;
+	width: 30%;
+	margin-left: 20%;
+	margin-right: 50%;
+	color: white;
+	text-align: left;
+}
+
+#updateExhibitionForm_explain textarea{
+	width:80%;
+	resize: none;
+	font-size: 120%;
+	font-weight: bold;
+	overflow: hidden;
+	padding :20px;
+	margin-left:10%;
+	margin-right:10%;
+	margin-bottom:3%;
+	border: 2px solid white;
+	background-color: rgba(0,0,0,0);
+	color: white;
+}
+#updateExhibitionForm_explain textarea:hover{
+	box-shadow:1px 1px 10px rgba(199,178,153,0.5);
+}
+#updateExhibitionForm_explain textarea:hover:focus{
+	box-shadow:1px 1px 10px rgba(199,178,153,0.5);
+}
+
+#updateExhibitionForm_explain_submit{
+	width:10%;
+	margin-left:45%;
+	margin-right:45%;
+	
+	border:none;
+	color: white;
+	font-weight: bold;
+	font-size: 120%;
+	border:2px solid white;
+	background-color:rgba(51,51,51,0.2);
+	cursor: pointer;
+	padding: 10px;
+}
+
+#updateExhibitionForm_explain_submit:hover{
+	width:10%;
+	margin-left:45%;
+	margin-right:45%;
+	border:none;
+	color: white;
+	font-weight: bold;
+	font-size: 120%;
+	border:2px solid white;
+	background-color:rgba(0,0,0,0);
+	cursor: pointer;
+	padding: 10px;
+	box-shadow:1px 1px 10px rgba(199,178,153,0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
