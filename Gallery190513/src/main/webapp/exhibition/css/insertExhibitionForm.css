@@ -343,8 +343,8 @@ html,body{
 }
 #insertExhibitionForm_submitButton{
 	width:10%;
-	margin-left:10%;
-	margin-right:10%;
+	margin-left:45%;
+	margin-right:45%;
 	border:none;
 	color: white;
 	font-weight: bold;
@@ -355,7 +355,7 @@ html,body{
 	padding: 10px;
 }
 #insertExhibitionForm_submitButton:hover{
-	width:20%;
+	width:10%;
 	
 	border:none;
 	color: white;
@@ -366,6 +366,8 @@ html,body{
 	cursor: pointer;
 	padding: 10px;
 	box-shadow:  5px 5px 20px  rgb(102,255,102);
+	margin-left:45%;
+	margin-right:45%;
 	
 }
 

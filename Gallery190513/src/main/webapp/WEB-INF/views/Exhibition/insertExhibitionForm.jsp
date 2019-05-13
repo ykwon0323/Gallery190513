@@ -83,7 +83,7 @@
 			
 			<div id="insertExhibitionForm_itemlist_box">
 				<%if(myItemList.size()==0){ %>
-					<h4>※등록하신 작품이 없습니다.</h4>
+					<h4 style="width: 100%; text-align: center;">※등록하신 작품이 없습니다.</h4>
 				<%}else{ %>
 					<div id="insertExhibitionForm_itemlist_box_table">
 						<%for(int i=0 ; i < myItemList.size() ; i++) {%>
