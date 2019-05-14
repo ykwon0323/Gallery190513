@@ -163,12 +163,9 @@ $(document).ready(function(){
 	var scroll_v =getParameterByName('scroll_v');
 	
 	
-	
-	var scroll = $("#s_l").offset().top;
-	
 	if(scroll_v==0||scroll_v==null){
 		
-		$(document).scrollTop(scroll-40);
+		$(document).scrollTop(scroll);
 		
 	}else{
 		$(document).scrollTop(scroll_v);

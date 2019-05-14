@@ -34,13 +34,13 @@
      <!-- 페이지처리 -->
   <select id="gallerypagenum" resultType="int">
   
-	SELECT CEIL(COUNT(*)/6) AS COUNT FROM GALLERY.GALLERY
+	SELECT CEIL(COUNT(*)/12) AS COUNT FROM GALLERY.GALLERY
   
   </select>
   
     <select id="gallerypagenum_m_no" resultType="int" parameterType="int">
   
-	SELECT CEIL(COUNT(*)/6) AS COUNT FROM GALLERY.GALLERY WHERE  M_NO =#{m_no}
+	SELECT CEIL(COUNT(*)/12) AS COUNT FROM GALLERY.GALLERY WHERE  M_NO =#{m_no}
   
   </select>
   

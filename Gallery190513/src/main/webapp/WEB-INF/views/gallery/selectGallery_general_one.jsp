@@ -106,7 +106,7 @@ $(document).ready(function(){
 	var scroll = $("#s_l").offset().top;
 	
 
-		$(document).scrollTop(scroll-40);
+		$(document).scrollTop(scroll-50);
 		
 
 
@@ -160,7 +160,7 @@ $(document).ready(function(){
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body style="min-width: 1200px;">
 
-
+<div id="s_l"></div>
 	
 	   <div class="justify-content-center pb-5" style="margin-top:10px; ">
           <div class="heading-section text-center ftco-animate" style="z-index: -1;">

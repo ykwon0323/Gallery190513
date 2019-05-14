@@ -150,18 +150,22 @@ line-height: 1.2;
 <script type="text/javascript">
 $(document).ready(function(){
 	
+
 	
 	var scroll_v =getParameterByName('scroll_v');
 	
+
 	
-	
-	var scroll = $("#s_l").offset().top;
+	//var scroll = $("#s_l").offset().top;
 	
 	if(scroll_v==0||scroll_v==null){
 		
-		$(document).scrollTop(scroll-40);
+
+		$(document).scrollTop();
 		
 	}else{
+		
+
 		$(document).scrollTop(scroll_v);
 	}
 	
@@ -172,6 +176,8 @@ $(document).ready(function(){
 
 
 function scroll_v(url) {
+	
+
 	
 	var scroll_v = $(document).scrollTop();
 	
@@ -197,7 +203,7 @@ function getParameterByName(name) {
 <jsp:include page="/WEB-INF/views/header.jsp" />
 
 
-
+<div id="s_l"></div>
 
 
 <div class="justify-content-center pb-5" style="margin-top:10px; ">

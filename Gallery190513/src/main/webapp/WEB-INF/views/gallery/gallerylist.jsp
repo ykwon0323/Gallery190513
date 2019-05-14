@@ -188,11 +188,13 @@
   				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
 	
 		
-		 	<%for(int i =1; i<=pagenum;i++){%>
+		 	<%if(pagenum>1){
+		 	
+		 	for(int i =1; i<=pagenum;i++){%>
 		 		
 		 	<a href="gallerylist.do?g_pcount=<%=i%>"><%=i%></a>
 		 	
-		 	<%}%>
+		 	<%}}%>
   			
   			</div>
   			</div>
