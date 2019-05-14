@@ -22,9 +22,16 @@
  <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet"> 
 
-<link rel="stylesheet" href="boot_g/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+<!-- <link rel="stylesheet" href="boot_g/css/bootstrap.min.css">
 <link rel="stylesheet" href="boot_g/css/owl.carousel.min.css">
-<link rel="stylesheet" href="boot_g/css/style.css">
+<link rel="stylesheet" href="boot_g/css/style.css"> -->
+
+
 <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
 
 
@@ -194,8 +201,87 @@ $(document).ready(function(){
 
 		<div class="container">
 		<div class="row">
+		<div class="col-8">
+		
+		
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="galleryupload/${galleryDto.g_img1}" alt="" style="min-width:700px; max-height: 400px;">
+    </div>
+
+    <div class="item">
+      <img src="galleryupload/${galleryDto.g_img2}" alt="" style="min-width:700px; max-height: 400px;">
+    </div>
+
+    <div class="item">
+      <img src="galleryupload/${galleryDto.g_img3}" alt="" style="min-width:600px; max-height: 400px;">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		
+		
+		
+		
+		
+		
+		</div>
+		</div>
+		<div class="row">
 			
-					<div class="col-lg-6">
+					<div class="col-4">
+					
+					<div style="text-align: center;">
+						<div class="ud_img">
+							<div><img alt="g_img1" src="galleryupload/${galleryDto.g_img1}"></div>
+					
+						</div>
+
+						<div class="ud_img">
+							<div><img alt="g_img2"src="galleryupload/${galleryDto.g_img2}"></div> 
+						
+
+						</div>
+
+						<div class="ud_img">
+							<div><img alt="g_img3"src="galleryupload/${galleryDto.g_img3}"></div> 
+							
+
+						</div>
+
+
+						<div class="ud_img">
+							 <div><img alt="g_img4"src="galleryupload/${galleryDto.g_img4}"></div> 
+							
+						</div>
+						
+					</div>			
+				
+						
+					
+					
+					
+					</div>
+					
+					<%-- <div class="col-8">
 
 					<div class="owl-carousel slide-one-item-alt">
 						<img style="height: 400px; width: 540px" src="galleryupload/${galleryDto.g_img1}" alt="Image" class="img-fluid">
@@ -208,15 +294,15 @@ $(document).ready(function(){
 							style="color: #e2c0bb;" class="custom-next">Next</a>
 					</div>
 
-					</div>
+					</div> --%>
 					
-
+			</div>
 
 					
+	
+					<div class="row">
 
-
-
-					<div class="col-lg-5 ml-auto" style="font-family: 'Cute Font', cursive; font-size: 25px;  color: black; ">
+					<div class="col ml-auto" style="font-family: 'Cute Font', cursive; font-size: 25px;  color: black; ">
 
 						<div class="section-title" style="margin-bottom: 20px; font-weight:100; color:black; 
 						
@@ -246,37 +332,13 @@ $(document).ready(function(){
 						</div>
 
 
-					<div style="text-align: center; margin-top: 100px;">
-						<div class="ud_img">
-							<div><img alt="g_img1" src="galleryupload/${galleryDto.g_img1}"></div>
-					
-						</div>
 
-						<div class="ud_img">
-							<div><img alt="g_img2"src="galleryupload/${galleryDto.g_img2}"></div> 
-						
-
-						</div>
-
-						<div class="ud_img">
-							<div><img alt="g_img3"src="galleryupload/${galleryDto.g_img3}"></div> 
-							
-
-						</div>
-
-
-						<div class="ud_img">
-							 <div><img alt="g_img4"src="galleryupload/${galleryDto.g_img4}"></div> 
-							
-						</div>
-						
-								
-				
-					</div>	
 
 					</div>
+					
+					</div>
 	
-			</div>
+			
 		</div>
 					
 	</section>
@@ -320,10 +382,12 @@ $(document).ready(function(){
 	</div>
 
 	<!-- 부트슻트랩 시작 -->
-	<script src="boot_g/js/jquery-3.3.1.min.js"></script>
+	
+
+<!-- 	<script src="boot_g/js/jquery-3.3.1.min.js"></script>
 	<script src="boot_g/js/owl.carousel.min.js"></script>
 	<script src="boot_g/js/aos.js"></script>
-	<script src="boot_g/js/main.js"></script>
+	<script src="boot_g/js/main.js"></script> -->
 	
 	<!-- 부트슻트랩 끝 -->
 
