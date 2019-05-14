@@ -11,9 +11,12 @@ public interface IArtistDao {
    ArtistDto    selectArtist(int a_no);         //U , M
    List<ArtistDto> selectArtistList(int a_state);      //U , M
    List<ArtistDto> selectArtistList();         //U , M
-   List<ArtistDto> selectArtistListImg();
+   List<ArtistDto> selectArtistListImg(String a_pcount);
    public ArtistDto selectMemberId(int a_no);
    
    //작가등급 update
       boolean updateArtistState(ArtistDto artistDto);
+      
+      
+      public int selectArtistListImg_pagenum();
 }

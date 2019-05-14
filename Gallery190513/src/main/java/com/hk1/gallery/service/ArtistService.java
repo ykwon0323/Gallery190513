@@ -50,9 +50,9 @@ public class ArtistService implements IArtistService {
    }
 
    @Override
-   public List<ArtistDto> selectArtistListImg() {
+   public List<ArtistDto> selectArtistListImg(String a_pcount) {
       // TODO Auto-generated method stub
-      return artistDao.selectArtistListImg();
+      return artistDao.selectArtistListImg(a_pcount);
    }
 
    @Override
@@ -66,4 +66,10 @@ public class ArtistService implements IArtistService {
       // TODO Auto-generated method stub
       return artistDao.updateArtistState(artistDto);
    }
+
+   @Override
+   	public int selectArtistListImg_pagenum() {
+	   	// TODO Auto-generated method stub
+	return artistDao.selectArtistListImg_pagenum();
+}
 }

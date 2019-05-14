@@ -46,9 +46,9 @@ public class ArtistDao implements IArtistDao {
       }
       
       @Override
-      public List<ArtistDto> selectArtistListImg() {
+      public List<ArtistDto> selectArtistListImg(String a_pcount) {
         
-         return sqlSession.selectList(namespace+"selectArtistListImg");
+         return sqlSession.selectList(namespace+"selectArtistListImg", a_pcount);
       }
       
       //메일 아이디 가져오기 추가
@@ -61,6 +61,11 @@ public class ArtistDao implements IArtistDao {
          int count = sqlSession.update(namespace+"updateArtistState",artistDto);
             return count>0?true:false;
       }
+	@Override
+	public int selectArtistListImg_pagenum() {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne(namespace + "selectArtistListImg_pagenum");
+	}
       
       
 }

@@ -9,9 +9,64 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
-
-
 <title>인덱스</title>
+
+<style type="text/css">
+
+
+	
+.heading-section span{
+
+font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #e2c0bb;
+    letter-spacing: 2px;
+    text-align: center!important;
+   	margin: 0;
+    padding: 0;
+    
+}
+
+	
+.heading-section span{
+
+font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #e2c0bb;
+    letter-spacing: 2px;
+    text-align: center!important;
+   	margin: 0;
+    padding: 0;
+    
+}
+
+
+.heading-section h2{
+font-size: 40px;
+    font-weight: 600;
+line-height: 1.2;
+    color: inherit;
+    margin-top:8px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center!important;
+
+}
+
+.heading-section p{
+	font-family: -apple-system,BlinkMacSystemFont;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+
+}
+
+</style>
 </head>
 <% MemberDto Ddto = (MemberDto) session.getAttribute("loginMember"); %>
 <%-- <%int m_grade=%><%=Ddto.getM_grade() %><%; %> --%>
@@ -82,6 +137,31 @@ function imageURL(input) {
 <form class="form-horizontal" action="insertGallery.do" method="post" enctype="multipart/form-data">
 
 <div class="container" sty>
+
+<div class="row">
+
+
+<div class="col justify-content-center pb-5" style="margin-top:10px; ">
+          <div class="heading-section text-center ftco-animate" style="z-index: -1;">
+          	<span class="subheading">Best Gallery</span>
+            <h2 class="mb-4">방구석 갤러리</h2>
+            <p>All the galleries you want</p>
+          </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="row">
 <div class="col">
@@ -208,7 +288,7 @@ function imageURL(input) {
 	 </div>
 	 
 	 
-	 <div style="margin: 10px 20px; width: 250px;">
+	 <div style="margin: 10px 20px; width: 250px; float: right;">
 		<input  class=" btn btn-primary" type="submit" value="등록">
 	</div>
 	 

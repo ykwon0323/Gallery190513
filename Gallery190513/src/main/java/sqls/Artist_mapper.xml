@@ -44,11 +44,31 @@
        ORDER BY A_NO DESC
     </select>
     <!-- 지우기 -->
-    <select id = "selectArtistListImg" resultType="ArtistDto">
-       SELECT a.A_NO, a.A_NAME, a.A_SOLO, a.A_SQUARD, a.A_CAREER, 
-       a.A_STATE, e.E_IMG FROM ARTIST a INNER JOIN EXHIBITION e on a.A_NO = e.A_NO AND a.A_STATE=2
+    
+    
+    
+    
+    <select id = "selectArtistListImg" parameterType="String" resultType="ArtistDto">
+       <!-- SELECT a.A_NO, a.A_NAME, a.A_SOLO, a.A_SQUARD, a.A_CAREER, 
+       a.A_STATE, e.E_IMG FROM ARTIST a INNER JOIN EXHIBITION e on a.A_NO = e.A_NO AND a.A_STATE=2 -->
+       
+       SELECT A_NO, A_NAME, A_SOLO, A_SQUARD, A_CAREER, 
+       A_STATE, E_IMG FROM(
+       SELECT ROWNUM AS RN, a.A_NO, a.A_NAME, a.A_SOLO, a.A_SQUARD, a.A_CAREER, 
+       a.A_STATE, e.E_IMG FROM ARTIST a INNER JOIN EXHIBITION e on a.A_NO = e.A_NO AND a.A_STATE=2) WHERE CEIL(RN/15) = #{a_pcount}
+       
     
     </select>
+    
+    <!-- 페이징 -->
+    <select id="selectArtistListImg_pagenum" resultType="int">
+    SELECT CEIL(COUNT(*)/2) AS COUNT FROM (SELECT a.A_NO, a.A_NAME, a.A_SOLO, a.A_SQUARD, a.A_CAREER, 
+       a.A_STATE, e.E_IMG FROM ARTIST a INNER JOIN EXHIBITION e on a.A_NO = e.A_NO AND a.A_STATE=15) 
+    
+    </select>
+    
+    
+    
     
     <select id="selectMemberId" parameterType="int" resultType="ArtistDto">
        SELECT a.A_NO, a.A_NAME, a.A_SOLO, a.A_SQUARD, a.A_CAREER, 

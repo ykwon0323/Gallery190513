@@ -46,6 +46,7 @@ System.out.println("이미지 디티오는?+"+list);%>
 <body>
 
 
+
     <div class="container">
     	<div class="row justify-content-center pb-5" >
           <div class="col heading-section text-center ftco-animate" style="z-index: -1;">
@@ -168,6 +169,24 @@ System.out.println("이미지 디티오는?+"+list);%>
     
     		
     			</div>
+    			
+
+	
+	    <div class="row" style="margin-top: 30px;">
+  			<div style="margin: 0 auto;" >
+  				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
+	
+		
+		 	<%for(int i =1; i<=pagenum;i++){%>
+		 		
+		 	<a href="artistlist.do?a_pcount=<%=i%>"><%=i%></a>
+		 	
+		 	<%}%>
+  			
+  			</div>
+  		</div>
+
+    			
     	</div>
 
 

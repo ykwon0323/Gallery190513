@@ -11,6 +11,8 @@ public class ItemDto {
 	private int m_no;
 	
 	
+	
+	
 	public ItemDto() {
 		super();
 	}
@@ -27,7 +29,7 @@ public class ItemDto {
 		this.m_no = m_no;
 	}
 	
-	
+
 
 	public int getI_no() {
 		return i_no;

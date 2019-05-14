@@ -12,6 +12,7 @@ public class ArtistDto {
 	private int a_state;
 	private String e_img;
 	private String m_id;
+	private String a_pcount;
 
 	
 	public ArtistDto() {
@@ -19,7 +20,21 @@ public class ArtistDto {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	
 
+
+
+	public String getA_pcount() {
+		return a_pcount;
+	}
+
+
+
+	public ArtistDto setA_pcount(String a_pcount) {
+		this.a_pcount = a_pcount;
+		return this;
+	}
 
 
 

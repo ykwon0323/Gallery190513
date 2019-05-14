@@ -17,6 +17,7 @@ public class ItemDao implements IItemDao {
 	private SqlSessionTemplate sqlSession;
 	@Override
 	   public boolean insertItem(ItemDto itemDto) {
+		
 	      int count=sqlSession.insert(namespace+"insertItem", itemDto);
 	      
 	      return count>0?true:false;
@@ -69,8 +70,20 @@ public class ItemDao implements IItemDao {
 	public List<ItemDto> selectA_noItemList(int a_no, int from) {
 		// TODO Auto-generated method stub
 		if(from==0) {
+			
+			
+			
+			
+			
 			return sqlSession.selectList(namespace+"selectItemList4",a_no);
 		}else {
+			
+			
+			
+			
+			
+			
+			
 		return sqlSession.selectList(namespace+"selectItemList3",a_no);}
 	}
 

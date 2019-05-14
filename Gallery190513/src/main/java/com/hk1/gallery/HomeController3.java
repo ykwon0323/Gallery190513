@@ -69,10 +69,21 @@ public class HomeController3 {
 	 */
 	//작가 리스트
 	@RequestMapping(value = "/artistlist.do", method = RequestMethod.GET)
-	public String artistlist(Locale locale, Model model) {
+	public String artistlist(Locale locale, Model model,String a_pcount) {
 		logger.info("작가목록{}.", locale);
 		
-		List<ArtistDto> list = artistService.selectArtistListImg();
+		
+		
+		int pagenum = artistService.selectArtistListImg_pagenum();
+		
+		model.addAttribute("pagenum", pagenum );
+		
+		if(a_pcount==null) {
+			a_pcount="1";
+		}
+		
+		
+		List<ArtistDto> list = artistService.selectArtistListImg(a_pcount);
 		
 		System.out.println("what is list = " +list);
 		model.addAttribute("list",list);
@@ -94,9 +105,13 @@ public class HomeController3 {
 		//상세보기 안의 작가번호로 작품
 		List<ItemDto> itemDto = itemService.selectA_noItemList(a_no,1);
 		model.addAttribute("itemDto", itemDto);
+		
 		//상세보기 안의 작가번호로 작품
 		List<ExhibitionDto> exhibitionDto = exhibitionService.selectExhibitionList(a_no);
 		model.addAttribute("exhibitionDto", exhibitionDto);
+		
+		
+		
 	return "artist/detailArtist";
 	}
 	
