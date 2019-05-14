@@ -13,11 +13,49 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>구매목록</title>
 <link rel="stylesheet" href="login/css/myItemList.css">
+<style>
+	.heading-section span {
+	font-size: 16px;
+	display: block;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	color: #e2c0bb;
+	letter-spacing: 2px;
+	text-align: center !important;
+	margin: 0;
+	padding: 0;
+}
+
+.heading-section h2 {
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: inherit;
+	margin-top: 8px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	text-align: center !important;
+}
+
+.heading-section p {
+	font-family: -apple-system, BlinkMacSystemFont;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+}
+</style>
 </head>
 <body>
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <%-- <jsp:include page="privateGnb.jsp" />	 --%>
-	
+	<div class="row justify-content-center pb-5" >
+          <div class="col heading-section text-center ftco-animate" style="z-index:;">
+          	<span class="subheading">My Item</span>
+            <h2 class="mb-4">방구석 갤러리</h2>
+            <p>List of works you have purchased</p>
+          </div>
+        </div>
 	
 	<div id="myItemList">
 		<h3>작품 구매목록</h3>

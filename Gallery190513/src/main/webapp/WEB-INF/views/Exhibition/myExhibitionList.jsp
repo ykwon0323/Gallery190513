@@ -85,7 +85,7 @@ div.exhibition_container {
 
 
 	
-<hr/>
+
 <div class="exhibition_container container"  style="width: 1200px; text-align: center;">
 		
 	<div class="row justify-content-center pb-5" >

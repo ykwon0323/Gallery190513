@@ -51,6 +51,14 @@
 		font-weight: bold; 
 		
 	}
+	
+		.messagelogo{
+	margin-top:-30px;
+	text-align: center;
+    width: 100%;
+    color: black;
+    
+	}	
 			
 
 </style>
@@ -58,6 +66,7 @@
 </head>
 <body>
 <div class="messagecontainer" style="text-align: center;">
+<div class="messagelogo">MESSAGE</div>
 <div style="text-align: center;"><img alt="메시지 아이콘" src="requestupload/message_icon.png" width="50px" height="50px"> 
 </div>
 <br/>

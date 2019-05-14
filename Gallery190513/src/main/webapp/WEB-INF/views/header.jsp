@@ -197,7 +197,7 @@ li.oe_heading a.oe_body{
 			<button style=" width: 80px; height: 40px;" class="btn btn-success" onclick="location.href='loginform.do'" >LOGIN</button>
 			
 			<%}else{ %>
-			<button class="btn btn-danger"  onclick="location.href='logout.do'" ><span><%=loginMember.getM_name()%>님 </span>
+			<button class="btn btn-danger"  onclick="location.href='logout.do'" ><span style="font-style: 12px;"><%=loginMember.getM_name()%>님 </span>
 			<span >LOGOUT</span></button>
 			<%} %>
 			</div>
@@ -307,7 +307,7 @@ li.oe_heading a.oe_body{
 				})
             });
         </script>
-       <div style="background-color : black; margin-bottom:">
+       <div style="background-color : black; margin-bottom:100px">
        	<br/><br/>
        </div>
 	

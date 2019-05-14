@@ -52,7 +52,13 @@
 		font-weight: bold; 
 		
 	}
-		
+	.messagelogo{
+	margin-top:-30px;
+	text-align: center;
+    width: 100%;
+    color: black;
+    
+	}	
 
 </style>
 
@@ -60,6 +66,7 @@
 <body>
 
 <div class="messagecontainer" style="text-align: center;">
+<div class="messagelogo">MESSAGE</div>
 <div style="text-align: center;"><img alt="메시지 아이콘" src="requestupload/message_icon.png" width="50px" height="50px"> 
 </div>
 <br/>
@@ -73,7 +80,7 @@
 <label style="margin-left: -40px;" for="send">FROM.&nbsp</label><input  style="margin-left: 10px;" size="60;"  type="text" value="<%=r_sendname%>" id="send" name="r_sendname" readonly="readonly" class="btn btn-outline-primary"> <br/>
 <label style="margin-left: -40px;" for="title">TITLE.&nbsp</label><input  style="margin-left: 10px;" size="60;" type="text" name="r_title" id="title" required="required"  class="btn btn-outline-primary"> 
 <div style="margin-top: 25px;" id="content"><br/>
-<textarea  rows="7" cols="50" name="r_content" required="required"  class="form-control" style="width: 450px;" ></textarea>
+<textarea  rows="8" cols="50" name="r_content" required="required"  class="form-control" style="width: 450px;" ></textarea>
 </div>
 <br/>
 

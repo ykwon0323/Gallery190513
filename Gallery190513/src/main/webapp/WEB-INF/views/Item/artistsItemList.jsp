@@ -146,7 +146,7 @@ div#artistItemList h4 {
 </head>
 <body>
 <jsp:include page="/WEB-INF/views/header.jsp" />
-<hr>
+
 	<script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -179,7 +179,7 @@ div#artistItemList h4 {
 					<h5 style="font-weight: bold;">작품명: ${item.i_name}</h5>
 					<h6>작품가격: ${item.i_price}</h6><br/>
 					<div style="float: right;"><a href="#target1">
-						<input  style="font-size: 13px;" class="btn btn-outline-secondary btn-sm" type="button" value="작품수정" class="scroll" onclick="javascript:updateitemForm(${item.i_no});"></a><br/>
+						<input  style="font-size: 13px;" class="btn btn-outline-primary btn-sm" type="button" value="작품수정" class="scroll" onclick="javascript:updateitemForm(${item.i_no});"></a><br/>
 						<input style="font-size: 13px;" class="btn btn-outline-danger btn-sm" type="button" value="작품삭제" onclick="deleteitem.do?i_no=${item.i_no}"><br/>
 					</div>
 				</div>
@@ -194,7 +194,7 @@ div#artistItemList h4 {
 		</c:otherwise>
 		</c:choose>
        </div>
-       	
+       
        	<div id="artistItemList_updateitemForm_div" style="width: 1200px;">
        	
        	<hr>
@@ -210,26 +210,27 @@ div#artistItemList h4 {
 			</div>
 			
 			<div style="margin-left: 170px;">
-			<span >작품명 &nbsp&nbsp&nbsp : </span>
+			<span style="font-weight: bold;font-size: 25px; text-align: right;" >작품명 &nbsp&nbsp&nbsp&nbsp&nbsp  </span><br/>
 			<input style="margin-top: 15px; type="text" name="i_name" id="artistItemList_updateitemForm_input_i_name" >
-			<br>
+			<br/><br/>
 			
-			<span>작품가격 : </span>
+			<span style="font-weight: bold;font-size: 25px; text-align: right;" >작품가격&nbsp&nbsp  </span><br/>
 			<input style="margin-top: 15px; margin-bottom: 15px; type="text" name="i_price" id="artistItemList_updateitemForm_input_i_price">
-			<br>
-			<span>작품설명 : </span>
+			<br/>
+			<span style="font-weight: bold;font-size: 25px;" >작품설명&nbsp&nbsp  </span><br/><br/>
 			<textarea  rows="20" cols="100" name="i_explain" id="artistItemList_updateitemForm_input_i_explain"></textarea>
 			
 			<input type="hidden" name="i_img" id="artistItemList_updateitemForm_i_img_nameTag">
 			<input type="hidden" name="a_no" value="<%=loginMember.getM_no()%>">
 			<input type="hidden" name="i_no" id="artistItemList_updateitemForm_input_i_no" >
-			<input type="submit" value="수정완료" class="btn btn-outline-secondary">
+			<input type="submit" value="수정완료" class="btn btn-outline-primary">
 			</div>
 			</form>
 	
 	</div>
 		
        
+        </div>
         </div>
         <div id="target1"></div>
 	

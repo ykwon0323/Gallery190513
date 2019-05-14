@@ -29,70 +29,82 @@
 
 
 <style type="text/css">
-.exhibition_containerDetail:hover #exhibitioning {
-	color: red;
+	
+	.exhibition_containerDetail:hover #exhibitioning{
+		color:red;
+		
+	}
+	
+	
+	.exhibition_container{
+		display: none;
+	}
+	.artist_container{
+		display: none;
+		border: 2px solid black;
+		border-radius: 20px;
+		width: 450px;
+    	height: auto;
+    	margin: auto;
+    		background-image: url("logo/car.jpg");
+		background-color: #ffffff;
+        background-color: rgba( 255, 255, 255, 1.0 );
+    	
 }
+	.artist_container:after{
+	
+        
+	}
+	div.alldetail_container{
+		   width:100%;
+    		margin: 0 auto;
+    		font-family: 'Poor Story', cursive;
+    	font-weight: bold;
+    } 
+    
+    div.alldetail_container h4{
+    	    width: 25%;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(26,26,26);
+    color: rgb(50,50,50);
+    }
+       
+.heading-section span{
 
-.exhibition_container {
-	display: none;
-}
-
-.artist_container {
-	display: none;
-	border: 1px solid slategray;
-	border-radius: 20px;
-	width: 450px;
-	height: auto;
-	margin: auto;
-	background-image: url("logo/car.jpg");
-}
-
-
-div.alldetail_container {
-	width: 100%;
-	margin: 0 auto;
-	font-family: 'Poor Story', cursive;
-	font-weight: bold;
-}
-
-div.alldetail_container h4 {
-	width: 25%;
-	font-weight: bold;
-	padding-bottom: 10px;
-	border-bottom: 3px solid rgb(26, 26, 26);
-	color: rgb(50, 50, 50);
-}
-
-.heading-section span {
 	font-size: 16px;
-	display: block;
-	margin-bottom: 5px;
-	text-transform: uppercase;
-	color: #e2c0bb;
-	letter-spacing: 2px;
-	text-align: center !important;
-	margin: 0;
-	padding: 0;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #e2c0bb;
+    letter-spacing: 2px;
+    text-align: center!important;
+      margin: 0;
+    padding: 0;
+    
 }
 
-.heading-section h2 {
-	font-size: 40px;
-	font-weight: 600;
-	line-height: 1.2;
-	color: inherit;
-	margin-top: 8px;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
-	text-align: center !important;
+.heading-section h2{
+font-size: 40px;
+    font-weight: 600;
+line-height: 1.2;
+    color: inherit;
+    margin-top:8px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center!important;
+
 }
 
-.heading-section p {
-	font-family: -apple-system, BlinkMacSystemFont;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.5;
-	color: #212529;
+.heading-section p{
+   font-family: -apple-system,BlinkMacSystemFont;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+
 }
+	
 </style>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">
@@ -197,14 +209,12 @@ function detail_artist(){
 		<div class="exhibition_containerDetail" style="
 					width:80%;
 					float:; 
-					border: 1px solid slategray;
+					border: 2px solid black;
 					border-radius: 15px;
 					overflow: hidden;
 					margin: auto;   
 					margin-bottom: 20px;
-					max-height: 250px;
-					 box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
-					 background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0px, transparent 5%, transparent 95%, rgba(0, 0, 0, 0.2) 100%);">
+					max-height: 250px;">
 		
 		<span><img alt="작가대표이미지" src="exhibitionupload/<%=exhibitionDto.getE_img()%>" width="300px;" style="min-height: 250px; max-height: 250px; float: left;" ></span>
 		<p style="font-size: 25px; font-weight: bold; margin-top: 20px;">전시 제목<p>
