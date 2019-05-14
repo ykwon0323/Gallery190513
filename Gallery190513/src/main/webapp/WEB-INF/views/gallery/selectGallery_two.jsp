@@ -275,7 +275,7 @@ function scroll_v(url) {
 <body>
 
 
-<hr id="s_l">
+
 
 
 <div class="justify-content-center pb-5" style="margin-top:10px; ">

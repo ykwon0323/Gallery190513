@@ -159,7 +159,7 @@ $(document).ready(function(){
 
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body style="min-width: 1200px;">
-<hr id="s_l" />
+
 
 	
 	   <div class="justify-content-center pb-5" style="margin-top:10px; ">

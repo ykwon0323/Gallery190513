@@ -100,8 +100,8 @@ ul.oe_menu > li{
 }
 ul.oe_menu > li > a{
 	display:block;
-	background-color:#ffffff;
-	color:#808080;
+	background-color:black;
+	color:white;
 	text-decoration:none;
 	font-weight:bolder;
 	font-size:15px;
@@ -116,13 +116,14 @@ ul.oe_menu > li > a{
 }
 ul.oe_menu > li > a:hover,
 ul.oe_menu > li.selected > a{
-	background:#fff;
-	color:#101010;
+	background:black;
+	color:firebrick;
+	
 	opacity:;
 }
 .oe_wrapper ul.hovered > li > a{
-	background:#fff;
-	text-shadow:0px 0px 1px #FFF;
+	background:black;
+	text-shadow:0px 0px 10px white;
 }
 ul.oe_menu div{
 	
@@ -166,8 +167,9 @@ li.oe_heading a.oe_body{
 	border-bottom:1px solid #ddd;
 	text-align: center;
 }
-
-ul.oe_menu div ul li a.oe_body{}
+.btn btn-success:hover{
+	cursor: pointer;
+	}
 	
 
 </style>
@@ -188,14 +190,14 @@ ul.oe_menu div ul li a.oe_body{}
 		</script>
 
 <div class="oe_wrapper" style="position:relative ; z-index: 300">
-			<div class="mainHeader" style="position: fixed; background-color: white; height: 50px; z-index: 99">
-			<div class="mainLogo" style="position: absolute; left: 110px; top: 10px; z-index: 99;background-color: transparent;" ><a href="index.jsp"><img alt="index.jsp" src="logo/logo1.png" width="180" height="auto" ></a> </div>
-			<div class="login_wrapper" style="position: absolute; right: 50px; top: 10px; z-index: 99;">
+			<div class="mainHeader" style="position: fixed; background-color:black ; height: 50px; z-index: 99">
+			<div class="mainLogo" style="position: absolute; left: 95px; top: 10px; z-index: 99;background-color: transparent;" ><a href="index.jsp"><img alt="index.jsp" src="logo/logo1.png" width="180" height="auto" ></a> </div>
+			<div class="login_wrapper" style="position: absolute; right: 50px; top: 5px; z-index: 99;">
 			<%if(loginMember==null){ %>
-			<button style=" width: 80px; height: 40px;" class="btn btn-outline-success" onclick="location.href='loginform.do'" >LOGIN</button>
+			<button style=" width: 80px; height: 40px;" class="btn btn-success" onclick="location.href='loginform.do'" >LOGIN</button>
 			
 			<%}else{ %>
-			<button class="btn btn-outline-danger"  onclick="location.href='logout.do'" ><span><%=loginMember.getM_name()%>님 </span>
+			<button class="btn btn-danger"  onclick="location.href='logout.do'" ><span><%=loginMember.getM_name()%>님 </span>
 			<span >LOGOUT</span></button>
 			<%} %>
 			</div>
@@ -305,7 +307,7 @@ ul.oe_menu div ul li a.oe_body{}
 				})
             });
         </script>
-       <div>
-       	<br/><br/><br/><br/>
+       <div style="background-color : black; margin-bottom:">
+       	<br/><br/>
        </div>
 	

@@ -196,7 +196,7 @@ function getParameterByName(name) {
 
 <jsp:include page="/WEB-INF/views/header.jsp" />
 
-<hr id="s_l">
+
 
 
 

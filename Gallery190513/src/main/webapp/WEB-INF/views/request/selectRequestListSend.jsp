@@ -95,7 +95,7 @@ line-height: 1.2;
 
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
-<hr>
+
 <div class="container">
 	
 

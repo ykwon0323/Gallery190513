@@ -54,7 +54,7 @@ line-height: 1.2;
 }
 
 	h4{
-    	    width: 25%;
+    	  width: 25%;
     font-weight: bold;
     padding-bottom: 10px;
     border-bottom: 3px solid rgb(26,26,26);
@@ -88,7 +88,7 @@ line-height: 1.2;
 
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
-<hr>
+
 
 <div class="container">
 

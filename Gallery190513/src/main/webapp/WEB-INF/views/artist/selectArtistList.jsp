@@ -45,7 +45,6 @@ System.out.println("이미지 디티오는?+"+list);%>
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
 
-<hr>
 
     <div class="container">
     	<div class="row justify-content-center pb-5" >

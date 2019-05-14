@@ -39,11 +39,18 @@
 	}
 	.artist_container{
 		display: none;
-		border: 1px solid black;
+		border: 2px solid black;
 		border-radius: 20px;
 		width: 450px;
     	height: auto;
     	margin: auto;
+    	
+}
+	.artist_container:after{
+		background-image: url("logo/car.jpg");
+		background-color: #ffffff;
+        background-color: rgba( 255, 255, 255, 1.0 );
+        
 	}
 	div.alldetail_container{
 		   width:100%;
@@ -136,7 +143,6 @@ function detail_artist(){
 <body>
 
 
-<hr>
 
 <div class="alldetail_container"  style="width: 1200px; text-align: center;">
 
@@ -207,11 +213,11 @@ function detail_artist(){
 	</div>
 	
 	<div class="artist_container" id="artist_container" style="margin-top: 50px; ">
-		
+		<div class="bgImage">
 		<h3>개인</h3><p><%=artistDto.getA_solo() %></p><br/><br/>
 		<h3>단체</h3><p><%=artistDto.getA_Squard() %></p><br/><br/>
 		<h3>커리어</h3><p><%=artistDto.getA_career() %></p>
-	
+		</div>
 	</div>
 	</div>
 	</div>
