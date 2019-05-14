@@ -38,12 +38,30 @@
    WHERE A_NO=#{a_no}
   </select>
   
-  
-  <select id="selectExhibitionList1" resultType="ExhibitionDto" >
+   <select id="selectExhibitionList1" resultType="ExhibitionDto" parameterType="String" >
    SELECT E_NO, E_TITLE, E_EXPLAIN, A_NO, A_NAME, E_CLICK, E_IMG
    FROM GALLERY.EXHIBITION
-    ORDER BY E_NO DESC
+    ORDER BY E_NO DESC 
+
   </select>
   
-   
+  
+  <!-- 페이징 처리 -->
+  <select id="selectExhibitionList2" resultType="ExhibitionDto" parameterType="String" >
+   <!-- SELECT E_NO, E_TITLE, E_EXPLAIN, A_NO, A_NAME, E_CLICK, E_IMG
+   FROM GALLERY.EXHIBITION
+    ORDER BY E_NO DESC -->
+    
+    SELECT E_NO, E_TITLE, E_EXPLAIN, A_NO, A_NAME, E_CLICK, E_IMG
+  	FROM(SELECT ROWNUM AS RN, E_NO, E_TITLE, E_EXPLAIN, A_NO, A_NAME, E_CLICK, E_IMG
+  	FROM GALLERY.EXHIBITION ORDER BY E_NO DESC) WHERE CEIL(RN/20) = #{e_pcount}
+    
+  </select>
+  
+  
+  <select id="selectExhibitionList_pagenum" resultType="int">
+  
+  SELECT CEIL(COUNT(*)/20) AS COUNT  FROM GALLERY.EXHIBITION
+  
+  </select> 
   </mapper>

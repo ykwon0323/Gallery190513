@@ -45,8 +45,20 @@ public class ExhibitionService implements IExhibitionService{
 	}
 
 	@Override
+	public List<ExhibitionDto> selectExhibitionList(String e_pcount) {
+		// TODO Auto-generated method stub
+		return exhibitionDao.selectExhibitionList(e_pcount);
+	}
+	
+	@Override
 	public List<ExhibitionDto> selectExhibitionList() {
 		// TODO Auto-generated method stub
 		return exhibitionDao.selectExhibitionList();
+	}
+
+	@Override
+	public int selectExhibitionList_pagenum() {
+		// TODO Auto-generated method stub
+		return exhibitionDao.selectExhibitionList_pagenum();
 	}
 }

@@ -45,10 +45,23 @@ public class ExhibitionDao implements IExhibitionDao {
 	      return sqlSession.selectList(namespace + "selectExhibitionList", a_no);
 	   }
 	   @Override
+	   public List<ExhibitionDto> selectExhibitionList(String e_pcount) {
+
+	      return sqlSession.selectList(namespace + "selectExhibitionList2", e_pcount);
+	   }
+	   
+	   @Override
 	   public List<ExhibitionDto> selectExhibitionList() {
 
 	      return sqlSession.selectList(namespace + "selectExhibitionList1");
 	   }
+	   
+	   
+	@Override
+	public int selectExhibitionList_pagenum() {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne(namespace + "selectExhibitionList_pagenum");
+	}
 
 
 

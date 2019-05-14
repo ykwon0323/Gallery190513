@@ -148,7 +148,39 @@ div.exhibition_container {
 					</c:otherwise>
 				</c:choose>
 			</div><!-- exhibitionList END -->
-	</div></div>
+	</div>
+	
+	
+	<div class="row" style="margin-top: 30px;">
+  			<div style="margin: 0 auto;" >
+  				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
+	
+		
+		 	<%for(int i =1; i<=pagenum;i++){%>
+		 		
+		 	<a href="exhibitionlist.do?e_pcount=<%=i%>"><%=i%></a>
+		 	
+		 	<%}%>
+  			
+  			</div>
+  			</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
 	<jsp:include page="/WEB-INF/views/tail.jsp" />
 	<!-- JS includes -->
 

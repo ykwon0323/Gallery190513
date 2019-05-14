@@ -14,5 +14,8 @@ public interface IExhibitionService {
 	ExhibitionDto selectExhibition(int e_no);		//U , M
 	
 	List<ExhibitionDto> selectExhibitionList(int a_no);	//U , M
+	List<ExhibitionDto> selectExhibitionList(String e_pcount);
 	List<ExhibitionDto> selectExhibitionList();
+	
+	public int selectExhibitionList_pagenum();
 }
