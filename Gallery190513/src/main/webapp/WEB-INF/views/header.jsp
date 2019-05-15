@@ -131,11 +131,13 @@ ul.oe_menu div{
 	top:50px;
 	left:1px;
 	background:#fff;
-	width:800px;
+	width:750px;
 	height:auto;
 	padding:30px;
 	display:none;
 	 z-index: 999px;
+	
+	
 }
 ul.oe_menu div ul li a{
 	text-align: center;
@@ -158,10 +160,13 @@ ul.oe_menu li ul{
 	float:left;
 	width: 155px;
 	margin-right:10px;
+	margin-top: -15px;
+	
 }
 li.oe_heading a.oe_body{
 	color:black;
-	font-size:20px;
+	font-weight:bold;
+	font-size:13px;
 	margin-bottom:10px;
 	padding-bottom:6px;
 	border-bottom:1px solid #ddd;

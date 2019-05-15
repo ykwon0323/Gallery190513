@@ -152,15 +152,18 @@ div#artistItemList h4 {
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
     
-    <div class="artistItemList_container" style="width: 1200px; margin: 0 auto;">
-<div id="artistItemList" style="text-align: center;" >
-	<div class="row justify-content-center pb-5" >
+    <div class="row justify-content-center pb-5" style="padding-top: 2%">
           <div class="col heading-section text-center ftco-animate" style="z-index:;">
           	<span class="subheading">My Item</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
+            <img alt="로고"
+					src="logo/newLogo1.png" width="10%">
+				<p></p>
             <p>Best Item in the room</p>
           </div>
         </div>
+    <div class="artistItemList_container" style="width: 1200px; margin: 0 auto;">
+<div id="artistItemList" style="text-align: center;" >
+	
         	
         	<h4 >등록된 작품</h4>
 		<c:choose>
