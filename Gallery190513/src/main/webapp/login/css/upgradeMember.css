@@ -11,6 +11,8 @@ html,body{
 	width: 80%;
 	margin:0 auto;
 	background-color: white;
+	padding-top: 5%;
+	padding-bottom: 10%;
 }
 #upgradeMember h2{
 	width: 20%;

@@ -84,7 +84,7 @@ MemberDto loginMember = (MemberDto)session.getAttribute("loginMember");
 	<div class="row justify-content-center pb-5" >
           <div class="col heading-section text-center ftco-animate" style="z-index:;">
           	<span class="subheading">My Information</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
+           <img alt="로고" src="logo/newLogo1.png" width="10%">
             <p>Your information to protect you</p>
           </div>
         </div>
@@ -92,8 +92,9 @@ MemberDto loginMember = (MemberDto)session.getAttribute("loginMember");
 <div id="updateMemberForm">
 	<h3>회원정보(상세·수정)</h3>
 	<p>등록된 정보를 확인 후 수정하실 수 있습니다.</p>
-	<div id="updateMemberForm_updateMemberForm">
+	
 	<form action="updateMember.do" method="post" name="updateMemberForm">
+		<div id="updateMemberForm_updateMemberForm">
 			<input type="hidden" name="m_no" value="<%=loginMember.getM_no() %>">
 			<input type="hidden" name="m_grade" value="<%=loginMember.getM_grade()%>">
 			<div>
@@ -120,17 +121,15 @@ MemberDto loginMember = (MemberDto)session.getAttribute("loginMember");
 				<input type="text" name="m_tel3"  maxlength="4" pattern="[0-9]{4}" value="<%=(loginMember.getM_tel()).substring(7, 11) %>"  style="width: 33%;" required="required">
 			<p>앞자리 중간자리 뒷자리</p>
 			</div>
+		</div>
 			<footer>
 				<input type="submit" value="수정완료" id="updateMemberForm_updateMemberForm_submitButton"  
-						style="color:white; 
-								width:50%; 
-								margin-left:30%;
-								padding-left:5%;
-								padding-right:5%;"
+					
 						onclick="successUpdateMember();">
 			</footer>
 		</form>
-	</div>
+		
+	
 </div><!-- updateMemberForm End -->
 <script type="text/javascript">
 	function successUpdateMember(){

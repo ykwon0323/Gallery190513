@@ -136,7 +136,20 @@ html,body{
 		  var hours = Math.floor((RemainTime % (1000 * 60 * 60 * 24)) / (1000*60*60));
 		  var miniutes = Math.floor((RemainTime % (1000 * 60 * 60)) / (1000*60));
 		  var seconds = Math.floor((RemainTime % (1000 * 60)) / 1000);
-		  
+		  if(hours<10){
+				hours = '0'+hours;
+				
+			}
+
+			if(miniutes<10){
+				miniutes= '0'+miniutes;
+				
+			}
+
+			if(seconds<10){
+				seconds = '0'+seconds;
+			
+			}
 		  m =RemainDate+"일"+ hours + ":" +  miniutes + ":" + seconds ; // 남은 시간 text형태로 변경
 		  
 		  document.all.timer.innerHTML = m;   // div 영역에 보여줌 

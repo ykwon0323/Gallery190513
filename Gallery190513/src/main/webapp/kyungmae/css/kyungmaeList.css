@@ -13,6 +13,9 @@ html,body{
     background-size:  100%;  */
    
 }
+#kyungmaelist input:focus{
+	outline: none;
+}
 /* 오늘 마감 경매리스트 */
 #kyungmaeList_nowKyungmaeList{
 	width:100%;
@@ -84,6 +87,9 @@ html,body{
 	border-radius: 20px;
 	cursor: pointer;
 
+}
+.kyungmaeList_nowKyungmaeList_over3_cell input:focus{
+	outline: none;
 }
 .kyungmaeList_nowKyungmaeList_over3_cell input:hover{
 	text-align: center;
@@ -168,6 +174,9 @@ html,body{
 	border-radius: 20px;
 	cursor: pointer;
 
+}
+.kyungmaeList_nowKyungmaeList_less3_cell input:focus{
+	outline: none;
 }
 .kyungmaeList_nowKyungmaeList_less3_cell input:hover{
 	text-align: center;

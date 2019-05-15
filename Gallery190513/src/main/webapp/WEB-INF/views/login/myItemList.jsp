@@ -49,25 +49,30 @@
 <body>
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <%-- <jsp:include page="privateGnb.jsp" />	 --%>
+<div id="myItemList">
 	<div class="row justify-content-center pb-5" >
           <div class="col heading-section text-center ftco-animate" style="z-index:;">
-          	<span class="subheading">My Item</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
-            <p>List of works you have purchased</p>
+          	<span class="subheading">My Art Collection</span>
+          <!--   <h2 class="mb-4">방구석 갤러리</h2> -->
+           <img alt="로고" src="logo/newLogo1.png" width="10%">
+            <p></p>
           </div>
         </div>
 	
-	<div id="myItemList">
+	
 		<h3>작품 구매목록</h3>
-			<p>회원님께서 구매하신 작품 목록 입니다.</p>
-			<p>전시의 감동을 다시 한번 느끼고싶으시다면?<br> [전시감상]을 클릭해주세요<p>
+			
 		<%if(myItemList.size()==0){ %>
-			<p>구매완료 된 작품이 없습니다</p>
-			<p>작품 구매절차</p>
-			<p>1. 보고싶은 전시를 감상합니다</p>
-			<p>2. 마음에 드는 작품 구매버튼 클릭</p>
-			<p>3. 경매를 통해 구매 완료!</p>
+			<div id="myItemList_noItem">
+				<h5>구매완료 된 작품이 없습니다</h5>
+				<h6>작품 구매절차</h6>
+				<h6>1. 보고싶은 전시를 감상합니다</h6>
+				<h6>2. 마음에 드는 작품 구매버튼 클릭</h6>
+				<h6>3. 경매를 통해 구매 완료!</h6>
+			</div>
 		<%}else{ %>
+		<p>회원님께서 구매하신 작품 목록 입니다.</p>
+			<p>전시의 감동을 다시 한번 느끼고싶으시다면?<br> [전시감상]을 클릭해주세요<p>
 		<div id="myItemList_table">
 			<div style="display: table-row-group;
 						width: 100%;
