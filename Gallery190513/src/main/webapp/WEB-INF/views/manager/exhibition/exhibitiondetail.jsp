@@ -10,10 +10,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>전시 상세보기</title>
 <style>
-
+.container {
+ width:600px;
+}
+table{
+background-color:rgb(228, 194, 194);
+}
+textarea{
+background-color:rgb(228, 194, 194);
+}
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:50px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 </style>
 </head>
@@ -22,8 +34,8 @@ top:150px;
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
-
+<div class="main" align="center">
+	<div class="container" align="center">
 
 	<h1>전시상세보기</h1>
 	<%
@@ -70,6 +82,7 @@ top:150px;
 	</table>
 	
 	
+</div>
 </div>
 
 <div class="tail">

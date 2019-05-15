@@ -11,10 +11,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원등급 변경</title>
 <style>
-
+table{
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 </style>
 
@@ -28,16 +49,16 @@ top:150px;
 <%
 List<MemberDto>list=(List<MemberDto>)request.getAttribute("list");
 %>
-<div class="main">
+<div class="main" align="center">
    <h1>회원등급변경</h1>
    <table border="1">
-      <col width="40px;">
+      <col width="60px;">
       <col width="150px;">
       <col width="150px;">
       <col width="400px;">
       <col width="200px;">
       <col width="200px;">
-      <col width="50px;">
+      <col width="60px;">
    <tr>
       <th>번호</th>
       <th>아이디</th>
@@ -85,7 +106,7 @@ List<MemberDto>list=(List<MemberDto>)request.getAttribute("list");
    <%} %>
    </table>
    </div>
- <div class="tail">
+ <div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>  
    

@@ -10,11 +10,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>일정수정</title>
 <style>
-.main{
-position: absolute;
-top:150px;
+.container{
+ width:500px;
+ 
 }
-
+table{
+border:2px solid red;
+background-color:rgb(228, 194, 194);
+}
+tr{
+height:40px;
+}
+.main{
+position:relative;
+top:50px;
+}
+.tail{
+position:relative;
+top:100px;
+}
 
 </style>
 
@@ -27,13 +41,13 @@ CallendarDto callendarDto=(CallendarDto)request.getAttribute("callendarDto");
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
+<div class="main" align="center">
 
-
+<div class="container" align="center">
 	<h1>일정수정하기</h1>
 	<form action="managerupdateCallendar.do" method="post">
 	<input type="hidden" name="c_no" value="<%=callendarDto.getC_no()%>"/>
-	<table border="1">
+	<table >
 	<col width="150px;">
 		<col width="400px;">
 	
@@ -66,9 +80,10 @@ CallendarDto callendarDto=(CallendarDto)request.getAttribute("callendarDto");
 	
 	
 	</table>
-	
+	<br>
 	<input type="submit" value="수정완료"/>
 	</form>
+	</div>
 	</div>
 
 <div class="tail">

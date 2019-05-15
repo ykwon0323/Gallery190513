@@ -902,10 +902,11 @@ public class HomeController2 {
 			exhibitionDto.setE_img(registeredExhibitionDto.getE_img());
 //			continue;
 		}
-		
+		System.out.println(e_img);
+		System.out.println(e_img.substring(e_img.lastIndexOf(".")));
 		String stored_fname=createUUId()
 				+(e_img.substring(e_img.lastIndexOf(".")));
-		
+		System.out.println(stored_fname);
 						//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
 		File file=new File("C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/exhibitionupload/"+stored_fname);
 		

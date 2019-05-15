@@ -19,31 +19,34 @@ padding-right:50px;
 position: absolute;
 left: 230px;
 }
-.mainHeader{
-	-webkit-transition: All 0.2s ease;
-	-moz-transition: All 0.2s ease;
-	-o-transition: All 0.2s ease;
-	display: table;
-	width: 100%;
-	border-collapse: collapse;
-    border: none;
-    table-layout:fixed;
-    background-color: #ffffff;	
+.main{
+position: relative;
+top:0px;
 }
 .tail{
-position: absolute;
-top: 500px;
+position: relative;
+top: 100px;
+}
+.mainlogo2{
+width:1000px;
+opacity: 0.7!important;
 }
 
 </style>
 </head>
 <body>
-<div class="">
+
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
+
+
+<div class="main" align="center">
+
+<h1>환영</h1>
+<img class="mainlogo2" src="logo/logo2.png" alt="logo"/>
 </div>
 
 
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 

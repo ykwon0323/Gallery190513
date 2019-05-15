@@ -11,8 +11,12 @@
 <style>
 
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:0px;
 }
 </style>
 

@@ -10,10 +10,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>메시지 수정하기</title>
 <style>
+.container {
+ width:600px;
+}
+table{
 
+background-color:rgb(228, 194, 194);
+}
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:50px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 </style>
 </head>
@@ -25,8 +35,8 @@ top:150px;
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
-
+<div class="main" align="center">
+<div class="container" align="center">
 	<h1>메시지 수정하기</h1>
 	<form action="managerupdateRequest.do" method="post">
 	<table border="1">
@@ -71,6 +81,7 @@ top:150px;
 	
 	<input type="submit" value="수정완료"/>
 	</form>
+	</div>
 	</div>
 
 <div class="tail">

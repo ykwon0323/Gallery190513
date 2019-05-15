@@ -10,10 +10,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원 상세보기</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 .main{
-position: absolute;
-top:150px;
+position: relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:100px;
+}
+table{
+font-family: 'Nanum Gothic', sans-serif;
+background-color: rgb(228, 194, 194);
+
+/* background-image: url(JVG3SpZ1Sxe.jpg) ; */
+/* opacity: 0.5!important; */
+}
+tr{
+height:50px;
 }
 
 </style>
@@ -22,7 +37,7 @@ top:150px;
 <div class="header">
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
-<div class="main">
+<div class="main" align="center">
 	<h1>회원 상세보기</h1>
 	<table border="1">
 	
@@ -94,7 +109,7 @@ top:150px;
 	</table>
 </div>	
 
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 	<script type="text/javascript">

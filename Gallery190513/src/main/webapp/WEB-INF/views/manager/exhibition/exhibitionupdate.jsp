@@ -11,10 +11,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>전시정보수정</title>
 <style>
-
+.container {
+ width:600px;
+}
+table{
+background-color:rgb(228, 194, 194);
+}
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:50px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 </style>
 </head>
@@ -26,8 +35,8 @@ ExhibitionDto exhibitionDto=(ExhibitionDto)request.getAttribute("exhibitionDto")
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
-
+<div class="main" align="center">
+	<div class="container" align="center">
 	<h1>전시정보수정</h1>
 	<form action="managerupdateExhibition.do" method="post" enctype="Multipart/form-data">
 	<table border="1">
@@ -64,11 +73,11 @@ ExhibitionDto exhibitionDto=(ExhibitionDto)request.getAttribute("exhibitionDto")
 		
 	</tr>
 	</table>
-	
+	<br>
 	<input type="submit" value="수정완료"/>
 	</form>
-	
-	
+	<br>
+	</div>
 </div>
 
 <div class="tail">

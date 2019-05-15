@@ -10,13 +10,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>작품상세보기</title>
 <style>
-img{
+#view{
 width:200px;
 height:200px;
 }
+.container {
+ width:600px;
+}
+table{
+background-color:rgb(228, 194, 194);
+}
+textarea{
+background-color:rgb(228, 194, 194);}
+
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:50px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 </style>
 </head>
@@ -28,7 +41,8 @@ ItemDto itemDto=(ItemDto)request.getAttribute("itemDto");
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
+<div class="main" align="center">
+	<div class="container" align="center">
 
 	<h1>상세보기</h1>
 	<table border="1">
@@ -49,7 +63,7 @@ ItemDto itemDto=(ItemDto)request.getAttribute("itemDto");
 	<tr>
 		<th>작품이미지</th>
 		<td>
-		<img src="itemupload/<%=itemDto.getI_img()%>" width="300px;" height="300px;"/><br>
+		<img id="view" src="itemupload/<%=itemDto.getI_img()%>" width="300px;" height="300px;"/><br>
 		<a href="itemupload/<%=itemDto.getI_img()%>">자세히보기</a>
 <%-- 		<img src="${itemDto.i_img}"/></td> --%>
 	</tr>
@@ -77,6 +91,7 @@ ItemDto itemDto=(ItemDto)request.getAttribute("itemDto");
 		</td>
 	</tr>
 	</table>
+	</div>
 	</div>
 
 <div class="tail">

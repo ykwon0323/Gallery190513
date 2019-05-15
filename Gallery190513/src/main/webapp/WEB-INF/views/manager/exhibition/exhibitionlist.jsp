@@ -10,13 +10,42 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>전시목록보기</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
+table{
+
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+h1{
+font-family: 'Nanum Gothic', sans-serif;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
 a:hover{
 color:threedlightshadow;
 }
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 
 </style>
@@ -31,17 +60,19 @@ top:150px;
 
 <div class="main">
 
-	<h1>전시목록보기</h1>
+	<h1 align="center">전시목록보기</h1>
+	<div id="button" style="padding-left:350px;">
 	<input type="button" value="전시추가" onclick="location.href='managerinsertExhibitionform.do'"/>
-	<table border="1">
-		<col width="40px;">
-		<col width="100px;">
-		<col width="300px;">
-		<col width="40px;">
+	</div>
+	<table border="1" align="center">
+		<col width="60px;">
+		<col width="200px;">
+		<col width="350px;">
+		<col width="60px;">
 		<col width="80px;">
 		<col width="150px;">
 		<col width="80px;">
-		<col width="50px;">
+		<col width="60px;">
 	
 	
 	<tr>
@@ -76,7 +107,7 @@ top:150px;
 	</table>
 	</div>
 	
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 </body>

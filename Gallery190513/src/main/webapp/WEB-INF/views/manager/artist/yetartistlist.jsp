@@ -11,10 +11,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>승인안된 작가목록</title>
 <style>
-
+table{
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 </style>
 
@@ -29,11 +50,18 @@ top:150px;
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
+<div class="main" align="center">
 
 
 <h1>작가승인대기 목록</h1>
 	<table border="1">
+	<col width="60px;">
+      <col width="150px;">
+      <col width="400px;">
+      <col width="400px;">
+      <col width="300px;">
+      <col width="60px;">
+      <col width="60px;">
 		<tr>
 			<th>번호</th>
 			<th>이름</th>
@@ -67,7 +95,7 @@ top:150px;
 	
 </div>
 
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 	

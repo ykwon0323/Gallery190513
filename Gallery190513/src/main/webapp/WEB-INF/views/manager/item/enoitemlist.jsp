@@ -11,10 +11,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>전시 작품</title>
 <style>
-
+table{
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 </style>
 </head>
@@ -28,8 +49,11 @@ top:150px;
 	List<ItemDto>list=(List<ItemDto>)request.getAttribute("list");
 	
 	%>
+	<h1 align="center">전시 작품목록</h1>
+	<div id="button" style="padding-left:360px;">
 	<input type="button" value="작픔추가" onclick="location.href='managerinsertItemform1.do'"/>
-	<table border="1">
+	</div>
+	<table border="1" align="center">
 		<col width="40px"/>
 		<col width="40px"/>
 		<col width="100px"/>
@@ -73,7 +97,7 @@ top:150px;
 	</table>
 	</div>
 
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 </body>

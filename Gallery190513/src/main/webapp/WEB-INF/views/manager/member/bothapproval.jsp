@@ -15,13 +15,13 @@
 <style>
 
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
 }
 
 .tail{
-position :absolute;
-top: 1000px;
+position:relative;
+top:0px;
 
 }
 

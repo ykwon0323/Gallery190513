@@ -9,11 +9,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 
 .main{
-position: absolute;
-top:150px;
+position: relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:100px;
+}
+tr{
+height:40px;
+}
+input{
+height:20px;
+}
+#button{
+height:25px;
+}
+table{
+font-family: 'Nanum Gothic', sans-serif;
+background-color: rgb(228, 194, 194);
 }
 </style>
 </head>
@@ -26,15 +44,15 @@ top:150px;
 <%
     MemberDto memberDto=(MemberDto)request.getAttribute("memberDto");
 %>
-<div class="main">
+<div class="main" align="center">
 <h1>회원 정보 수정</h1>
    <form action="managerupdateMember.do" method="post">
    <input type="hidden" name="m_no" value="<%=memberDto.getM_no()%>"/>
    
    <table border="1">
    
-      <col width="150px;">
-      <col width="400px;">
+      <col width="180px;">
+      <col width="430px;">
    
    <tr>
    <th>아이디</th>
@@ -103,12 +121,14 @@ top:150px;
    
    </table>
    
+   <br>
    
-   <input type="submit">
+   <input id="button" type="submit" value="수정완료">
    
    </form>
+   
    </div>
-   <div class="tail">
+   <div class="tail"  >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 </body>

@@ -14,9 +14,25 @@ input{
 width:500px;
 }
 .main{
-position: absolute;
-top:150px;
-
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:100px;
+}
+table{
+background-color: rgb(243, 202, 197);
+}
+#button{
+height:25px;
+}
+tr{
+height:40px;
+}
+input{
+height:20px;
+}
 </style>
 </head>
 <body>
@@ -26,7 +42,7 @@ top:150px;
 <div class="header">
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
-<div class="main">
+<div class="main" align="center">
 <h1>작가 정보 수정</h1>
 	<form action="managerupdateArtist.do" method="post">
 	<input type="hidden" name="a_no" value="<%=artistDto.getA_no()%>"/>
@@ -76,13 +92,14 @@ top:150px;
 	
 	
 	</table>
+	<br>
 	
-	<input type="submit">
+	<input id="button" type="submit" value="수정완료">
 	</form>
 	
 	</div>
 
-<div class="tail">
+<div class="tail"  >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 	

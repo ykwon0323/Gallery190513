@@ -11,14 +11,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>오늘종료경매</title>
 <style>
-
+table{
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
 }
 .tail{
-position: absolute;
-top:500px;
+position:relative;
+top:100px;
 }
 </style>
 
@@ -31,10 +48,12 @@ top:500px;
 <div class="main">
 
 	
-	<h1>경매종료</h1>
+	<h1 align="center">경매종료</h1>
+	<div id="button" style="padding-left:430px;">
 	<a href="managerKyungmaeList_Ing1.do">진행중인경매</a>
 	<a href="managerselectKyungmaeList1.do">경매목록</a>
-	<table border="1">
+	</div>
+	<table border="1" align="center">
 	<tr>
 		<th>경매번호</th>
 		<th>작품번호</th>
@@ -80,7 +99,7 @@ top:500px;
 	</table>
 	</div>
 
-<div class="tail">
+<div class="tail"  >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 	

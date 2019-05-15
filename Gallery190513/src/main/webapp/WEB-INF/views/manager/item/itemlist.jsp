@@ -11,12 +11,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>작품 목록</title>
 <style>
+table{
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
 a:hover{
 color:threedlightshadow;
 }
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 
 </style>
@@ -32,9 +54,12 @@ List<ItemDto>list=(List<ItemDto>)request.getAttribute("list");
 <div class="main">
 
 
-	<h1>작품목록</h1>
+	<h1 align="center">작품목록</h1>
+	<div style="padding-left:330px;">
 	<input type="button" value="작품추가" onclick="location.href='managerinsertItemform.do'"/>
-	<table border="1">
+	</div>
+	
+	<table border="1" align="center">
 		<col width="40px"/>
 		<col width="40px"/>
 		<col width="100px"/>
@@ -74,7 +99,7 @@ List<ItemDto>list=(List<ItemDto>)request.getAttribute("list");
 	</table>
 	</div>
 
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 	

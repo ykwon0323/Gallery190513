@@ -8,15 +8,20 @@
 <html>
 <head>
 <script type="text/javascript">
-window.resizeTo(500,500)
+
+
 
 </script>
 <meta http-equiv="Content- Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style>
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:0px;
 }
 </style>
 </head>

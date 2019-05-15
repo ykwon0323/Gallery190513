@@ -10,11 +10,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>갤러리 정보 수정</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
-
+.container {
+border:2px solid red;
+ width:550px;
+  background-color:rgb(228, 194, 194);
+ }
+ input{
+ width:400px;
+ }
 .main{
-position: absolute;
-top:150px;
+font-family: 'Nanum Gothic', sans-serif;
+position:relative;
+top:50px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 </style>
 </head>
@@ -26,8 +39,8 @@ top:150px;
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
-
+<div class="main" align="center">
+	<div class="container" align="center">
    <h1>갤러리 정보 수정</h1>
    <form action="managerupdateGallery.do" method="post" enctype="multipart/form-data">
    <table border="1">
@@ -96,7 +109,11 @@ top:150px;
    
    <tr>
       <th>갤러리 소개</th>
-      <td><input type="text" name="g_intro" value="<%=galleryDto.getG_intro()%>"/></td>
+      <td>
+      <textarea name="g_intro" cols="60" rows="30"><%=galleryDto.getG_intro()%>"</textarea>
+      
+<%--       <input type="text" name="g_intro" value="<%=galleryDto.getG_intro()%>"/></td> --%>
+   </td>
    </tr>
    
    <tr>
@@ -119,6 +136,7 @@ top:150px;
    </table>
    <input type="submit"/>
    </form>
+   </div>
    </div>
 
 <div class="tail">

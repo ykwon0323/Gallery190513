@@ -13,12 +13,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>답글목록</title>
 <style>
+table{
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+th{
+background-color:rgb(241, 187, 180);
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
 a:hover{
 color:threedlightshadow;
 }
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 
 </style>
@@ -34,18 +56,19 @@ List<DabgeulDto>list=(List<DabgeulDto>)request.getAttribute("list");
 <div class="main">
 
 
-	<h1>전체답글목록</h1>
+	<h1 align="center">전체답글목록</h1>
+	<div id="button" style="padding-left:480px;">
 	<input type="button" value="답글추가" onclick="location.href='managerinsertDabgeulform.do'">
+	</div>
 	
-	
-	<table border="1">
-		<col width="40px"/>
-		<col width="40px"/>
-		<col width="300px"/>
-		<col width="40px"/>
+	<table border="1" align="center">
+		<col width="80px"/>
+		<col width="80px"/>
+		<col width="350px"/>
+		<col width="80px"/>
 		<col width="100px"/>
-		<col width="150px"/>
-		<col width="60px"/>
+		<col width="200px"/>
+		<col width="80px"/>
 	<tr>
 		<th>답글번호</th>
 		<th>전시번호</th>
@@ -65,7 +88,7 @@ List<DabgeulDto>list=(List<DabgeulDto>)request.getAttribute("list");
 		<td><%=dabgeulDto.getD_no()%></td><!-- 답글 상세보기 -->
 		<td><a href="managerselectenoDabgeulList.do?e_no=<%=dabgeulDto.getE_no()%>"><%=dabgeulDto.getE_no()%></a></td><!-- 전시별 답글 -->
 		<td><a href="managerselectDabgeul.do?d_no=<%=dabgeulDto.getD_no()%>"><%=dabgeulDto.getD_content()%></a></td>
-		<td><a href="managerselectMember1.do?m_no=<%=dabgeulDto.getM_no()%>"><%=dabgeulDto.getM_no()%></a></td>
+		<td><a href="managerselectMember1.do?m_no=<%=dabgeulDto.getM_no()%>" target="_blank"><%=dabgeulDto.getM_no()%></a></td>
 		<td><%=dabgeulDto.getM_name()%></td>
 		
 		<td>
@@ -83,7 +106,7 @@ List<DabgeulDto>list=(List<DabgeulDto>)request.getAttribute("list");
 	
 	</div>
 
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 	

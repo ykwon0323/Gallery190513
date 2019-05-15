@@ -11,14 +11,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>작가목록</title>
 <style>
-
+table{
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
+a:hover{
+color:threedlightshadow;
+}
 .main{
-position: relative;
-top:150px;
+position:relative;
+top:0px;
 }
 .tail{
-position: absolute;
-top:500px;
+position:relative;
+top:100px;
 }
 </style>
 </head>
@@ -32,18 +52,21 @@ top:500px;
 
 <div class="main">
 
-   <h1>작가목록</h1>
+   <h1 align="center">작가목록</h1>
    
+   <div id="button" style="padding-left:220px;">
    <input type="button" value="작가추가" onclick="location.href='managerinsertArtistform.do'">
    <a href="managerselectyetArtistList.do?a_state=1">미승인 작가목록</a>
-   <table border="1">
-      <col width="40px;">
+   </div>
+   
+   <table border="1" align="center">
+      <col width="60px;">
       <col width="150px;">
       <col width="400px;">
       <col width="400px;">
       <col width="300px;">
       <col width="60px;">
-      <col width="50px;">
+      <col width="60px;">
    
       <tr>
          <th>번호</th>
@@ -86,7 +109,7 @@ top:500px;
 
    </div>
 
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
    

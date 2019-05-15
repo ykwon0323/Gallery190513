@@ -14,16 +14,48 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
+ 
+table{
 
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+h1{
+font-family: 'Nanum Gothic', sans-serif;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
+a:hover{
+color:threedlightshadow;
+}
 .main{
-position: absolute;
-top:150px;
+position: relative;
+top:0px;
 }
 .tail{
-position: absolute;
-top:500px;
+position: relative;
+top:100px;
 }
+/* .main{ */
+/* background-image:url(logo/logo2.png); */
+/* opacity:0.2; */
+/* } */
 
 </style>
 </head>
@@ -33,24 +65,28 @@ top:500px;
 </div>
 
 
-<div class="main">
+<div class="main" >
+<!-- <img class="mainlogo" src="logo/logo2.png" alt="logo" -->
+<!-- style="opacity:0.2"/> -->
 <% 
 	List<MemberDto> list=(List<MemberDto>)request.getAttribute("list");// Object타입에 저장되도록 설계
 %>
-	<h1>회원목록</h1>
+	<h1 align="center">회원목록</h1>
 	<form action="managerselectMemberList.do" method="post">
-	<input type="button" value="회원추가" onclick="location.href='managerinsertmemberform.do'">
+	<div id="button" style="padding-left:350px;">
+	<input type="button" value="회원추가" onclick="location.href='managerinsertmemberform.do'" >
 	<input type="button" value="미승인회원" onclick="location.href='managerselectCheckMemberList.do'">
+	</div>
 	
-	
-	<table border="1">
-		<col width="40px;">
+	<table border="1" align="center">
+		<col width="45px;">
 		<col width="150px;">
 		<col width="150px;">
 		<col width="400px;">
 		<col width="200px;">
 		<col width="150px;">
-		<col width="50px;">
+		<col width="60px;">
+		<col width="60px;">
 	
 	<tr>
 		<th>번호</th>
@@ -84,10 +120,10 @@ top:500px;
 					갤러리주
 				<%}else if(memberDto.getM_grade()==4){%>
 					<a href="managerMemberlistselectArtist.do?m_no=<%=memberDto.getM_no()%>"
-					target="_blank"
-					style="width:500; height:500;">
+					target="_blank" >
+<!-- 					onclick="window.open(this.href,'_blank',width=800,height=300)"> -->
 					작가(대기)</a>
-
+<!-- 					<div style="width:500; height:500;"></div> -->
 	
 					
 				<%}else if(memberDto.getM_grade()==5){%>
@@ -115,13 +151,15 @@ top:500px;
 	</form>
 </div>
 	<script type="text/javascript">
-	
-	
+	pop(){
+		window.open(this.href,'_blank',width=800, height=500);
+		
+	}
 	
 	</script>
 
 
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 	

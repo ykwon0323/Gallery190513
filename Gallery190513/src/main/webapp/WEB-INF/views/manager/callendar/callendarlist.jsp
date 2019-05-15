@@ -12,15 +12,35 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>전시 일정목록</title>
 <style>
+table{
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
 a:hover{
 color:threedlightshadow;
 }
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
 }
-
-
+.tail{
+position:relative;
+top:100px;
+}
 </style>
 </head>
 <body>
@@ -36,16 +56,17 @@ List<CallendarDto>list=(List<CallendarDto>)request.getAttribute("list");
 
 
 
-	<h1>전시일정 목록</h1>
+	<h1 align="center">전시일정 목록</h1>
+	<div id="button" style="padding-left:350px;">
 	<input type="button" value="일정추가" onclick="location.href='managerinsertcallendarform.do'">
-
-	<table border="1">
-	<col width="40px;">
+	</div>
+	<table border="1" align="center">
+	<col width="60px;">
+	<col width="250px;">
+	<col width="450px;">
 	<col width="150px;">
 	<col width="200px;">
-	<col width="150px;">
-	<col width="150px;">
-	<col width="40px;">
+	<col width="60px;">
 	
 	<tr>
 		<th>번호</th>
@@ -82,7 +103,7 @@ List<CallendarDto>list=(List<CallendarDto>)request.getAttribute("list");
 	
 	</div>
 
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 	

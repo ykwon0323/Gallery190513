@@ -10,10 +10,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>작가의 전시 리스트</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
-
+table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+h1{
+font-family: 'Nanum Gothic', sans-serif;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
 .main{
-position: absolute;
+position:relative;
+top:50px;
+}
+.tail{
+position:relative;
 top:150px;
 }
 </style>
@@ -27,11 +54,19 @@ top:150px;
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
+<div class="main" align="center">
 
 
 	<h1>작가 전시리스트</h1>
 	<table border="1">
+	<col width="60px;">
+		<col width="150px;">
+		<col width="60px;">
+		<col width="200px;">
+		<col width="400px;">
+		<col width="80px;">
+		<col width="60px;">
+	
 	<tr>
 	<th>작가번호</th>
 		<th>작가이름</th>

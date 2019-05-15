@@ -9,10 +9,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style>
-
+.container {
+ width:600px;
+}
+table{
+background-color:rgb(228, 194, 194);
+}
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:0px;
 }
 </style>
 </head>
@@ -22,7 +31,7 @@ top:150px;
 </div>
 
 <div class="main">
-
+	<div class="container" align="center">
 
 	<h1>요기</h1>
 	<form action="managerupdateItemeno.do" method="post">
@@ -49,6 +58,7 @@ top:150px;
 	
 	</table>
 	</form>
+	</div>
 	</div>
 
 <div class="tail">

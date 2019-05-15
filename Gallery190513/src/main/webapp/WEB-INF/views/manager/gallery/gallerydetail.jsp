@@ -9,15 +9,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>갤러리 상세보기</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:50px;
 }
+.container {
+font-family: 'Nanum Gothic', sans-serif;
+ width:800px;
+ }
+ table{
+ background-color:rgb(228, 194, 194);
+ }
+
 .tail{
-position: absolute;
-top: 2000px;
+position:relative;
+top:100px;
 }
 </style>
 
@@ -30,8 +39,8 @@ GalleryDto galleryDto=(GalleryDto)request.getAttribute("galleryDto");
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
-
+<div class="main" align="center">
+	<div class="container" align="center">
    <h1>갤러리 상세보기</h1>
    <table border="1">
    <tr>
@@ -129,6 +138,7 @@ GalleryDto galleryDto=(GalleryDto)request.getAttribute("galleryDto");
       </td>
    </tr>
    </table>
+   </div>
    </div>
 
 <div class="tail">

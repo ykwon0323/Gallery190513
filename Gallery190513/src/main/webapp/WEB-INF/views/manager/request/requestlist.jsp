@@ -13,12 +13,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>메시지 목록 보기</title>
 <style>
+table{
+border: solid 1px #DDEEEE;
+border-collapse: collapse;
+border-spacing: 0;
+font: normal 15px;
+}
+th{
+background-color:rgb(241, 187, 180);;
+border: solid 1px #DDEEEE;
+ color: #336B6B;
+font-size:20px;
+}
+td{
+ background-color:  white;
+border-left: none;
+border-right:none;
+text-align: center;
+}
 a:hover{
 color:threedlightshadow;
 }
 .main{
-position: absolute;
-top:150px;
+position:relative;
+top:0px;
+}
+.tail{
+position:relative;
+top:100px;
 }
 </style>
 </head>
@@ -32,18 +54,20 @@ top:150px;
 <%
 List<RequestDto>list=(List<RequestDto>)request.getAttribute("list");
 %>
-	<h1>메시지 목록보기</h1>
+	<h1 align="center">메시지 목록보기</h1>
+	<div id="button" style="padding-left:430px;">
 	<input type="button" value="메시지 추가" onclick="location.href='managerinsertRequestform.do'"/>
-	<table border="1">
-	<col width="50px;">
-	<col width="50px;">
-	<col width="100px;">
-	<col width="50px;">
-	<col width="100px;">
-	<col width="200px;">
+	</div>
+	<table border="1" align="center">
+	<col width="80px;">
+	<col width="80px;">
+	<col width="130px;">
+	<col width="80px;">
+	<col width="130px;">
+	<col width="250px;">
 	<col width="150px;">
-	<col width="60px;">
-	<col width="50px;">
+	<col width="80px;">
+	<col width="80px;">
 	<tr>
 		<th>요청번호</th>
 		<th>보낸회원번호</th>
@@ -82,7 +106,7 @@ List<RequestDto>list=(List<RequestDto>)request.getAttribute("list");
 	</table>
 	</div>
 
-<div class="tail">
+<div class="tail" >
 <jsp:include page="/WEB-INF/views/tail.jsp" />
 </div>
 	
