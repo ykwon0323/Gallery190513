@@ -133,16 +133,20 @@ function detail_artist(){
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
 
+<div class="row justify-content-center pb-5" style="padding-top: 2%;">
+			<div class="col heading-section text-center ftco-animate"
+				style="z-index: 99;">
+				<span class="subheading">Best Auction</span> <img alt="로고"
+					src="logo/newLogo1.png" width="10%">
+				<p></p>
+				<p>A place to buy new and creative artists</p>
+			</div>
+		</div>
+
 
 <div class="alldetail_container"  style="width: 1200px; text-align: center;">
 
-    <div class="row justify-content-center pb-5" >
-          <div class="col heading-section text-center ftco-animate" style="z-index:;">
-          	<span class="subheading">Best Artist</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
-            <p>A place to introduce new and creative artists</p>
-          </div>
-        </div>
+   
 
 <h4><%=artistDto.getA_name() %>&nbsp&nbsp&nbsp작가</h4>
 <%-- <span>	<%if(loginMember==null||loginMember.getM_grade()!=3){ %>
@@ -216,7 +220,7 @@ function detail_artist(){
 	<%} %>
 	</div>
 	
-	<div class="artist_container" id="artist_container" style="margin-top: 50px; ">
+	<div class="artist_container" id="artist_container" style="margin-top: 50px; margin-bottom: 10% ">
 		<div class="bgImage">
 		<h3>개인</h3><p><%=artistDto.getA_solo() %></p><br/><br/>
 		<h3>단체</h3><p><%=artistDto.getA_Squard() %></p><br/><br/>

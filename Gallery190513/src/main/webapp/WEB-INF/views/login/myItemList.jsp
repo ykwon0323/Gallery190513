@@ -49,10 +49,12 @@
 <body>
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <%-- <jsp:include page="privateGnb.jsp" />	 --%>
-	<div class="row justify-content-center pb-5" >
+	<
+	<div class="row justify-content-center pb-5"  style="margin-bottom: -5%; padding-top: 2%;">
           <div class="col heading-section text-center ftco-animate" style="z-index:;">
           	<span class="subheading">My Item</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
+            <img alt="로고" src="logo/newLogo1.png" width="10%">
+            <p></p>
             <p>List of works you have purchased</p>
           </div>
         </div>

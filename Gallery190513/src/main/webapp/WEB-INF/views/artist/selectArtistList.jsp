@@ -44,17 +44,21 @@ System.out.println("이미지 디티오는?+"+list);%>
 
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
+	
+	<div class="row justify-content-center pb-5" style="padding-top: 2%;">
+			<div class="col heading-section text-center ftco-animate"
+				style="z-index: -1;">
+				<span class="subheading">Best Auction</span> <img alt="로고"
+					src="logo/newLogo1.png" width="10%">
+				<p></p>
+				<p>A place to buy new and creative artists</p>
+			</div>
+		</div>
 
 
 
     <div class="container">
-    	<div class="row justify-content-center pb-5" >
-          <div class="col heading-section text-center ftco-animate" style="z-index: -1;">
-          	<span class="subheading">Best Artist</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
-            <p>A place to introduce new and creative artists</p>
-          </div>
-        </div>
+    	
   
     		<div class="row">
     			
@@ -172,7 +176,7 @@ System.out.println("이미지 디티오는?+"+list);%>
     			
 
 	
-	    <div class="row" style="margin-top: 30px;">
+	    <div class="row" style="margin-top: 30px; padding-bottom: 5%;">
   			<div style="margin: 0 auto;" >
   				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
 	

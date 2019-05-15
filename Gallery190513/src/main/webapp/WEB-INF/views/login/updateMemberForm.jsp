@@ -81,10 +81,12 @@ MemberDto loginMember = (MemberDto)session.getAttribute("loginMember");
 		</div>
 	</form>
 </div> --%>
+<div style="padding-top: 3%;">
 	<div class="row justify-content-center pb-5" >
           <div class="col heading-section text-center ftco-animate" style="z-index:;">
           	<span class="subheading">My Information</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
+            <img alt="로고" src="logo/newLogo1.png" width="10%">
+            <p></p>
             <p>Your information to protect you</p>
           </div>
         </div>
@@ -120,6 +122,7 @@ MemberDto loginMember = (MemberDto)session.getAttribute("loginMember");
 				<input type="text" name="m_tel3"  maxlength="4" pattern="[0-9]{4}" value="<%=(loginMember.getM_tel()).substring(7, 11) %>"  style="width: 33%;" required="required">
 			<p>앞자리 중간자리 뒷자리</p>
 			</div>
+			
 			<footer>
 				<input type="submit" value="수정완료" id="updateMemberForm_updateMemberForm_submitButton"  
 						style="color:white; 
@@ -130,6 +133,7 @@ MemberDto loginMember = (MemberDto)session.getAttribute("loginMember");
 						onclick="successUpdateMember();">
 			</footer>
 		</form>
+	</div>
 	</div>
 </div><!-- updateMemberForm End -->
 <script type="text/javascript">

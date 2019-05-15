@@ -88,18 +88,20 @@ line-height: 1.2;
 
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
+	<div class="row justify-content-center pb-5" style="padding-top: 2%;">
+			<div class="col heading-section text-center ftco-animate"
+				style="z-index: -1;">
+				<span class="subheading">Best Auction</span> <img alt="로고"
+					src="logo/newLogo1.png" width="10%">
+				<p></p>
+				<p>A place to buy new and creative artists</p>
+			</div>
+		</div>
+
+<div class="container" ">
 
 
-<div class="container">
-
-
-	 <div class="row justify-content-center pb-5" >
-          <div class="col heading-section text-center ftco-animate" style="z-index:;">
-          	<span class="subheading">Best Message</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
-            <p>Request to fulfill your dream</p>
-          </div>
-        </div>
+	
        <h4>받은 메시지함</h4>
 	<br/>
 	<table class="table table-hover">
@@ -140,7 +142,7 @@ line-height: 1.2;
 	<% if(list.size()!=0){
 	%>
 	
-	    <div class="row" style="margin-top: 30px;">
+	    <div class="row" style="margin-top: 30px; padding-bottom: 5%;">
   			<div style="margin: 0 auto;" >
   				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
 				<% int r_recieve = list.get(0).getR_receive();%>
@@ -191,6 +193,7 @@ line-height: 1.2;
 
 
 
-<jsp:include page="/WEB-INF/views/tail.jsp" />	
+
 </body>
+<jsp:include page="/WEB-INF/views/tail.jsp" />	
 </html>

@@ -401,16 +401,32 @@ public class HomeController {
 		return "redirect:myExhibitionList.do";  
 		}
 	//전시목록
-	@RequestMapping(value = "/exhibitionlist.do",  method = {RequestMethod.POST, RequestMethod.GET})
-	public String exhibitionlist(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model) {
-		logger.info("exhibitionlist.do.", locale);
-		
-		List<ExhibitionDto> exhibitionList =exhibitionService.selectExhibitionList();
-		
-		model.addAttribute("exhibitionList", exhibitionList);
-			
-			return "Exhibition/exhibitionList";
-		}
+	   @RequestMapping(value = "/exhibitionlist.do",  method = {RequestMethod.POST, RequestMethod.GET})
+	   public String exhibitionlist(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model,String e_pcount) {
+	      logger.info("exhibitionlist.do.", locale);
+
+	      
+	      int pagenum = exhibitionService.selectExhibitionList_pagenum();
+	      
+	      model.addAttribute("pagenum", pagenum);
+	      
+	      if(e_pcount==null) {
+	         e_pcount="1";
+	      }
+	      
+	      
+	      
+	      List<ExhibitionDto> exhibitionList =exhibitionService.selectExhibitionList(e_pcount);
+	      
+	      model.addAttribute("exhibitionList", exhibitionList);
+	         
+	         return "Exhibition/exhibitionList";
+	         
+	         
+	         
+	         
+	         
+	      }
 	//전시상세보기
 	@RequestMapping(value = "/detailExhibition.do",  method = {RequestMethod.POST, RequestMethod.GET})
 	public String detailExhibition(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model,int e_no) {
