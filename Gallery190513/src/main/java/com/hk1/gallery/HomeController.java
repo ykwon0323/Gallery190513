@@ -89,7 +89,16 @@ public class HomeController {
 		public String index(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model) {
 			logger.info("/index.do{}.", locale);
 			System.out.println("index Controller를 거쳐갔도다");
+			Calendar cal= Calendar.getInstance();
+
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			String k_regdate  = sdf.format(cal.getTime());
 			
+
+			List<KyungmaeDto> nowKyungmaeList = kyungmaeService.selectKyungmaeList(k_regdate);
+			
+			request.setAttribute("nowKyungmaeList", nowKyungmaeList);
+
 			return "main";
 		}
 	

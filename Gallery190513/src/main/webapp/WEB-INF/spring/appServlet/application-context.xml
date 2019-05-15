@@ -29,7 +29,7 @@
     p:host="smtp.naver.com"
     p:port="465"
     p:username="gallerytest4"
-    p:password="!gksrud3wh">
+    p:password="!gksrud3wh1">
     <property name="javaMailProperties">
     <props>
       <prop key="mail.smtp.starttls.enable">true</prop>
