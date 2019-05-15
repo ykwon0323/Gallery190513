@@ -268,7 +268,7 @@ function insertKyungmaeButton(i_no){
 <body>
 <jsp:include page="/WEB-INF/views/header.jsp" />
 		
-		
+		<!-- 
 		<div class="row justify-content-center pb-5" style="padding-top: 2%;">
 			<div class="col heading-section text-center ftco-animate"
 				style="z-index: -1;">
@@ -278,7 +278,7 @@ function insertKyungmaeButton(i_no){
 				<p>A place to buy new and creative artists</p>
 			</div>
 		</div>
-
+ -->
 			<div id="kyungmaelist"  >
 
 		
