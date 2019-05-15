@@ -191,7 +191,7 @@ li.oe_heading a.oe_body{
 
 <div class="oe_wrapper" style="position:relative ; z-index: 300">
 			<div class="mainHeader" style="position: fixed; background-color:black ; height: 50px; z-index: 99">
-			<div class="mainLogo" style="position: absolute; left: 95px; top: 10px; z-index: 99;background-color: transparent;" ><a href="index.jsp"><img alt="index.jsp" src="logo/newLogo2.png" width="20%" height="auto" ></a> </div>
+			<div class="mainLogo" style="position: absolute; left: 95px; top: 2.5px; z-index: 99;background-color: transparent;" ><a href="index.jsp"><img alt="index.jsp" src="logo/newLogo2.png" width="20%" height="auto" ></a> </div>
 			<div class="login_wrapper" style="position: absolute; right: 50px; top: 5px; z-index: 99;">
 			<%if(loginMember==null){ %>
 			<button style=" width: 80px; height: 40px;" class="btn btn-success" onclick="location.href='loginform.do'" >LOGIN</button>
@@ -214,7 +214,7 @@ li.oe_heading a.oe_body{
 				
 				<li><a href="">MY PAGE</a>
 				
-					<div style="left:-447px; border-radius: 58px 58px 58px 58px; box-shadow: 11px 15px 18px 2px rgba(69,68,67,1);" >
+					<div style="left:-447px; border-radius:; box-shadow:;" >
 						<ul>
 						<li class="oe_heading"><a class="oe_body" href="myprivate.do"> 회원정보</a></li>
 						</ul>

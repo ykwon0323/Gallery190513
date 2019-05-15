@@ -29,22 +29,37 @@
         <link rel="stylesheet" href="boot_g/list/css/magnific-popup.css">
     <link rel="stylesheet" href="boot_g/list/css/animate.css">
     <link rel="stylesheet" href="boot_g/list/css/style.css">
+    
+    <style type="text/css">
+    	  div.container h4{
+    	    width: 25%;
+    	font-weight: bold;
+  	  padding-bottom: 10px;
+  	  margin-bottom: 50px;
+    	border-bottom: 3px solid rgb(26,26,26);
+    	color: rgb(50,50,50);
+    }
+    </style>
 
 </head>
 
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
 
-
-    <div class="container">
-    	<div class="row justify-content-center pb-5" >
+	<div class="row justify-content-center pb-5"  style="padding-top: 2%;">
           <div class="col heading-section text-center ftco-animate" style="z-index: -1;">
           	<span class="subheading">Best Gallery</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
+            <img alt="로고"
+					src="logo/newLogo1.png" width="10%">
+				<p></p>
             <p>All the galleries you want</p>
           </div>
         </div>
-  
+
+
+    <div class="container">
+    	
+  <h4>등록한 갤러리 목록</h4>
     		<div class="row">
     			
     		<% 
@@ -110,7 +125,7 @@
     			</div>
     			
     			
-    	<div class="row" style="margin-top: 30px;">
+    	<div class="row" style="margin-top: 30px; padding-bottom: 5%;">
   			<div style="margin: 0 auto;" >
   				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
 	

@@ -74,19 +74,19 @@ div.exhibition_container {
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
 
+<div class="row justify-content-center pb-5" style="padding-top: 2%;">
+			<div class="col heading-section text-center ftco-animate"
+				style="z-index: 99;">
+				<span class="subheading">Best Auction</span> <img alt="로고"
+					src="logo/newLogo1.png" width="10%">
+				<p></p>
+				<p>A place to buy new and creative artists</p>
+			</div>
+		</div>
 
 	
 
 <div class="exhibition_container container"  style="width: 1200px; text-align: center;">
-	
-	<div class="row justify-content-center pb-5" >
-          <div class="col heading-section text-center ftco-animate" style="z-index:;">
-          	<span class="subheading">Best Exhibition</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
-            <p>Best exhibition in the room</p>
-          </div>
-        </div>
-
 <div class="exhibition_detailcontainer">
 	<div id="exhibitionList" style="width: 1200px; text-align: center;">
 			<c:choose>
@@ -151,12 +151,10 @@ div.exhibition_container {
 	</div>
 	
 	
-	<div class="row" style="margin-top: 30px;">
+	 <div class="row" style="margin-top: 30px; padding-bottom: 5%;">
   			<div style="margin: 0 auto;" >
-  				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
-	
-			
-		 	<%if(pagenum>1){
+  				<% int pagenum = (Integer)request.getAttribute("pagenum");%>
+			<%if(pagenum>1){
 		 	
 		 	for(int i =1; i<=pagenum;i++){%>
 		 		
@@ -166,24 +164,9 @@ div.exhibition_container {
   			
   			</div>
   			</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	</div>
 	
-	
-	
-	
-	
-	
-	
-	<jsp:include page="/WEB-INF/views/tail.jsp" />
+<jsp:include page="/WEB-INF/views/tail.jsp" />
 	<!-- JS includes -->
 
       

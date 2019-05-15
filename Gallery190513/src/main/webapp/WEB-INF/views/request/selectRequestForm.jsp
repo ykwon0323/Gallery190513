@@ -27,7 +27,7 @@
 		padding: 0px;
 		margin: 0px;
 		font-family: 'East Sea Dokdo', cursive;
-		background-image: url("logo/back.jpg");
+		
 		background-size: 1000px 470px;
 		
 		
@@ -42,6 +42,7 @@
 	#content textarea{
 		margin-left: auto;
 		margin-right: auto;
+		background-image: url("logo/back.jpg");
 	}
 	
 	.messagecontainer input{

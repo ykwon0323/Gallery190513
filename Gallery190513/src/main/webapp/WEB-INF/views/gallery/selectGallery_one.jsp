@@ -18,15 +18,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+<!-- 폰트 -->
 <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+<!-- 폰트 끝 -->
+
 <!-- 부트스트랩 -->
-
-<link rel="stylesheet" href="boot_g/css/bootstrap.min.css">
-<link rel="stylesheet" href="boot_g/css/owl.carousel.min.css">
-<link rel="stylesheet" href="boot_g/css/style.css">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <!-- 부트스트랩 끝 -->
 
 <title>인덱스</title>
@@ -35,12 +40,15 @@
 
 
 
+
 .ud_img button{
 background-color: white;
 border-radius: 10px;
-width: 49px;
+width: 50px;
 	border: none;
+	font-size:20px;
 color: #e2c0bb; font-family: 'Cute Font', cursive;"
+
 
 
 }
@@ -48,12 +56,15 @@ color: #e2c0bb; font-family: 'Cute Font', cursive;"
 
 .ud_img {
 	display: inline-block;
+	width: 150px;
+	height: 200px;
+	
 }
 
 
 .ud_img img{
-	width: 100px;
-	height: 100px;}
+	width: 150px;
+	height: 150px;}
 	
 .heading-section span{
 
@@ -97,6 +108,41 @@ line-height: 1.2;
 </head>
 
 <script type="text/javascript">
+
+
+
+$(function() {
+	
+	$("form").submit(function(){
+		var count=0;
+
+	      $(".fileinput").each(function(){
+	         if($(this).val()==""){
+	            swal("파일을 선택하세요");
+	            
+	            
+	            $(this).prev().focus();
+	            return false;
+	         }
+	         count++
+	      });
+	  	if(count<4){
+	      return false;
+	  		
+	  	}
+	   });
+	
+
+});
+
+
+
+
+
+
+
+
+
 
 $(document).ready(function(){
 	
@@ -156,34 +202,39 @@ $(document).ready(function(){
 	int month = cal.get(Calendar.MONTH) + 1; //현재 월을 구함 (0~11월)
 %>
 
-
+	<jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
 
-	<jsp:include page="/WEB-INF/views/header.jsp" />
-	
-	<div id="s_l"></div>
 	
 	
-		<div class="justify-content-center pb-5" style="margin-top:10px; ">
+		<div class="justify-content-center pb-5" style="margin-top:10px; padding-top: 3% ">
           <div class="heading-section text-center ftco-animate" style="z-index: -1;">
           	<span class="subheading">Best Gallery</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
+             <img alt="로고"
+					src="logo/newLogo1.png" width="10%">
+				<p></p>
             <p>All the galleries you want</p>
           </div>
         </div>
+	
+	<div id="s_l"> </div>
+	
+	
+	
 
+	
 
 
 	<div style="text-align: center; margin: 0 auto;">
-	
-		<h6 style="font-weight: bold;">
+		
+		<h3 style="font-weight: bold;">
       <span onclick="location.href='selectGallery.do?year=<%=year%>&month=<%=month%>&g_no=${galleryDto.g_no}&g_return=one'">
       안내&nbsp|</span>
       <span onclick="location.href='selectGallery.do?year=<%=year%>&month=<%=month%>&g_no=${galleryDto.g_no}&g_return=two'">
       전시일정</span>
 
-       </h6>
-
+       </h3>
+	
 		
 	</div>
 
@@ -192,8 +243,14 @@ $(document).ready(function(){
 
 
 
-	<section class="site-section">
-	<form action="updateGallery.do" method="post"
+	
+
+
+		
+		
+		<div class="container" style="margin-top: 80px;">
+			
+			<form action="updateGallery.do" method="post"
 				enctype="multipart/form-data">
 				<div>
 					<input type="hidden" name="g_no" value="${galleryDto.g_no}"
@@ -203,133 +260,262 @@ $(document).ready(function(){
 					<input type="hidden" name="m_no" value="${galleryDto.m_no}"
 						readonly="readonly">
 				</div>
-
-		<div class="container">
+		
 		<div class="row">
-			
-					<div class="col-lg-6">
-
-					<div class="owl-carousel slide-one-item-alt">
-						<img style="height: 400px; width: 540px" src="galleryupload/${galleryDto.g_img1}" alt="Image" class="img-fluid">
-						<img style="height: 400px; width: 540px" src="galleryupload/${galleryDto.g_img2}" alt="Image" class="img-fluid">
-						<img style="height: 400px; width: 540px" src="galleryupload/${galleryDto.g_img3}" alt="Image" class="img-fluid">
-						<img style="height: 400px; width: 540px" src="galleryupload/${galleryDto.g_img4}" alt="Image" class="img-fluid">
-					</div>
-					<div class="custom-direction" style="background-color: white; opacity: 0.9; ">
-						<a href="#" class="custom-prev" style="color: #e2c0bb;">Prev</a><a href="#"
-							style="color: #e2c0bb;" class="custom-next">Next</a>
-					</div>
+		
+		
+		<div class="col-4 row" style="text-align: center;">
 					
-					
-<!-- 파일추가 이미지 부분 -->
-				<div style="text-align: center;">
+				
+				<div class="row">
+				
+				<div class="w-100" style="margin: 10px;"></div>
+						<div class="col">
+						
+						
 						<div class="ud_img">
 							<div><img alt="g_img1" src="galleryupload/${galleryDto.g_img1}"></div>
-							<label for="gallery_img1"><button class="btn-light" onclick="imgup(1)">파일변경</button></label>
-							<input style="display: none;"
+							
+							
+							
+							<button class="btn-light" type="button" onclick="imgup(1)">파일변경</button>
+							<input class="fileinput" style="display: none;"
 								onchange="imageURL(this)" id="gallery_img1" multiple="multiple"
-								type="file" name="file" required="required">
-						</div>
-
-						<div class="ud_img">
-							<div><img alt="g_img2"src="galleryupload/${galleryDto.g_img2}"></div> 
-							<label for="gallery_img2"><button class="btn-light" onclick="imgup(2)">파일변경</button></label>
-							<input style="display: none;" onchange="imageURL(this)"
-								id="gallery_img2" multiple="multiple" type="file" name="file"
-								required="required">
-						</div>
-
-						<div class="ud_img">
-							<div><img alt="g_img3"src="galleryupload/${galleryDto.g_img3}"></div> 
-							<label for="gallery_img3"><button class="btn-light" onclick="imgup(3)">파일변경</button></label>
-							<input style="display: none;" onchange="imageURL(this)"
-								id="gallery_img3" multiple="multiple" type="file" name="file"
-								required="required">
-						</div>
-
-
-						<div class="ud_img">
-							 <div><img alt="g_img4"src="galleryupload/${galleryDto.g_img4}"></div> 
-							 <label for="gallery_img4"><button class="btn-light" onclick="imgup(4)">파일변경</button></label>
-							<input style="display: none;" onchange="imageURL(this)"
-								id="gallery_img4" multiple="multiple" type="file" name="file"
-								required="required">
+								type="file" name="file">
 						</div>
 						
-								
+						
+						<div class="ud_img">
+							<div><img alt="g_img3" src="galleryupload/${galleryDto.g_img3}"></div>
+							
+							
+							
+							<button class="btn-light" type="button" onclick="imgup(3)">파일변경</button>
+							<input class="fileinput" style="display: none;"
+								onchange="imageURL(this)" id="gallery_img3" multiple="multiple"
+								type="file" name="file">
+						</div>
+						
+						
+						</div>
+
+
+						<div class="col">
+						
+						
+						<div class="ud_img">
+							<div><img alt="g_img2" src="galleryupload/${galleryDto.g_img2}"></div>
+							
+							
+							
+							<button class="btn-light" type="button" onclick="imgup(2)">파일변경</button>
+							<input class="fileinput" style="display: none;"
+								onchange="imageURL(this)" id="gallery_img2" multiple="multiple"
+								type="file" name="file">
+						</div>
+						
+						<div class="ud_img">
+							<div><img alt="g_img2" src="galleryupload/${galleryDto.g_img4}"></div>
+							
+							
+							<button class="btn-light" type="button" onclick="imgup(4)">파일변경</button>
+							<input class="fileinput" style="display: none;"
+								onchange="imageURL(this)" id="gallery_img4" multiple="multiple"
+								type="file" name="file">
+						</div>
+						
+						
+						
+						
+						</div>
+						
+					</div>	
 				
 					</div>
+		
+		
+		
+		
 
+						
+						
+								
+		
+		
+		
+		
+		
+		<div class="col-8">
+		
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="galleryupload/${galleryDto.g_img1}" alt="" style="min-width:800px; max-height: 400px;">
+    </div>
 
-					</div>
-					
+    <div class="item">
+      <img src="galleryupload/${galleryDto.g_img2}" alt="" style="min-width:100%; max-height: 400px;">
+    </div>
 
+    <div class="item">
+      <img src="galleryupload/${galleryDto.g_img3}" alt="" style="min-width:100%; max-height: 400px;">
+    </div>
+    
+    <div class="item">
+      <img src="galleryupload/${galleryDto.g_img4}" alt="" style="min-width:100%; max-height: 400px;">
+    </div>
+    
+    
+    
+  </div>
 
-					
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		
+		
+		
+		
+		
+		
+		</div>
+	
+		
+		</div>
+		
+		
+		
+		
+		
+		<div class="row">
 
+					<div class="col ml-auto" style="font-family: 'Noto Serif KR', serif; font-size: 15px;  color: black; ">
 
-
-					<div class="col-lg-5 ml-auto" style="font-family: 'Cute Font', cursive; font-size: 25px; color: #e2c0bb; ">
-<!-- <h2 class="section-title mb-3">We Are The Best Consulting
-							Agency</h2> -->
-						<div class="section-title" style="margin-bottom: 20px; font-family: 'East Sea Dokdo', cursive; font-size: 60px;">
+						<div class="section-title" style="margin-bottom: 20px; font-weight:100; color:black; 
+						
+						font-family: 'East Sea Dokdo', cursive; font-size: 60px;">
 							<input style="border: none;" size="10" type="text" name="g_name"
 								value="${galleryDto.g_name}">
+							
+							
+							
+							
+							
 						</div>
 
-						<div>
-							<span style="margin-right: 10px;">전화번호</span><input style="border: none; font-weight: 400; color: #999999;"  size="30" type="text" name="g_tel"
-								value="${galleryDto.g_tel}">
-						</div>
+						<div class="w-100" style="margin: 2px;"></div>
 						
-						<div>
-							<span style="margin-right: 40px; float: left;">주소</span>
-							
-							 <textarea style="border: none; font-weight: 400; color: #999999; resize: none;" name="g_adress" rows="2" cols="40">${galleryDto.g_adress}</textarea> 
-							
-							<%-- <input style="height: 100px;" type="text" name="g_adress" value="${galleryDto.g_adress}"> --%>
-						</div>
-						
+						<div class="row">
+						<div class="col-1"></div>
+						<div class="col-10">
+							<span style="margin-right: 36px; font-size:40px; color: #e2c0bb; font-family: 'Cute Font', sans-serif;"> 갤러리 소개</span> 
+													
 
-						<div>
-							<span>소개</span> <br />
-							<textarea  style="border: none; font-weight: 400; color: #999999; resize: none;" rows="4" cols="50">${galleryDto.g_intro}</textarea>
-						
+							<div style="border: none; line-height: 50px;">
+							<textarea name="g_intro"  style="border: none; font-weight: 400; resize: none; width: 920px; height: 200px;">${galleryDto.g_intro}</textarea>
+							</div>
 						
 							<%-- <span>g_intro</span> <input type="text" name="g_intro"
 								value="${galleryDto.g_intro}"> --%>
 						</div>
-
-						<p>
-							<input style="color:#e2c0bb;" class="btn btn-light mr-2 mb-2" type="submit"
-								value="수정을 해볼가">
-						</p>
+						</div>
+						
+						
+						<div class="w-100" style="margin: 40px;"></div>
+						
+						
+						
+						<div class="row">
+						
+						<div class="col-1"></div>
+						<div class="col-10">
+							<div style="border: none; font-size:15px;"><span style="margin-right: 10px; color: #e2c0bb;">Tel</span>
+							<input style="border: none;" type="text" name="g_tel"
+								value="${galleryDto.g_tel}">
+							</div>
+						</div>
+						</div>
+						
+						<div class="w-100" style="margin: 20px;"></div>
+						
+						
+						<div class="row">
+							<div class="col-1"></div>
+							
+							
+							 <div class="col-10">
+							 
+							 <div style="border: none;"> 
+							 
+							 <textarea style="border: none; resize: none;" name="g_adress" rows="2" cols="110">${galleryDto.g_adress}</textarea>
+							 
+							 </div> 
+							
+							<%-- <input style="height: 100px;" type="text" name="g_adress" value="${galleryDto.g_adress}"> --%>
+						</div>
+						
+						</div>
+						
+						
+						<div class="row">
+						<div class="col-10"></div>
+						<div class="col-2">
+							<input style="color:#e2c0bb; font-size: 20px;" class="btn btn-light mr-2 mb-2" type="submit"
+								value="수정">
+						</div>
 
 						<div>
 							<input type="hidden" name="g_state" value="${galleryDto.g_state}"
 								readonly="readonly">
 						</div>
+					
+						</div>
+
+
 
 					</div>
+					
+					</div>
+		
+		</form>
+		
 	
-			</div>
-		</div>
-						</form>
-	</section>
-
-
-
-
-
-
-
-
-
-
-	<!-- 지도 관련 블락 처리 풀기 -->
-		<div id="map" style="min-width: 100px; min-height: 250px; margin: 0 20%;">
-	 <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d61a4dc1efe55edbdfac5ab744921183"></script> -->
+		
+		
+		
+		
+		<div class="w-100" style="margin: 80px;"></div>
+					
+					
+					
+					<div class="row">
+					
+					<div class="col-1"></div>
+					
+					
+					<div class="col-10">
+					
+					
+					
+					<!-- 지도 관련 블락 처리 풀기 -->
+	<div id="map" style="min-width: 100px; min-height: 250px;">
+		 <!--  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d61a4dc1efe55edbdfac5ab744921183"></script>  -->
 		<script>
 			var container = document.getElementById('map');
 			var options = {
@@ -355,14 +541,25 @@ $(document).ready(function(){
 
 
 	</div>
-
-	<!-- 부트슻트랩 시작 -->
-	<script src="boot_g/js/jquery-3.3.1.min.js"></script>
-	<script src="boot_g/js/owl.carousel.min.js"></script>
-	<script src="boot_g/js/aos.js"></script>
-	<script src="boot_g/js/main.js"></script>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</div>
+					
+					<div class="col-1"></div>
+					
+					</div>
 	
-	<!-- 부트슻트랩 끝 -->
+			
+		</div>
+
+
 
 
 
