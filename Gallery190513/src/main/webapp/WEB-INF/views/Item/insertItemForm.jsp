@@ -50,7 +50,7 @@ int m_grade = loginMember.getM_grade();%>
 					<h5>작품 업로드</h5>
 						<p>업로드하신 이미지가 표시됩니다</p>
 						<div id="insertItemForm_fileupload_showbox" style="display:none;">
-							<img id="insertItemForm_fileupload_showbox_img" src="#" alt="미리보기이미지" width="80%">
+							<img id="insertItemForm_fileupload_showbox_img" src="#" alt="미리보기이미지" width="30%">
 						</div>
 						<label for="insertItemForm_fileupload">작품 업로드
 					<input type="file" name="filename" required="required" id="insertItemForm_fileupload">
@@ -94,7 +94,7 @@ int m_grade = loginMember.getM_grade();%>
 							 pattern="[0-9]{1,22}"><br>
 						 </div>
 					</div>
-				<h5>작품해석</h5>
+				<p>작품해석</p>
 				 
 				<div id="insertItemForm_main_content_explain_explain">
 				<textarea rows="10" cols="50%" name="i_explain" required="required"></textarea>

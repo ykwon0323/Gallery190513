@@ -1,0 +1,142 @@
+@charset "UTF-8";
+html,body{
+	margin: 0;
+	padding:0;
+}
+#insertArtistForm input:focus{
+	outline: none;
+}
+#insertArtistForm{
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom:10%;
+}
+#insertArtistForm h3{
+	width: 20%;
+	margin-left:20%;
+	margin-right:60%;
+	font-weight: bold;
+	font-size: 150%;
+	padding: 10px;
+	border-bottom: 2px solid rgb(51,51,51);
+	color: rgb(51,51,51);
+}
+#insertArtistForm p{
+	width: 60%;
+	margin: 0 auto;
+	font-weight: bold;
+	font-size: 100%;
+	padding: 10px;
+	color: rgb(180,180,180);
+}
+#insertArtistForm_table{
+	width: 60%;
+	margin: 0 auto;
+	display: table;
+}
+.insertArtistForm_tr{
+	width: 100%;
+	display: table-row-group;
+	
+}
+.insertArtistForm_cell_title{
+	width: 40%;
+	display: table-cell;
+	text-align: center;
+	border-bottom: 3px solid rgba(51,51,51,0.1);
+}
+.insertArtistForm_cell_title h5{
+	width: 50%;
+	margin-left:50%;
+	font-weight: bold;
+	font-size: 120%;
+	padding: 10px;
+	color: rgb(51,51,51);
+	text-align: left;
+}
+.insertArtistForm_cell_text{
+	width: 60%;
+	display: table-cell;
+	padding-bottom: 3%;
+	padding-top: 3%;
+	border-bottom: 3px solid rgba(51,51,51,0.1);
+	
+}
+.insertArtistForm_cell_text input{
+	width: 50%;
+	margin-left:20%;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 2%;
+	border: 1px solid rgba(51,51,51,0.3);
+	text-align: center;
+}
+.insertArtistForm_cell_text input:focus{
+	text-align: left;
+	box-shadow: 0px 0px 10px  rgba(67, 163, 19,0.3);
+}
+
+#soloPlusbutton,#squardPlusbutton,#careerPlusbutton{
+	width:13%;
+	margin:0;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+	background-color: white;
+	border: 2px solid rgba(67, 163, 19,0.3);
+	color: rgba(67, 163, 19,0.3);
+}
+#soloPlusbutton:hover,#squardPlusbutton:hover,#careerPlusbutton:hover{
+	width:13%;
+	margin:0;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+	background-color: rgba(67, 163, 19,0.3);
+	border: 2px solid rgba(67, 163, 19,0.3);
+	color: white;
+	
+}
+#soloPlusbutton:focus,#squardPlusbutton:focus,#careerPlusbutton:focus{
+text-align: center;
+
+}
+#insertArtistForm_submit_div{
+		width: 70%;
+		margin: 0 auto;
+}
+#insertArtistForm_submit_button{
+		width: 8%;
+		margin-left: 46%;
+		margin-right: 46%;
+		margin-top: 3%;
+		color: white;
+		background-color: rgba(67, 163, 19,0.6);
+		border:none;
+		border-radius: 10px;
+		padding: 10px;
+		font-weight: bold;
+		font-size: 120%;
+		cursor: pointer;
+}
+#insertArtistForm_submit_button:hover{
+		width: 8%;
+		margin-left: 46%;
+		margin-right: 46%;
+		margin-top: 3%;
+		color: white;
+		background-color: rgba(67, 163, 19,0.6);
+		border:none;
+		border-radius: 10px;
+		padding: 10px;
+		font-weight: bold;
+		font-size: 120%;
+		cursor: pointer;
+		opacity: 0.8;
+}

@@ -47,7 +47,7 @@
 					<div id="insertExhibitionForm_fileupload_box">
 						
 							<div id="insertExhibitionForm_fileupload_showbox" style="display:none;">
-								<img id="insertExhibitionForm_fileupload_showbox_img" src="#" alt="미리보기이미지" width="50%">
+								<img id="insertExhibitionForm_fileupload_showbox_img" src="#" alt="미리보기이미지" width="30%">
 							</div>
 							<label for="insertExhibitionForm_fileupload">대표이미지 업로드
 							<input type="file" name="filename" required="required" id="insertExhibitionForm_fileupload">

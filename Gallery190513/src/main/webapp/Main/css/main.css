@@ -1,0 +1,30 @@
+@charset "UTF-8";
+html,body{
+	margin: 0 ;
+	padding: 0;
+}
+body{
+	
+	
+	background: url("../images/bg.jpg") no-repeat center center fixed;
+    background-size:  100% 90% ;  */
+}
+#main{
+	width:100%;
+	height: 970px;
+}
+#main_men{
+	width:20%;
+	position:absolute;
+	left: 0;
+	top:10%;
+	
+	
+	
+}
+#main_women{
+	width:20%;
+	position:absolute;
+	right: 0;
+	top:10%;
+}

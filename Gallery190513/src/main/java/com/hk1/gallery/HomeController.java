@@ -84,6 +84,14 @@ public class HomeController {
 
 	
 //-↓로그인관련-------------------------------------------------------------------------------------------------------------	
+	//메인호출
+		@RequestMapping(value = "/index.do",  method = {RequestMethod.POST, RequestMethod.GET})
+		public String index(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model) {
+			logger.info("/index.do{}.", locale);
+			System.out.println("index Controller를 거쳐갔도다");
+			
+			return "main";
+		}
 	
 	//로그인 폼 호출
 	@RequestMapping(value = "/loginform.do",  method = {RequestMethod.POST, RequestMethod.GET})
@@ -117,7 +125,7 @@ public class HomeController {
 		}else {
 			
 			session.setAttribute("loginMember", memberDto);
-			return "redirect:index.jsp";
+			return "redirect:index.do";
 		}
 		
 	}
@@ -139,7 +147,7 @@ public class HomeController {
 		if(memberService.insertMember(memberDto)) {
 			MemberDto loginMember = memberService.selectMember(memberDto.getM_id());
 			session.setAttribute("loginMember", memberDto);
-			return "redirect:index.jsp";
+			return "redirect:index.do";
 		}else {
 			//error
 			System.out.println("insertMember error");
@@ -154,7 +162,7 @@ public class HomeController {
 		
 		HttpSession session = request.getSession();
 		session.invalidate();
-		return "redirect:index.jsp";
+		return "redirect:index.do";
 	}
 	//회원 개인정보 페이지
 	@RequestMapping(value = "/privatemain.do",  method = {RequestMethod.POST, RequestMethod.GET})
@@ -394,30 +402,14 @@ public class HomeController {
 		}
 	//전시목록
 	@RequestMapping(value = "/exhibitionlist.do",  method = {RequestMethod.POST, RequestMethod.GET})
-	public String exhibitionlist(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model,String e_pcount) {
+	public String exhibitionlist(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model) {
 		logger.info("exhibitionlist.do.", locale);
-
 		
-		int pagenum = exhibitionService.selectExhibitionList_pagenum();
-		
-		model.addAttribute("pagenum", pagenum);
-		
-		if(e_pcount==null) {
-			e_pcount="1";
-		}
-		
-		
-		
-		List<ExhibitionDto> exhibitionList =exhibitionService.selectExhibitionList(e_pcount);
+		List<ExhibitionDto> exhibitionList =exhibitionService.selectExhibitionList();
 		
 		model.addAttribute("exhibitionList", exhibitionList);
 			
 			return "Exhibition/exhibitionList";
-			
-			
-			
-			
-			
 		}
 	//전시상세보기
 	@RequestMapping(value = "/detailExhibition.do",  method = {RequestMethod.POST, RequestMethod.GET})

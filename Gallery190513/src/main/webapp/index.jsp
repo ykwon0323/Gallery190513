@@ -3,16 +3,32 @@
     pageEncoding="UTF-8"%>
 <%request.setCharacterEncoding("utf-8"); %>
 <%response.setContentType("text/html; charset=UTF-8"); %>
-<!DOCTYPE html>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>방구석갤러리</title>
 </head>
-<body>
-<jsp:include page="/WEB-INF/views/header.jsp" />
-<h1>MAIN</h1>
+<body style="margin:0; padding: 0;">
 
-<jsp:include page="/WEB-INF/views/tail.jsp" />
+<iframe src="index.do" style="width: 100%;
+							  height: 100%;
+							  overflow-x:hidden;
+							  overflow-y:scroll;
+							  border: none; ">
+<!-- <form name=sendForm action="index.do" method="post">
+	</form>
+<script  type="text/javascript">
+	window.onload = function(){
+		
+
+		 document.sendForm.submit();  
+	}
+
+</script> -->
+</iframe>
+
+
+
 </body>
 </html>

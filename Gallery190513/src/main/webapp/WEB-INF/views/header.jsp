@@ -191,7 +191,7 @@ li.oe_heading a.oe_body{
 
 <div class="oe_wrapper" style="position:relative ; z-index: 300">
 			<div class="mainHeader" style="position: fixed; background-color:black ; height: 50px; z-index: 99">
-			<div class="mainLogo" style="position: absolute; left: 95px; top: 10px; z-index: 99;background-color: transparent;" ><a href="index.jsp"><img alt="index.jsp" src="logo/logo1.png" width="180" height="auto" ></a> </div>
+			<div class="mainLogo" style="position: absolute; left: 95px; top: 10px; z-index: 99;background-color: transparent;" ><a href="index.jsp"><img alt="index.jsp" src="logo/newLogo2.png" width="20%" height="auto" ></a> </div>
 			<div class="login_wrapper" style="position: absolute; right: 50px; top: 5px; z-index: 99;">
 			<%if(loginMember==null){ %>
 			<button style=" width: 80px; height: 40px;" class="btn btn-success" onclick="location.href='loginform.do'" >LOGIN</button>
@@ -307,7 +307,7 @@ li.oe_heading a.oe_body{
 				})
             });
         </script>
-       <div style="background-color : black; margin-bottom:100px">
+      <div style="background-color : black; margin-bottom:0.1%;">
        	<br/><br/>
-       </div>
+       </div> 
 	
