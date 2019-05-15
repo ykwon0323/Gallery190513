@@ -17,25 +17,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<!-- 부트스트랩 -->
+
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
- <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet"> 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  
-<!-- <link rel="stylesheet" href="boot_g/css/bootstrap.min.css">
-<link rel="stylesheet" href="boot_g/css/owl.carousel.min.css">
-<link rel="stylesheet" href="boot_g/css/style.css"> -->
-
-
+<!-- 폰트 -->
+<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+<!-- 폰트 끝 -->
 
-
+<!-- 부트스트랩 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <!-- 부트스트랩 끝 -->
+  
+
 
 <title>인덱스</title>
 
@@ -52,15 +51,16 @@ color: #e2c0bb; font-family: 'Cute Font', cursive;"
 
 }
 
-
 .ud_img {
 	display: inline-block;
+	width: 150px;
+	height: 150px;
 }
 
 
 .ud_img img{
-	width: 100px;
-	height: 100px;}
+	width: 150px;
+	height: 150px;}
 	
 .heading-section span{
 
@@ -196,35 +196,80 @@ $(document).ready(function(){
 
 
 
-	<section class="site-section">
-	
-
-		<div class="container">
+		<div class="container" style="margin-top: 80px;">
 		<div class="row">
+		
+		
+		<div class="col-4 row" style="text-align: center;">
+					
+				<div class="row">
+				<div class="w-100" style="margin: 2px;"></div>
+				
+						<div class="col">
+				
+						<div class="ud_img">
+							<img alt="g_img1" src="galleryupload/${galleryDto.g_img1}">
+					
+						</div>
+						</div>	
+
+						<div class="col">
+						<div class="ud_img">
+							<img alt="g_img2"src="galleryupload/${galleryDto.g_img2}">
+						
+						</div>
+						</div>
+				</div>
+				
+				<div class="row">
+						<div class="ud_img col">
+							<div><img alt="g_img3"src="galleryupload/${galleryDto.g_img3}"></div> 
+							
+
+						</div>
+
+
+						<div class="ud_img col">
+							 <div><img alt="g_img4"src="galleryupload/${galleryDto.g_img4}"></div> 
+							
+						</div>
+						
+					</div>	
+				
+					</div>
+		
+		
 		<div class="col-8">
 		
-		
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="galleryupload/${galleryDto.g_img1}" alt="" style="min-width:700px; max-height: 400px;">
+      <img src="galleryupload/${galleryDto.g_img1}" alt="" style="min-width:800px; max-height: 400px;">
     </div>
 
     <div class="item">
-      <img src="galleryupload/${galleryDto.g_img2}" alt="" style="min-width:700px; max-height: 400px;">
+      <img src="galleryupload/${galleryDto.g_img2}" alt="" style="min-width:100%; max-height: 400px;">
     </div>
 
     <div class="item">
-      <img src="galleryupload/${galleryDto.g_img3}" alt="" style="min-width:600px; max-height: 400px;">
+      <img src="galleryupload/${galleryDto.g_img3}" alt="" style="min-width:100%; max-height: 400px;">
     </div>
+    
+    <div class="item">
+      <img src="galleryupload/${galleryDto.g_img4}" alt="" style="min-width:100%; max-height: 400px;">
+    </div>
+    
+    
+    
   </div>
 
   <!-- Left and right controls -->
@@ -244,65 +289,17 @@ $(document).ready(function(){
 		
 		
 		</div>
+	
+		
 		</div>
-		<div class="row">
+		
 			
-					<div class="col-4">
-					
-					<div style="text-align: center;">
-						<div class="ud_img">
-							<div><img alt="g_img1" src="galleryupload/${galleryDto.g_img1}"></div>
-					
-						</div>
+			
 
-						<div class="ud_img">
-							<div><img alt="g_img2"src="galleryupload/${galleryDto.g_img2}"></div> 
-						
-
-						</div>
-
-						<div class="ud_img">
-							<div><img alt="g_img3"src="galleryupload/${galleryDto.g_img3}"></div> 
-							
-
-						</div>
-
-
-						<div class="ud_img">
-							 <div><img alt="g_img4"src="galleryupload/${galleryDto.g_img4}"></div> 
-							
-						</div>
-						
-					</div>			
-				
-						
-					
-					
-					
-					</div>
-					
-					<%-- <div class="col-8">
-
-					<div class="owl-carousel slide-one-item-alt">
-						<img style="height: 400px; width: 540px" src="galleryupload/${galleryDto.g_img1}" alt="Image" class="img-fluid">
-						<img style="height: 400px; width: 540px" src="galleryupload/${galleryDto.g_img2}" alt="Image" class="img-fluid">
-						<img style="height: 400px; width: 540px" src="galleryupload/${galleryDto.g_img3}" alt="Image" class="img-fluid">
-						<img style="height: 400px; width: 540px" src="galleryupload/${galleryDto.g_img4}" alt="Image" class="img-fluid">
-					</div>
-					<div class="custom-direction" style="background-color: white; opacity: 0.9; ">
-						<a href="#" class="custom-prev" style="color: #e2c0bb;">Prev</a><a href="#"
-							style="color: #e2c0bb;" class="custom-next">Next</a>
-					</div>
-
-					</div> --%>
-					
-			</div>
-
-					
 	
 					<div class="row">
 
-					<div class="col ml-auto" style="font-family: 'Cute Font', cursive; font-size: 25px;  color: black; ">
+					<div class="col ml-auto" style="font-family: 'Noto Serif KR', serif; font-size: 15px;  color: black; ">
 
 						<div class="section-title" style="margin-bottom: 20px; font-weight:100; color:black; 
 						
@@ -310,51 +307,75 @@ $(document).ready(function(){
 							<div>${galleryDto.g_name}</div>
 						</div>
 
-						<div>
-							<div style="border: none;"><span style="margin-right: 10px; color: #e2c0bb;">전화번호</span>${galleryDto.g_tel}</div>
-						</div>
+						<div class="w-100" style="margin: 2px;"></div>
 						
-						<div>
-							
-							 <div style="border: none;"><span style="margin-right: 36px; color: #e2c0bb;">주소</span> ${galleryDto.g_adress}</div> 
-							
-							<%-- <input style="height: 100px;" type="text" name="g_adress" value="${galleryDto.g_adress}"> --%>
-						</div>
-						
-
-						<div>
-							<span style="margin-right: 36px; color: #e2c0bb;">소개</span> 
-							<div  style="border: none;">${galleryDto.g_intro}</div>
+						<div class="row">
+						<div class="col-1"></div>
+						<div class="col-10">
+							<span style="margin-right: 36px; font-size:40px; color: #e2c0bb; font-family: 'Cute Font', sans-serif;"> 갤러리 소개</span> 
+							<div  style="border: none; line-height: 50px;">${galleryDto.g_intro}</div>
 						
 						
 							<%-- <span>g_intro</span> <input type="text" name="g_intro"
 								value="${galleryDto.g_intro}"> --%>
 						</div>
-
+						</div>
+						
+						
+						<div class="w-100" style="margin: 40px;"></div>
+						
+						
+						
+						<div class="row">
+						
+						<div class="col-1"></div>
+						<div class="col-10">
+							<div style="border: none; font-size:15px;"><span style="margin-right: 10px; color: #e2c0bb;">Tel</span>${galleryDto.g_tel}</div>
+						</div>
+						</div>
+						
+						<div class="w-100" style="margin: 20px;"></div>
+						
+						
+						<div class="row">
+							<div class="col-1"></div>
+							
+							
+							 <div class="col-10">
+							 
+							 <div style="border: none;"> ${galleryDto.g_adress}</div> 
+							
+							<%-- <input style="height: 100px;" type="text" name="g_adress" value="${galleryDto.g_adress}"> --%>
+						</div>
+						
+						</div>
+					
+						
 
 
 
 					</div>
 					
 					</div>
-	
-			
-		</div>
 					
-	</section>
-
-
-
-
-
-
-
-
-
-
-	<!-- 지도 관련 블락 처리 풀기 -->
-	<div id="map" style="min-width: 100px; min-height: 250px; margin: 0 20%;">
-		 <!--  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d61a4dc1efe55edbdfac5ab744921183"></script>  --> 
+					
+					
+					<div class="w-100" style="margin: 80px;"></div>
+					
+					
+					
+					<div class="row">
+					
+					<div class="col-1"></div>
+					
+					
+					<div class="col-10">
+					
+					
+					
+					<!-- 지도 관련 블락 처리 풀기 -->
+	<div id="map" style="min-width: 100px; min-height: 250px;">
+		 <!--  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d61a4dc1efe55edbdfac5ab744921183"></script>  -->
 		<script>
 			var container = document.getElementById('map');
 			var options = {
@@ -380,16 +401,25 @@ $(document).ready(function(){
 
 
 	</div>
-
-	<!-- 부트슻트랩 시작 -->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					</div>
+					
+					<div class="col-1"></div>
+					
+					</div>
 	
+			
+		</div>
+					
 
-<!-- 	<script src="boot_g/js/jquery-3.3.1.min.js"></script>
-	<script src="boot_g/js/owl.carousel.min.js"></script>
-	<script src="boot_g/js/aos.js"></script>
-	<script src="boot_g/js/main.js"></script> -->
-	
-	<!-- 부트슻트랩 끝 -->
 
 
 
