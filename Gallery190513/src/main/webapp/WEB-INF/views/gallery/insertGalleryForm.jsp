@@ -136,18 +136,21 @@ function imageURL(input) {
 	
 <form class="form-horizontal" action="insertGallery.do" method="post" enctype="multipart/form-data">
 
-<div class="container" sty>
+	<div class="col justify-content-center pb-5" style="padding-top: 1%; ">
+          <div class="heading-section text-center ftco-animate" style="z-index: -1;">
+          	<span class="subheading">Best Gallery</span>
+             <img alt="로고"
+					src="logo/newLogo1.png" width="10%">
+				<p></p>
+            <p>All the galleries you want</p>
+          </div>
+</div>
+<div class="container" style="padding-bottom: 5%;">
 
 <div class="row">
 
 
-<div class="col justify-content-center pb-5" style="margin-top:10px; ">
-          <div class="heading-section text-center ftco-animate" style="z-index: -1;">
-          	<span class="subheading">Best Gallery</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
-            <p>All the galleries you want</p>
-          </div>
-</div>
+
 
 </div>
 
@@ -288,7 +291,7 @@ function imageURL(input) {
 	 </div>
 	 
 	 
-	 <div style="margin: 10px 20px; width: 250px; float: right;">
+	 <div style="    margin: 165px 20px 10px 10px; width: 250px; float: right;">
 		<input  class=" btn btn-primary" type="submit" value="등록">
 	</div>
 	 

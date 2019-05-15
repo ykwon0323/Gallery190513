@@ -56,18 +56,20 @@
 
 <!-- <h4 onclick="location.href='DabgeulList.do'">충돌이나니 답글을 분리해봅시다다ㄴ </h4> -->
 
+		<div class="row justify-content-center pb-5" style="padding-top: 2%;">
+          <div class="col heading-section text-center ftco-animate" style="z-index: -1;">
+          	<span class="subheading">Best Gallery</span>
+            	<img alt="로고" src="logo/newLogo1.png" width="10%">
+				<p></p>
+            <p>All the galleries you want</p>
+          </div>
+        </div>
 
 
 
 
     <div class="container">
-    	<div class="row justify-content-center pb-5" >
-          <div class="col heading-section text-center ftco-animate" style="z-index: -1;">
-          	<span class="subheading">Best Gallery</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
-            <p>All the galleries you want</p>
-          </div>
-        </div>
+    
   			
     		<div class="row">
     		
@@ -183,7 +185,7 @@
     			</div>
     			
     			
-    	<div class="row" style="margin-top: 30px;">
+    	<div class="row" style="margin-top: 30px; padding-bottom: 5%;" >
   			<div style="margin: 0 auto;" >
   				<% int pagenum = (Integer)request.getAttribute("pagenum"); %>
 	

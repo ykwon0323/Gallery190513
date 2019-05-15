@@ -197,38 +197,40 @@ function getParameterByName(name) {
 </script>
 
 
-
+<jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
 
-<jsp:include page="/WEB-INF/views/header.jsp" />
 
-
-<div id="s_l"></div>
-
-
-<div class="justify-content-center pb-5" style="margin-top:10px; ">
+	
+	<div class="justify-content-center pb-5" style="margin-top:10px; padding-top: 2%; ">
           <div class="heading-section text-center ftco-animate" style="z-index: -1;">
           	<span class="subheading">Best Gallery</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
+            <img alt="로고" src="logo/newLogo1.png" width="10%">
+				<p></p>
             <p>All the galleries you want</p>
           </div>
 </div>
 
+<div id="s_l"></div>
+
+
+
+
 
 	<div style="text-align: center; margin: 0 auto;">
 	
-		<h6 style="font-weight: bold;">
+		<h5 style="font-weight: bold;">
       <span onclick="location.href='selectGallery.do?year=<%=year%>&month=<%=month%>&g_no=${galleryDto.g_no}&g_return=general_one'">
       안내&nbsp|</span>
       <span onclick="location.href='selectGallery.do?year=<%=year%>&month=<%=month%>&g_no=${galleryDto.g_no}&g_return=general_two'">
       전시일정</span>
 
-       </h6>
+       </h5>
 
 		
 	</div>
 
-<div class="container" style="margin-top: 80px;">
+<div class="container" style="margin-top: 80px; margin-bottom: 80px;">
 
 
 <div class="row">

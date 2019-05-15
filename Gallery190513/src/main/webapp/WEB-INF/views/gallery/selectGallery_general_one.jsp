@@ -90,7 +90,7 @@ line-height: 1.2;
 
 .heading-section p{
 	font-family: -apple-system,BlinkMacSystemFont;
-    font-size: 1rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -167,27 +167,28 @@ $(document).ready(function(){
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body style="min-width: 1200px;">
 
-<div id="s_l"></div>
-	
-	   <div class="justify-content-center pb-5" style="margin-top:10px; ">
+	 <div class="justify-content-center pb-5" style="margin-top:10px; padding-top: 3%;">
           <div class="heading-section text-center ftco-animate" style="z-index: -1;">
           	<span class="subheading">Best Gallery</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
-            <p>All the galleries you want</p>
+            <img alt="로고" src="logo/newLogo1.png" width="10%">
+				<p></p>
+            <p style="font-size: 15px;">All the galleries you want</p>
           </div>
         </div>
+
+<div id="s_l"></div>
 	
 
 
 	<div style="text-align: center; margin: 0 auto;">
 	
-		<h6 style="font-weight: bold;">
+		<h3 style="font-weight: bold;">
       <span onclick="location.href='selectGallery.do?year=<%=year%>&month=<%=month%>&g_no=${galleryDto.g_no}&g_return=general_one'">
       안내&nbsp|</span>
       <span onclick="location.href='selectGallery.do?year=<%=year%>&month=<%=month%>&g_no=${galleryDto.g_no}&g_return=general_two'">
       전시일정</span>
 
-       </h6>
+       </h3>
 
 		
 	</div>

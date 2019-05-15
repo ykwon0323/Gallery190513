@@ -48,8 +48,8 @@ System.out.println("이미지 디티오는?+"+list);%>
 	<div class="row justify-content-center pb-5" style="padding-top: 2%;">
 			<div class="col heading-section text-center ftco-animate"
 				style="z-index: -1;">
-				<span class="subheading">Best Auction</span> <img alt="로고"
-					src="logo/newLogo1.png" width="10%">
+				<span class="subheading">Best Auction</span>
+				 <img alt="로고" src="logo/newLogo1.png" width="10%">
 				<p></p>
 				<p>A place to buy new and creative artists</p>
 			</div>
