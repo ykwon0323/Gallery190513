@@ -18,6 +18,8 @@
 <title>받은 메시지함 페이지</title>
 <%List<RequestDto> list = (List<RequestDto>)request.getAttribute("list"); %>
 <style type="text/css">
+
+
 	.heading-section span{
 
 	font-size: 16px;
@@ -130,7 +132,7 @@ line-height: 1.2;
 	<button disabled="disabled" class="btn btn-success btn-sm"   >대기중</button>
 		<%}
 		%></td>
-		<td style="text-align: center;"> <%=dto.getR_receivename()%></td>
+		<td style="text-align: center;"> <%=dto.getR_sendname()%></td>
 		<td style="text-align: center;"><a href="" onclick="receivepop(<%=dto.getR_no()%>)"><%=dto.getR_title() %></a></td>
 		<td style="text-align: center;"><fmt:formatDate value="<%= dto.getR_regdate() %>" pattern="yyyy년MM월dd일"/> </td>
 		<td style="text-align: center;"><a href="deleteRequest.do?r_no=<%=dto.getR_no()%>">삭제</a></td>
@@ -149,7 +151,7 @@ line-height: 1.2;
 		
 		 	<%for(int i =1; i<=pagenum;i++){%>
 		 		
-		 	<a href="selectRequestListReceive.do?r_pcount=<%=i%>&r_receive=<%=r_recieve%>"><%=i%></a>
+		 	<button class="btn btn-default btn-sm"><a style="color: black;" href="selectRequestListReceive.do?r_pcount=<%=i%>&r_receive=<%=r_recieve%>"><%=i%></a></button>
 		 	
 		 	<%}%>
   			

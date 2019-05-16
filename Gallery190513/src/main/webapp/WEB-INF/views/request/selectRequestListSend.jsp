@@ -159,7 +159,7 @@ line-height: 1.2;
 		
 		 	<%for(int i =1; i<=pagenum;i++){%>
 		 		
-		 	<a href="selectRequestListSend.do?r_pcount=<%=i%>&r_send=<%=r_send%>"><%=i%></a>
+		 	<button class="btn btn-default btn-sm"><a style="color: black;" href="selectRequestListSend.do?r_pcount=<%=i%>&r_send=<%=r_send%>"><%=i%></a></button>
 		 	
 		 	<%}%>
   			

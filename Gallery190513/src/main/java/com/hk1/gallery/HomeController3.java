@@ -312,7 +312,7 @@ public class HomeController3 {
 				
 				requestService.insertRequest(new RequestDto().setR_send(r_send)
 																			.setR_sendname(r_sendname)
-																			.setR_receive(r_receive)
+																			.setR_receive(m_no)
 																			.setR_receivename(r_receivename)
 																			.setR_title(r_title)
 																			.setR_content(r_content));
