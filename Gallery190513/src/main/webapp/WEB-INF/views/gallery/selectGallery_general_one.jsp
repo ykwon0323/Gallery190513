@@ -190,6 +190,7 @@ $(document).ready(function(){
 		<div class="row">
 		<div class="col">
 		<h4 style="
+		width: 25%;
 	font-family: inherit;
     font-weight: bold;
     padding-bottom: 10px;

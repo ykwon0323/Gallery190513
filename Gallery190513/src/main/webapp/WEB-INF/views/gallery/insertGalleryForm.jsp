@@ -21,11 +21,6 @@ label{font-family: 'Poor Story', cursive;
 font-size: 19px;
 font-weight: 200; }
 
-.btn{font-family: 'Poor Story', cursive;
-font-size: 20px;
-font-weight: 200;
-
- }
 	
 .heading-section span{
 
@@ -39,6 +34,13 @@ font-size: 16px;
    	margin: 0;
     padding: 0;
     
+}
+
+.btn-primary{
+
+font-family: 'Poor Story', cursive;
+font-size: 20px;
+font-weight: 200"
 }
 
 	
@@ -348,7 +350,9 @@ function imageURL(input) {
 	 </div>
 	 
 	 
-	 <div style="margin: 165px 20px 10px 10px; width: 250px; float: right;">
+	 <div style="margin: 165px 20px 10px 10px; width: 250px; float: right; font-family: 'Poor Story', cursive;
+font-size: 20px;
+font-weight: 200">
 		<input  class=" btn btn-primary" type="submit" value="등록">
 	</div>
 	 
