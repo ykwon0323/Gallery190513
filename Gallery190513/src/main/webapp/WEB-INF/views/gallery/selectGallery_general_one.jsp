@@ -26,6 +26,7 @@
 <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Hi+Melody|Poor+Story|Sunflower:300" rel="stylesheet">
 <!-- 폰트 끝 -->
 
 <!-- 부트스트랩 -->
@@ -180,9 +181,35 @@ $(document).ready(function(){
 	
 
 
-	<div style="text-align: center; margin: 0 auto;">
+
+
+
+
+
+		<div class="container">
+		<div class="row">
+		<div class="col">
+		<h4 style="
+	font-family: inherit;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(26, 26, 26);
+    text-align: center;
+        line-height: 1.2;
+            margin-bottom: .5rem;
+                margin-top: 0;
+                    margin: 0px 0px 10px;
+                    font-family: 'Poor Story', cursive;
+    font-size: 20px;
+    color: rgb(50, 50, 50);">갤러리&nbsp;&nbsp;&nbsp;${galleryDto.g_name}</h4>
 	
-		<h3 style="font-weight: bold;">
+		</div>
+		</div>
+	
+	
+	<div style="text-align: center; margin-bottom: 80px;">
+	
+		<h3 style="font-weight: bold; font-family: 'Poor Story', cursive; font-size: 25px;">
       <span onclick="location.href='selectGallery.do?year=<%=year%>&month=<%=month%>&g_no=${galleryDto.g_no}&g_return=general_one'">
       안내&nbsp|</span>
       <span onclick="location.href='selectGallery.do?year=<%=year%>&month=<%=month%>&g_no=${galleryDto.g_no}&g_return=general_two'">
@@ -192,12 +219,8 @@ $(document).ready(function(){
 
 		
 	</div>
-
-
-
-
-
-		<div class="container" style="margin-top: 80px;">
+		
+		
 		<div class="row">
 		
 		
@@ -284,7 +307,11 @@ $(document).ready(function(){
   </a>
 </div>
 		
-		
+				
+		<div style="background-color: black; height: 40px; text-align: center; font-size: 10px; font-weight:bold; padding: 10px;">
+
+						<a style="color: white;" href="#g_name">소개</a>&nbsp;&nbsp;ㅣ&nbsp;&nbsp;<a style="color: white;" href="#g_tel">전화번호</a>
+		</div>
 		
 		
 		
@@ -305,7 +332,7 @@ $(document).ready(function(){
 						<div class="section-title" style="margin-bottom: 20px; font-weight:100; color:black; 
 						
 						font-family: 'East Sea Dokdo', cursive; font-size: 60px;">
-							<div>${galleryDto.g_name}</div>
+							<div id="g_name">${galleryDto.g_name}</div>
 						</div>
 
 						<div class="w-100" style="margin: 2px;"></div>
@@ -331,7 +358,7 @@ $(document).ready(function(){
 						
 						<div class="col-1"></div>
 						<div class="col-10">
-							<div style="border: none; font-size:15px;"><span style="margin-right: 10px; color: #e2c0bb;">Tel</span>${galleryDto.g_tel}</div>
+							<div id="g_tel" style="border: none; font-size:15px;"><span style="margin-right: 10px; color: #e2c0bb;">Tel</span>${galleryDto.g_tel}</div>
 						</div>
 						</div>
 						

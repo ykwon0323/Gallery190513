@@ -7,11 +7,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Hi+Melody|Poor+Story|Sunflower:300" rel="stylesheet">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <title>인덱스</title>
+<style type="text/css">
+
+.container{font-family: 'Poor Story', cursive;
+font-size: 19px;
+font-weight: 200; }
+
+
+
+</style>
 </head>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
  
+
 
 <body>
 
@@ -161,7 +172,9 @@
 
 
 
-<input style="width: 300px;" class="btn btn-success form-control" type="submit" value="일정등록"  >
+<input style="width: 300px; font-family: 'Poor Story', cursive;
+font-size: 19px;
+font-weight: 200;" class="btn btn-success form-control" type="submit" value="일정등록"  >
 
 
 </form>

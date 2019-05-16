@@ -21,6 +21,7 @@
 <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Stylish" rel="stylesheet">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Hi+Melody|Poor+Story|Sunflower:300" rel="stylesheet">
 <title>인덱스</title>
 
 <style type="text/css">
@@ -289,21 +290,50 @@ function scroll_v(url) {
 
 
 
-	<div style="text-align: center; margin: 0 auto;">
+
+
+
+<div class="container">
+
+<div class="row">
+		<div class="col">
+<h4 style="width: 25%;
+	font-family: inherit;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(26, 26, 26);
+    text-align: center;
+        line-height: 1.2;
+            margin-bottom: .5rem;
+                margin-top: 0;
+                    margin: 0px 0px 10px;
+                    font-family: 'Poor Story', cursive;
+    font-size: 20px;
+    color: rgb(50, 50, 50);">마이갤러리&nbsp;&nbsp;&nbsp;${galleryDto.g_name}&nbsp;&nbsp;&nbsp;일정</h4>
+
+</div></div>
+
+
+
+	<div style="text-align: center; margin-bottom: 80px;">
 	
-		<h5 style="font-weight: bold;">
+		<h3 style="font-weight: bold; font-family: 'Poor Story', cursive; font-size: 25px;">
       <span onclick="location.href='selectGallery.do?year=<%=year%>&month=<%=month%>&g_no=${galleryDto.g_no}&g_return=one'">
       안내&nbsp|</span>
       <span onclick="location.href='selectGallery.do?year=<%=year%>&month=<%=month%>&g_no=${galleryDto.g_no}&g_return=two'">
       전시일정</span>
 
-       </h5>
+       </h3>
 
 		
 	</div>
 
 
-<div class="container" style="margin-top: 80px; margin-bottom: 80px;">
+
+
+
+
+
 
 
 <div class="row">
@@ -434,8 +464,8 @@ function scroll_v(url) {
 <%if(cllist.isEmpty()){
 	%>
 <div class="row">
-<div class="col" style="text-align: center; min-width: 470px;">
----------등록된 일정이 없습니다---------
+<div class="col" style="text-align: center; min-width: 470px; font-weight:400; font-size:20px;  font-family: 'Poor Story', cursive;">
+등록된 일정이 없습니다
 </div>
 </div>
 <%

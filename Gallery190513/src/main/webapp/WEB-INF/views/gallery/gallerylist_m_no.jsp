@@ -24,7 +24,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Hi+Melody|Poor+Story|Sunflower:300" rel="stylesheet">
     
         <link rel="stylesheet" href="boot_g/list/css/magnific-popup.css">
     <link rel="stylesheet" href="boot_g/list/css/animate.css">
@@ -59,7 +59,19 @@
 
     <div class="container">
     	
-  <h4>등록한 갤러리 목록</h4>
+  <h4 style="width: 25%;
+	font-family: inherit;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(26, 26, 26);
+    text-align: center;
+        line-height: 1.2;
+            margin-bottom: .5rem;
+                margin-top: 0;
+                    margin: 0px 0px 10px;
+                    font-family: 'Poor Story', cursive;
+    font-size: 20px;
+    color: rgb(50, 50, 50);">마이갤러리</h4>
     		<div class="row">
     			
     		<% 

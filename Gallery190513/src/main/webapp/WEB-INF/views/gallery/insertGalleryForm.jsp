@@ -9,11 +9,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Hi+Melody|Poor+Story|Sunflower:300" rel="stylesheet">
 <title>인덱스</title>
 
 <style type="text/css">
 
+label{font-family: 'Poor Story', cursive;
+font-size: 19px;
+font-weight: 200; }
 
+.btn{font-family: 'Poor Story', cursive;
+font-size: 20px;
+font-weight: 200;
+
+ }
 	
 .heading-section span{
 
@@ -72,6 +84,41 @@ line-height: 1.2;
 <%-- <%int m_grade=%><%=Ddto.getM_grade() %><%; %> --%>
 
 <script type="text/javascript">
+
+
+$(function() {
+	
+	$("form").submit(function(){
+		
+		var count=0;
+
+	      $(".fileinput").each(function(){
+	         if($(this).val()==""){
+	            swal("파일을 선택하세요");
+	            
+	            $(this).prev().focus();
+	            return false;
+	         }
+	         count++
+	      });
+	  	if(count<4){
+	      return false;
+	  		
+	  	}
+	   });
+	
+
+});
+
+
+
+
+
+
+
+
+
+
 function imgup(a) {
 
 	if (a == 1) {
@@ -147,7 +194,27 @@ function imageURL(input) {
 </div>
 <div class="container" style="padding-bottom: 5%;">
 
-<div class="row">
+  <h4 style="width: 25%;
+	font-family: inherit;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(26, 26, 26);
+    text-align: center;
+        line-height: 1.2;
+            margin-bottom: .5rem;
+                margin-top: 0;
+                    margin: 0px 0px 10px;
+                    font-family: 'Poor Story', cursive;
+    font-size: 20px;
+    color: rgb(50, 50, 50);">갤러리등록</h4>
+
+
+
+
+
+
+
+<div class="row" style="margin-top: 80px;">
 
 
 
@@ -246,11 +313,8 @@ function imageURL(input) {
 	<label class="col-sm-3 control-label">대표사진</label> 
 	
 	<div style="display: inline-block;" class="col-sm-3">
-	  <button class="btn btn-primary" onclick="imgup(1)">파일등록</button>	
-	 </div>
-	
-	 <div>
-	  <input onchange="imageURL(this)" id="gallery_img1" style="display: none;" multiple="multiple" type="file" name="file" required="required">
+	  <button class="btn btn-primary" type="button" onclick="imgup(1)">파일등록</button>
+	  <input class="fileinput" onchange="imageURL(this)" id="gallery_img1" style="display: none;" multiple="multiple" type="file" name="file">
 	 </div>
 	</div>
 	
@@ -258,11 +322,9 @@ function imageURL(input) {
 	<label class="col-sm-3 control-label">내부사진2</label> 
 	
 	<div style="display: inline-block;" class="col-sm-3">
-	  <button class="btn btn-primary" onclick="imgup(2)">파일등록</button>	
-	 </div>
+	  <button class="btn btn-primary" type="button" onclick="imgup(2)">파일등록</button>	
 	
-	 <div class="form-group">
-	  <input onchange="imageURL(this)" id="gallery_img2" style="display: none;" multiple="multiple" type="file" name="file" required="required">
+	  <input class="fileinput" onchange="imageURL(this)" id="gallery_img2" style="display: none;" multiple="multiple" type="file" name="file">
 	 </div>
 	 </div>
 	 
@@ -270,11 +332,8 @@ function imageURL(input) {
 	<label class="col-sm-3 control-label">내부사진3</label> 
 	
 	<div style="display: inline-block;" class="col-sm-3">
-	  <button class="btn btn-primary" onclick="imgup(3)">파일등록</button>	
-	 </div>
-	
-	 <div>
-	  <input onchange="imageURL(this)" id="gallery_img3" style="display: none;" multiple="multiple" type="file" name="file" required="required">
+	  <button class="btn btn-primary" type="button" onclick="imgup(3)">파일등록</button>	
+	  <input class="fileinput" onchange="imageURL(this)" id="gallery_img3" style="display: none;" multiple="multiple" type="file" name="file">
 	 </div>
 	 </div>
 	 
@@ -282,16 +341,14 @@ function imageURL(input) {
 	<label class="col-sm-3 control-label">내부사진4</label> 
 	
 	<div style="display: inline-block;" class="col-sm-3">
-	  <button class="btn btn-primary" onclick="imgup(4)">파일등록</button>	
+	  <button type="button" class="btn btn-primary" onclick="imgup(4)">파일등록</button>	
+	  <input class="fileinput" onchange="imageURL(this)" id="gallery_img4" style="display: none;" multiple="multiple" type="file" name="file">
 	 </div>
 	
-	 <div>
-	  <input onchange="imageURL(this)" id="gallery_img4" style="display: none;" multiple="multiple" type="file" name="file" required="required">
-	 </div>
 	 </div>
 	 
 	 
-	 <div style="    margin: 165px 20px 10px 10px; width: 250px; float: right;">
+	 <div style="margin: 165px 20px 10px 10px; width: 250px; float: right;">
 		<input  class=" btn btn-primary" type="submit" value="등록">
 	</div>
 	 
