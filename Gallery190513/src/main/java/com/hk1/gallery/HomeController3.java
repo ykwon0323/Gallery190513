@@ -266,9 +266,9 @@ public class HomeController3 {
 			
 			//갤러리가 작가한테
 			ArtistDto memberId = artistService.selectMemberId(a_no);
-			String from = "gallerytest4@naver.com";
+			String from = "gallerytest1@naver.com";
 			String to = memberId.getM_id();
-			String title = "[방구석갤러리]전시요청!";
+			String title = "[방구석갤러리]전시요청";
 			String msg = "새로운 갤러리의 전시 요청이 있습니다 메세지함을 확인해주세요!";
 			SendMail(from, to, title, msg);	
 			
@@ -323,9 +323,9 @@ public class HomeController3 {
 		
 				//작가가 갤러리에게
 				GalleryDto memberIdG = galleryService.selectMemberGId(m_no);
-				String fromG = "gallerytest4@naver.com";
+				String fromG = "gallerytest1@naver.com";
 				String toG = memberIdG.getM_id();
-				String titleG = "[방구석갤러리]전시요청!";
+				String titleG = "[방구석갤러리]전시요청";
 				String msgG = "새로운 작가의 전시 요청이 있습니다 메세지함을 확인해주세요!";
 				SendMail(fromG, toG, titleG, msgG);	
 				

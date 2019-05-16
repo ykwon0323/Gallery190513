@@ -91,7 +91,7 @@
     </select>
     
      <select id="selectMemberGId" parameterType="int" resultType="GalleryDto">
-       SELECT m.M_ID FROM GALLERY.GALLERY g INNER JOIN GALLERY.MEMBER m ON g.M_NO = m.M_NO AND g.m_NO=#{m_no}
+       SELECT m.M_ID FROM GALLERY.GALLERY g INNER JOIN GALLERY.MEMBER m ON g.M_NO = m.M_NO AND g.m_NO=#{m_no} AND <![CDATA[ ROWNUM<=1]]>   
     </select>
     
     

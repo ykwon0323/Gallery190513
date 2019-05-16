@@ -658,8 +658,8 @@ public class HomeController {
 					
 					if(kyungmaeService.insertKyungmae(kyungmaeDto)) {
 					 System.out.println("경매등록");
-					 String from = "gallerytest4@naver.com";
-						String to = "gallerytest4@naver.com";
+					 String from = "gallerytest1@naver.com";
+						String to = "gallerytest1@naver.com";
 						String title= "[방구석갤러리]경매등록 발생";
 						String msg ="경매가 등록되었습니다";
 						SendMail(from, to, title, msg);

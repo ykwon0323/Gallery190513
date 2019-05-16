@@ -1409,7 +1409,7 @@ public class HomeController2 {
 			m_no = kyungmaeDto.getK_first_no();
 			MemberDto memberDto=memberService.selectMember(m_no);
 			
-			String from1="gallerytest4@naver.com";
+			String from1="gallerytest1@naver.com";
 
 			String to= memberDto.getM_id();
 			System.out.println("누구에게:"+to); 
