@@ -173,27 +173,18 @@ public class HomeController {
 		session.invalidate();
 		return "redirect:index.do";
 	}
-	//회원 개인정보 페이지
-	@RequestMapping(value = "/privatemain.do",  method = {RequestMethod.POST, RequestMethod.GET})
-	public String privatemain(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model) {
-		logger.info("privatemain.do.", locale);
-		
-		HttpSession session = request.getSession();
-		MemberDto memberDto = (MemberDto) session.getAttribute("logimMember");
-		
-		return "login/updateMemberForm";
-	}
 	//회원 개인정보 수정폼 호출
 	@RequestMapping(value = "/myprivate.do",  method = {RequestMethod.POST, RequestMethod.GET})
 	public String myprivate(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model) {
 		logger.info("myprivate.do.", locale);
 		
-		HttpSession session = request.getSession();
-		MemberDto memberDto = (MemberDto) session.getAttribute("logimMember");
+		
 		
 		return "login/updateMemberForm";
 	}
-	//회원 개인정보 수정폼 호출
+	//회원 개인정보 수정
+	
+	
 	@RequestMapping(value = "/updateMember.do",  method = {RequestMethod.POST, RequestMethod.GET})
 	public String updateMember(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model,MemberDto memberDto) {
 		logger.info("updateMember.do.", locale);
@@ -212,7 +203,7 @@ public class HomeController {
 		return "login/updateMemberForm";
 		}else {
 		//error
-		System.out.println("insertMember error");
+		System.out.println("updatetMember error");
 		return "error";
 		}
 	
@@ -241,14 +232,14 @@ public class HomeController {
 	
 //-↓작품테이블관련 / ↑로그인관련-------------------------------------------------------------------------------------------------------------	
 	
-	//작품올리기 폼 호출 
+	//작품 등록 폼 호출 
 	@RequestMapping(value = "/insertItemForm.do",  method = {RequestMethod.POST, RequestMethod.GET})
 	public String insertItemForm(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model) {
 		logger.info("insertItemForm.do.", locale);
 			
 			return "Item/insertItemForm";
 		}
-	//작품 올리기
+	//작품 등록
 	@RequestMapping(value = "/insertItem.do",  method = {RequestMethod.POST, RequestMethod.GET})
 	public String insertItem(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model,ItemDto itemDto) {
 		logger.info("insertItem.do.", locale);
@@ -290,7 +281,7 @@ public class HomeController {
 		
 		return "redirect:artistsItemList.do";
 		}
-	//내 작품목록
+	//내 작품수정(작품목록)
 	@RequestMapping(value = "/artistsItemList.do",  method = {RequestMethod.POST, RequestMethod.GET})
 	public String artistsItemList(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model) {
 		logger.info("artistsItemList.do.", locale);
@@ -493,7 +484,7 @@ public class HomeController {
 		model.addAttribute("myitemList", myitemList);
 			return "Exhibition/updateExhibitionForm";
 		}	
-	//전시 수정
+	//전시 수정 완료
 	@RequestMapping(value = "/updateExhibition.do",  method = {RequestMethod.POST, RequestMethod.GET})
 	public String updateExhibition(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model,int[] Updatei_no,int[] Deletei_no) {
 		logger.info("updateExhibition.do.", locale);
