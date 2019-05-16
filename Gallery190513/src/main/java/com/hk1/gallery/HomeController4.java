@@ -191,7 +191,7 @@ public class HomeController4 {
 	public String insertGallery(Locale locale, Model model, MultipartHttpServletRequest mtfRequest,
 			HttpSession session)  {
 		logger.info("insertGallery 가자 {}.", locale);
-
+  
 		
 
 		GalleryDto galleryDto = new GalleryDto();
