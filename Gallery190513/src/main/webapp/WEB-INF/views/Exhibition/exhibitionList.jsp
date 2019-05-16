@@ -77,10 +77,10 @@ div.exhibition_container {
 <div class="row justify-content-center pb-5" style="padding-top: 2%;">
 			<div class="col heading-section text-center ftco-animate"
 				style="z-index: 99;">
-				<span class="subheading">Best Auction</span> <img alt="로고"
+				<span class="subheading">Best EXHIBITION</span> <img alt="로고"
 					src="logo/newLogo1.png" width="10%">
 				<p></p>
-				<p>A place to buy new and creative artists</p>
+				<p>A place to show new and creative Exhibition</p>
 			</div>
 		</div>
 

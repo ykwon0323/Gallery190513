@@ -44,7 +44,7 @@
 	width: 450px;
 	height: auto;
 	margin: auto;
-	background-image: url("logo/car.jpg");
+	
 }
 
 
@@ -136,10 +136,10 @@ function detail_artist(){
 <div class="row justify-content-center pb-5" style="padding-top: 2%;">
 			<div class="col heading-section text-center ftco-animate"
 				style="z-index: 99;">
-				<span class="subheading">Best Auction</span> <img alt="로고"
+				<span class="subheading">Best ARTIST</span> <img alt="로고"
 					src="logo/newLogo1.png" width="10%">
 				<p></p>
-				<p>A place to buy new and creative artists</p>
+				<p>A place to show new and creative artists</p>
 			</div>
 		</div>
 
@@ -156,7 +156,7 @@ function detail_artist(){
 		onclick="pop('<%=loginMember.getM_no()%>','<%=artistDto.getA_no() %>','<%=loginMember.getM_name() %>','<%=artistDto.getA_name() %>')" >
 		<%} %></span> --%>
 
-<div class="detail_container">
+<div class="detail_container" style="padding-bottom: 10%;">
 	<div class="artist_nav" style="margin-bottom: 75px;">
 	<h3 style="font-weight: bold;">
 		<span style=" color: black;" onclick="detail_itme()">작품&nbsp|</span>
@@ -220,7 +220,18 @@ function detail_artist(){
 	<%} %>
 	</div>
 	
-	<div class="artist_container" id="artist_container" style="margin-top: 50px; margin-bottom: 10% ">
+	<div class="artist_container" id="artist_container"  style="
+					width:60%;
+					height:auto;
+					float:; 
+					border: 1px solid slategray;
+					border-radius: 15px;
+					
+					margin: auto;   
+					margin-bottom: 20px;
+					
+					 box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+					 background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0px, transparent 5%, transparent 95%, rgba(0, 0, 0, 0.2) 100%);">
 		<div class="bgImage">
 		<h3>개인</h3><p><%=artistDto.getA_solo() %></p><br/><br/>
 		<h3>단체</h3><p><%=artistDto.getA_Squard() %></p><br/><br/>

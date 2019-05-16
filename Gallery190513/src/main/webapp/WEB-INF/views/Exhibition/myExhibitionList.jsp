@@ -82,19 +82,23 @@ div.exhibition_container {
 </head>
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <body>
+	
+	<div class="row justify-content-center pb-5" style="padding-top: 2%;" >
+          <div class="col heading-section text-center ftco-animate" style="z-index:;">
+          	<span class="subheading">My Exhibition</span>
+            <img alt="로고"
+					src="logo/newLogo1.png" width="10%">
+				<p></p>
+            <p>Best exhibition in the room</p>
+          </div>
+        </div>
 
 
 	
 
 <div class="exhibition_container container"  style="width: 1200px; text-align: center;">
 		
-	<div class="row justify-content-center pb-5" >
-          <div class="col heading-section text-center ftco-animate" style="z-index:;">
-          	<span class="subheading">My Exhibition</span>
-            <h2 class="mb-4">방구석 갤러리</h2>
-            <p>Best exhibition in the room</p>
-          </div>
-        </div>
+	
 <h4>등록된 전시 수정</h4>
 <div class="exhibition_detailcontainer">
 	<div id="exhibitionList" style="width: 1200px; text-align: center;">
