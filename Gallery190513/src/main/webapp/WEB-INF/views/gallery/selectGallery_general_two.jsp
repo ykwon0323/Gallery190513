@@ -465,7 +465,7 @@ for(CallendarDto dto:cllist){
 		<div>
 		 	<%for(int i =1; i<=pagenum;i++){%>
 		 		
-		 	<a href="selectGallery.do?year=2019&month=5&g_no=109&g_return=two&c_pcount=<%=i%>"><%=i%></a>
+		 	<a href="selectGallery.do?year=2019&month=5&g_no=109&g_return=general_two&c_pcount=<%=i%>"><%=i%></a>
 		 	
 		 	<%}%>
 		 	
