@@ -9,12 +9,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>일정수정</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
-.container{
+.maincontainer{
  width:500px;
  
 }
 table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
 border:2px solid red;
 background-color:rgb(228, 194, 194);
 }
@@ -23,11 +26,11 @@ height:40px;
 }
 .main{
 position:relative;
-top:50px;
+top:60px;
 }
 .tail{
 position:relative;
-top:100px;
+top:150px;
 }
 
 </style>
@@ -43,7 +46,7 @@ CallendarDto callendarDto=(CallendarDto)request.getAttribute("callendarDto");
 
 <div class="main" align="center">
 
-<div class="container" align="center">
+<div class="maincontainer" align="center">
 	<h1>일정수정하기</h1>
 	<form action="managerupdateCallendar.do" method="post">
 	<input type="hidden" name="c_no" value="<%=callendarDto.getC_no()%>"/>
@@ -74,7 +77,7 @@ CallendarDto callendarDto=(CallendarDto)request.getAttribute("callendarDto");
 	</tr>
 	<tr>
 	<th>갤러리번호</th>
-	<td><input type="text" name="g_no" value="<%=callendarDto.getG_no()%>"/>
+	<td><input type="text" name="g_no" value="<%=callendarDto.getG_no()%>" readonly="readonly"/>
 	</td>
 	</tr>
 	

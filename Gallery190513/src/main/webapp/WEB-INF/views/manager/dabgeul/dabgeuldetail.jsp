@@ -10,15 +10,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>답글 상세보기</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
-
+table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
+background-color: rgb(243, 202, 197);
+}
+tr{
+height:50px;
+}
 .main{
 position:relative;
-top:0px;
+top:60px;
 }
 .tail{
 position:relative;
-top:0px;
+top:100px;
 }
 </style>
 
@@ -28,7 +36,7 @@ top:0px;
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
+<div class="main" align="center">
 
 
 	<h1>답글상세보기</h1>

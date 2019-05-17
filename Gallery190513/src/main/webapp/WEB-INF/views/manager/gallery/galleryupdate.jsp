@@ -12,7 +12,7 @@
 <title>갤러리 정보 수정</title>
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
-.container {
+.maincontainer {
 border:2px solid red;
  width:550px;
   background-color:rgb(228, 194, 194);
@@ -21,9 +21,10 @@ border:2px solid red;
  width:400px;
  }
 .main{
+font-size:18px;
 font-family: 'Nanum Gothic', sans-serif;
 position:relative;
-top:50px;
+top:60px;
 }
 .tail{
 position:relative;
@@ -40,7 +41,7 @@ top:100px;
 </div>
 
 <div class="main" align="center">
-	<div class="container" align="center">
+	<div class="maincontainer" align="center">
    <h1>갤러리 정보 수정</h1>
    <form action="managerupdateGallery.do" method="post" enctype="multipart/form-data">
    <table border="1">
@@ -134,8 +135,10 @@ top:100px;
    </tr>
    
    </table>
-   <input type="submit"/>
+   <br>
+   <input type="submit" value="수정완료"/>
    </form>
+   <br>
    </div>
    </div>
 

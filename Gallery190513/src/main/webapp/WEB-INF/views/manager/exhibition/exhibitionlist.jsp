@@ -41,7 +41,7 @@ color:threedlightshadow;
 }
 .main{
 position:relative;
-top:0px;
+top:60px;
 }
 .tail{
 position:relative;

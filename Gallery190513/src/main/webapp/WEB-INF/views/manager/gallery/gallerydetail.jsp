@@ -14,11 +14,11 @@
 
 .main{
 position:relative;
-top:50px;
+top:60px;
 }
 .container {
 font-family: 'Nanum Gothic', sans-serif;
- width:800px;
+ width:600px;
  }
  table{
  background-color:rgb(228, 194, 194);
@@ -26,7 +26,7 @@ font-family: 'Nanum Gothic', sans-serif;
 
 .tail{
 position:relative;
-top:100px;
+top:150px;
 }
 </style>
 
@@ -43,6 +43,8 @@ GalleryDto galleryDto=(GalleryDto)request.getAttribute("galleryDto");
 	<div class="container" align="center">
    <h1>갤러리 상세보기</h1>
    <table border="1">
+   <col width="80px;">
+   <col width="400px;">
    <tr>
       <th>갤러리 번호</th>
       <td>${galleryDto.g_no}</td>

@@ -12,19 +12,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>승인창</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 
 .main{
+font-family: 'Nanum Gothic', sans-serif;
 position:relative;
-top:0px;
+top:60px;
 }
 
 .tail{
 position:relative;
-top:0px;
+top:100px;
 
 }
-
+table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
+background-color: rgb(228, 194, 194);
+}
 </style>
 
 </head>
@@ -33,7 +39,7 @@ top:0px;
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
+<div class="main" align="center">
 	<h1>작가,갤러리 승인</h1>
 <button onclick="updatestate1(${artistDto.a_no})">작가승인</button>
 <button onclick="updatestate2(${galleryDto.m_no})">갤러리승인</button>

@@ -14,7 +14,7 @@
 
 .main{
 position: relative;
-top:0px;
+top:60px;
 }
 .tail{
 position:relative;
@@ -30,6 +30,7 @@ height:20px;
 height:25px;
 }
 table{
+font-size:18px;
 font-family: 'Nanum Gothic', sans-serif;
 background-color: rgb(228, 194, 194);
 }

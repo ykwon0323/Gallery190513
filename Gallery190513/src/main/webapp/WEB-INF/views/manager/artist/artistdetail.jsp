@@ -9,8 +9,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>작가상세보기</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
 background-color: rgb(243, 202, 197);
 }
 tr{
@@ -18,11 +21,11 @@ height:50px;
 }
 .main{
 position:relative;
-top:0px;
+top:60px;
 }
 .tail{
 position:relative;
-top:100px;
+top:150px;
 }
 </style>
 

@@ -9,9 +9,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>작가정보수정</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style type="text/css">
 input{
 width:500px;
+height:20px;
 }
 .main{
 position:relative;
@@ -19,9 +21,11 @@ top:0px;
 }
 .tail{
 position:relative;
-top:100px;
+top:150px;
 }
 table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
 background-color: rgb(243, 202, 197);
 }
 #button{
@@ -30,9 +34,7 @@ height:25px;
 tr{
 height:40px;
 }
-input{
-height:20px;
-}
+
 </style>
 </head>
 <body>

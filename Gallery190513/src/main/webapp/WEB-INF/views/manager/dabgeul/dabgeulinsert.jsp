@@ -8,15 +8,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>답글추가하기</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 <style>
-
-.main{
-position:relative;
-top:0px;
+.maincontainer {
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
+	position: relative;
+/* 	top: 50px; */
+	border: 2px solid red;
+	/*         text-align:center; */
+	height: 300px;
+	width: 400px;
 }
-.tail{
-position:relative;
-top:0px;
+
+h1 {
+	margin: auto;
+}
+
+.row {
+	height: 90px;
+	width: 396px;
+	background-color: rgb(228, 194, 194);
+}
+
+.main {
+	position: relative;
+	top: 60px;
+}
+
+.tail {
+	position: relative;
+	top: 100px;
 }
 </style>
 
@@ -26,10 +48,16 @@ top:0px;
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
+<div class="main" align="center">
+<div class="maincontainer" align="center">
+		<div class="row">
+			<h1>
+				<i class="fa fa-lock" aria-hidden="true"></i> 답글추가하기
+			</h1>
 
-
-	<h1>답글추가하기</h1>
+		</div>
+		<br />
+		<br />
 	<form action="managerinsertDabgeul.do" method="post" autocomplete="off">
 	
 	전시번호:<input type="text" name="e_no" autocomplete="off"/><br>
@@ -40,7 +68,7 @@ top:0px;
 	<input type="submit" value="답글추가"/>
 	
 	</form>
-
+</div>
 </div>
 
 <div class="tail">

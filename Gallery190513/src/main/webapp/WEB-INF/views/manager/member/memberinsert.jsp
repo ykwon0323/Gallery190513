@@ -16,13 +16,14 @@
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style type="text/css">
 body {
+font-size:18px;
 font-family: 'Nanum Gothic', sans-serif;
 	line-height: 30px;
 }
 
 .main {
 	position: relative;
-	top: 0px;
+	top: 60px;
 }
 
 .tail {
