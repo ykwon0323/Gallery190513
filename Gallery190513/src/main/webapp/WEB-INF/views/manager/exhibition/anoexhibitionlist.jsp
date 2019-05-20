@@ -37,7 +37,7 @@ text-align: center;
 }
 .main{
 position:relative;
-top:50px;
+top:60px;
 }
 .tail{
 position:relative;

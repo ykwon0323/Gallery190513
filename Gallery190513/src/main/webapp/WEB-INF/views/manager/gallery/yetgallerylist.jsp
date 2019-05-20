@@ -31,9 +31,10 @@ border-right:none;
 text-align: center;
 }
 .main{
+font-size:18px;
 font-family: 'Nanum Gothic', sans-serif;
 position:relative;
-top:0px;
+top:60px;
 }
 .tail{
 position:relative;

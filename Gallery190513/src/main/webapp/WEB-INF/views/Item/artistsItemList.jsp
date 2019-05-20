@@ -183,7 +183,7 @@ div#artistItemList h4 {
 					<h6>작품가격: ${item.i_price}</h6><br/>
 					<div style="float: right;"><a href="#target1">
 						<input  style="font-size: 13px;" class="btn btn-outline-primary btn-sm" type="button" value="작품수정" class="scroll" onclick="javascript:updateitemForm(${item.i_no});"></a><br/>
-						<input style="font-size: 13px;" class="btn btn-outline-danger btn-sm" type="button" value="작품삭제" onclick="deleteitem.do?i_no=${item.i_no}"><br/>
+						<a href="deleteitem.do?i_no=${item.i_no}"><input style="font-size: 13px;" class="btn btn-outline-danger btn-sm" type="button" value="작품삭제"></a><br/>
 					</div>
 				</div>
 			</div>

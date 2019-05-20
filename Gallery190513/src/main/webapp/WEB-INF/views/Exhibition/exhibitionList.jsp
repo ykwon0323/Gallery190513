@@ -72,7 +72,7 @@ div.exhibition_container {
     
 </head>
 <jsp:include page="/WEB-INF/views/header.jsp" />
-<body>
+<body style="overflow-x:hidden;">
 
 <div class="row justify-content-center pb-5" style="padding-top: 2%;">
 			<div class="col heading-section text-center ftco-animate"

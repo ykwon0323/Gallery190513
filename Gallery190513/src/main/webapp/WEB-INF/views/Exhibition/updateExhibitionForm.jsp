@@ -17,7 +17,7 @@
 <title>전시수정</title>
 <link rel="stylesheet" href="exhibition/css/updateExhibitionForm.css">
 
-<body>
+<body style="overflow-x:hidden;">
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <script
     src="https://code.jquery.com/jquery-3.3.1.js"

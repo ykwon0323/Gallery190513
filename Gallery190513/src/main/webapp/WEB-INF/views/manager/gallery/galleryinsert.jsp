@@ -11,7 +11,7 @@
 <title>갤러리 추가하기</title>
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
-.container {
+.maincontainer {
 font-family: 'Nanum Gothic', sans-serif;
 background-color:rgb(228, 194, 194);
 border:2px solid red;
@@ -22,7 +22,7 @@ border:2px solid red;
 }
 .main{
 position:relative;
-top:50px;
+top:60px;
 }
 .tail{
 position:relative;
@@ -37,7 +37,7 @@ top:100px;
 
 <div class="main" align="center">
 
-<div class="container" align="center">
+<div class="maincontainer" align="center">
    <h1>갤러리 추가</h1>
    <form action="managerinsertGallery.do" method="post" enctype="multipart/form-data" autocomplete="off">
 <!--    갤러리번호:<input type="hidden" placeholder="갤러리 번호" name="g_no" autocomplete="off" /><br> -->

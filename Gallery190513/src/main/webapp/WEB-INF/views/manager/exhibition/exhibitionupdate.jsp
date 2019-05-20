@@ -10,8 +10,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>전시정보수정</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
-.container {
+.maincontainer {
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
  width:600px;
 }
 table{
@@ -19,7 +22,7 @@ background-color:rgb(228, 194, 194);
 }
 .main{
 position:relative;
-top:50px;
+top:60px;
 }
 .tail{
 position:relative;
@@ -36,7 +39,7 @@ ExhibitionDto exhibitionDto=(ExhibitionDto)request.getAttribute("exhibitionDto")
 </div>
 
 <div class="main" align="center">
-	<div class="container" align="center">
+	<div class="maincontainer" align="center">
 	<h1>전시정보수정</h1>
 	<form action="managerupdateExhibition.do" method="post" enctype="Multipart/form-data">
 	<table border="1">

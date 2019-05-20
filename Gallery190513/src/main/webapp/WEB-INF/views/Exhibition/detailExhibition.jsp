@@ -23,7 +23,7 @@
     crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body style="overflow-x:hidden;">
 <jsp:include page="/WEB-INF/views/header.jsp" />
 	<div id="detailExhibition">
 	<div id="detailExhibition_pageNavi">

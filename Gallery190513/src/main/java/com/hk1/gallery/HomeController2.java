@@ -447,9 +447,9 @@ public class HomeController2 {
 		
 
 		List<MultipartFile> fileList = mtfRequest.getFiles("file");
-
+		
 					//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		String path = "C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/galleryupload/";
+		String path = "D:/PROJECT/galleryupload/";
 		//C:\Users\itcam\git\gallery\Gallery\src\main\webapp\ //uploadFiles
 						//C:/Users/itcam/git/gallery/Gallery/src/main/webapp/uploadFiles
 		 for (int i = 0; i < fileList.size(); i++) {
@@ -568,9 +568,9 @@ public class HomeController2 {
 		galleryDto.setG_tel(g_tel);
 		
 		List<MultipartFile> fileList = mtfRequest.getFiles("file");
-
+		
 					//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		String path = "C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/galleryupload/";
+		String path = "D:/PROJECT/galleryupload/";
 		
 		 for (int i = 0; i < fileList.size(); i++) {
 			 
@@ -828,7 +828,7 @@ public class HomeController2 {
 		
 		
 							//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		File file = new File("C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/exhibitionupload/"+stored_fname);
+		File file = new File("D:/PROJECT/exhibitionupload/"+stored_fname);
 								
 		
 		
@@ -901,14 +901,15 @@ public class HomeController2 {
 		if(e_img.isEmpty()) {
 			exhibitionDto.setE_img(registeredExhibitionDto.getE_img());
 //			continue;
-		}
+		}else {
 		System.out.println(e_img);
 		System.out.println(e_img.substring(e_img.lastIndexOf(".")));
 		String stored_fname=createUUId()
 				+(e_img.substring(e_img.lastIndexOf(".")));
 		System.out.println(stored_fname);
+		
 						//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		File file=new File("C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/exhibitionupload/"+stored_fname);
+		File file=new File("D:/PROJECT/exhibitionupload/"+stored_fname);
 		
 		try {
 			multifile.transferTo(file);
@@ -923,7 +924,7 @@ public class HomeController2 {
 
 		System.out.println(exhibitionDto.toString());
 		
-		
+		}
 		boolean isS=exhibitionService.updateExhibition(exhibitionDto);
 		if(isS) {
 			return "redirect:managerselectExhibition.do?e_no="+exhibitionDto.getE_no();
@@ -1089,9 +1090,10 @@ public class HomeController2 {
 		
 		String stored_fname=createUUId()
 				+(i_img.substring(i_img.lastIndexOf(".")));
-			
+			//D:/PROJECT/itemupload/
+		//1C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/itemupload/
 						//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		File file=new File("C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/itemupload/"+stored_fname);
+		File file=new File("D:/PROJECT/itemupload/"+stored_fname);
 		try {
 			multifile.transferTo(file);
 		}catch(IllegalStateException e) {
@@ -1147,6 +1149,8 @@ public class HomeController2 {
 		int m_no=Integer.parseInt(multi.getParameter("m_no"));
 		
 		ItemDto registeredItemDto=itemService.selectItem(i_no);
+		System.out.println("what i_no:"+registeredItemDto);
+		System.out.println(registeredItemDto.getI_img());
 		
 		itemDto.setI_no(i_no);
 		itemDto.setE_no(e_no);
@@ -1155,20 +1159,30 @@ public class HomeController2 {
 		itemDto.setI_price(i_price);
 		itemDto.setA_no(a_no);
 		itemDto.setM_no(m_no);
+	
 		
 		MultipartFile multifile=multi.getFile("i_img");
+		System.out.println("multifile:"+multifile);
+		System.out.println("multifile:"+multifile.getOriginalFilename());
+		
 		
 		String i_img=multifile.getOriginalFilename();
+		System.out.println("i_img name:"+i_img);
 		if(i_img.isEmpty()) {
+	
 			itemDto.setI_img(registeredItemDto.getI_img());
-			//continue;
-		}
+//			continue;
+		}else {
+		System.out.println("i_img name:"+i_img);
+		
 		
 		String stored_fname=createUUId()
 				+(i_img.substring(i_img.lastIndexOf(".")));
 			
+		//C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/itemupload/
+		//D:/PROJECT/itemupload/
 						//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		File file=new File("C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/itemupload/"+stored_fname);
+		File file=new File("D:/PROJECT/itemupload/"+stored_fname);
 		try {
 			multifile.transferTo(file);
 		}catch(IllegalStateException e) {
@@ -1180,6 +1194,7 @@ public class HomeController2 {
 		itemDto.setI_img(stored_fname);
 		
 		System.out.println(itemDto.toString());
+		}
 		boolean isS=itemService.updateItem(itemDto);
 		if(isS) {
 			return "redirect:managerselectItem.do?i_no="+itemDto.getI_no();
@@ -1289,6 +1304,7 @@ public class HomeController2 {
 		logger.info("작품상세보기 {}.", locale);
 
 		CallendarDto callendarDto=callendarService.selectCallendar(c_no);
+		System.out.println(callendarDto);
 		model.addAttribute("callendarDto", callendarDto);
 
 		return "manager/callendar/callendardetail";

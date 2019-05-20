@@ -21,7 +21,7 @@ left: 230px;
 }
 .main{
 position: relative;
-top:0px;
+top:60px;
 }
 .tail{
 position: relative;
@@ -42,7 +42,7 @@ opacity: 0.7!important;
 <div class="main" align="center">
 
 <h1>환영</h1>
-<img class="mainlogo2" src="logo/logo2.png" alt="logo"/>
+<img class="mainlogo2" src="logo/newLogo1.png" alt="logo"/>
 </div>
 
 

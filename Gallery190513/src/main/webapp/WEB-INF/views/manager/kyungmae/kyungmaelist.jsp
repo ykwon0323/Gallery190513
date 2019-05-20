@@ -10,8 +10,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
 border: solid 1px #DDEEEE;
 border-collapse: collapse;
 border-spacing: 0;
@@ -34,7 +37,7 @@ color:threedlightshadow;
 }
 .main{
 position:relative;
-top:0px;
+top:60px;
 }
 .tail{
 position:relative;

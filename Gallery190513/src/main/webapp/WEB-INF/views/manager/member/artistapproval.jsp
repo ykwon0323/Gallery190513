@@ -14,14 +14,21 @@
 </script>
 <meta http-equiv="Content- Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 .main{
+font-family: 'Nanum Gothic', sans-serif;
 position:relative;
-top:0px;
+top:60px;
 }
 .tail{
 position:relative;
-top:0px;
+top:150px;
+}
+table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
+background-color: rgb(228, 194, 194);
 }
 </style>
 </head>
@@ -30,7 +37,7 @@ top:0px;
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
+<div class="main" align="center">
 	<h2>작가신청정보</h2>
 	<table border="1">
 		<col width="150px;">
@@ -78,7 +85,7 @@ top:0px;
 	<tr>
 		<td colspan="2">
 			<button onclick="updatestate(${artistDto.a_no})">승인</button>
-			<button onclick="close()">닫기</button>
+<!-- 			<button onclick="close()">닫기</button> -->
 		</td>
 	</tr>
 	</table>

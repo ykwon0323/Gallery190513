@@ -9,17 +9,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>상세보기</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
 background-color:rgb(228, 194, 194);
 }
 .main{
 position:relative;
-top:50px;
+top:60px;
 }
 .tail{
 position:relative;
-top:100px;
+top:150px;
 }
 </style>
 
@@ -37,6 +40,8 @@ top:100px;
 <h1>일정 상세보기</h1>
 
 	<table border="1">
+	<col width="80px;">
+	<col width="120px;">
 	<tr>
 		<th>번호</th>
 		<td>${callendarDto.c_no}</td>

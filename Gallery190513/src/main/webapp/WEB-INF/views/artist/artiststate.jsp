@@ -13,7 +13,7 @@
 
 </head>
 <%List<ArtistDto> list = (List<ArtistDto>)request.getAttribute("list"); %>
-<body>
+<body style="overflow-x:hidden;">
 
 <table border="1px">
 	<tr>

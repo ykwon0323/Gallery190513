@@ -11,7 +11,7 @@
 
 
 
-<!DOCTYPE html>
+
 <html>
 <head>
 
@@ -44,7 +44,7 @@
 
 </head>
 <jsp:include page="/WEB-INF/views/header.jsp" />
-<body>
+<body style="overflow-x:hidden;">
 
 
 <!-- <h4 onclick="location.href='gallerylist.do'">갤러리목록</h4> -->

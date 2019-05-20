@@ -10,8 +10,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>승인안된 작가목록</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
 border: solid 1px #DDEEEE;
 border-collapse: collapse;
 border-spacing: 0;
@@ -31,11 +34,11 @@ text-align: center;
 }
 .main{
 position:relative;
-top:0px;
+top:60px;
 }
 .tail{
 position:relative;
-top:100px;
+top:150px;
 }
 </style>
 

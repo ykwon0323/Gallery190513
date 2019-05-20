@@ -10,15 +10,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>답글 수정</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 <style>
-
+table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
+background-color: rgb(243, 202, 197);
+}
+tr{
+height:40px;
+}
 .main{
 position:relative;
-top:0px;
+top:60px;
 }
 .tail{
 position:relative;
-top:0px;
+top:100px;
+}
+input{
+width:300px;
+height:20px;
+}
+#button{
+height:25px;
 }
 </style>
 
@@ -28,7 +43,7 @@ top:0px;
 <jsp:include page="/WEB-INF/views/manager/managerHeader.jsp" />
 </div>
 
-<div class="main">
+<div class="main" align="center">
 
 
 	<h1>답글수정</h1>
@@ -38,6 +53,8 @@ top:0px;
 	%>
 	<form action="managerupdateDabgeul.do" method="post">
 	<table border="1">
+	<col width="100px;">
+	<col width="300px;">
 	<tr>
 		<th>답글번호</th>
 		<td><input type="text" name="d_no" value="<%=dabgeulDto.getD_no()%>" readonly="readonly"/></td>
@@ -72,7 +89,8 @@ top:0px;
 	
 	
 	</table>
-	<input type="submit" value="수정완료"/>
+	<br>
+	<input type="submit" value="수정완료" id="button"/>
 	</form>
 	
 	</div>

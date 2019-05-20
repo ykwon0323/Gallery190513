@@ -8,8 +8,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>일정추가</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
-.container {
+.maincontainer {
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
 border:2px solid red;
 width:600px;
 
@@ -24,11 +27,11 @@ width:600px;
     }
 .main{
 position:relative;
-top:50px;
+top:60px;
 }
 .tail{
 position:relative;
-top:100px;
+top:150px;
 }
 </style>
 
@@ -40,7 +43,7 @@ top:100px;
 </div>
 
 <div class="main" align="center">
-<div class="container" align="center">
+<div class="maincontainer" align="center">
 <div class="row">
 			<h1>
 				<i class="fa fa-lock" aria-hidden="true"></i> 일정추가하기

@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="exhibition/css/insertExhibitionForm.css">
 </head>
 
-<body>
+<body style="overflow-x:hidden;">
 <jsp:include page="/WEB-INF/views/header.jsp" />
 <%-- <jsp:include page="/WEB-INF/views/login/privateGnb.jsp" />	 --%>
 <script

@@ -9,17 +9,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>메시지 수정하기</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
-.container {
+.maincontainer {
+
  width:600px;
 }
 table{
-
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
 background-color:rgb(228, 194, 194);
 }
 .main{
 position:relative;
-top:50px;
+top:60px;
 }
 .tail{
 position:relative;
@@ -36,7 +39,7 @@ top:100px;
 </div>
 
 <div class="main" align="center">
-<div class="container" align="center">
+<div class="maincontainer" align="center">
 	<h1>메시지 수정하기</h1>
 	<form action="managerupdateRequest.do" method="post">
 	<table border="1">

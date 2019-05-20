@@ -9,11 +9,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>전시 상세보기</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 .container {
  width:600px;
 }
 table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
 background-color:rgb(228, 194, 194);
 }
 textarea{
@@ -21,7 +24,7 @@ background-color:rgb(228, 194, 194);
 }
 .main{
 position:relative;
-top:50px;
+top:60px;
 }
 .tail{
 position:relative;

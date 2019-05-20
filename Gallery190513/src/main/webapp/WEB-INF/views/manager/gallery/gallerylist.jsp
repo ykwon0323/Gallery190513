@@ -13,6 +13,8 @@
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
 <style>
 table{
+font-size:18px;
+font-family: 'Nanum Gothic', sans-serif;
 border: solid 1px #DDEEEE;
 border-collapse: collapse;
 border-spacing: 0;
@@ -36,7 +38,7 @@ color:threedlightshadow;
 .main{
 font-family: 'Nanum Gothic', sans-serif;
 position:relative;
-top:0px;
+top:60px;
 }
 .tail{
 position:relative;
