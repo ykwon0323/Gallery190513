@@ -183,7 +183,7 @@ public class HomeController3 {
 		
 		if (isS) {
 			
-			return "redirect:privatemain.do";
+			return "redirect:upgradeMember.do";
 		}else {
 			return "redirect:insertartistform.do";
 		}
