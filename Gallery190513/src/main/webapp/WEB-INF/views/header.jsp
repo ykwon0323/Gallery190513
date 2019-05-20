@@ -175,7 +175,12 @@ li.oe_heading a.oe_body{
 .btn btn-success:hover{
 	cursor: pointer;
 	}
-	
+@font-face{
+	 font-family:'a시월구일1';
+	 font-style:normal;
+	 font-weight:400;
+	 src:url('../font/a시월구일1.ttf');
+}	
 
 </style>
 <script type="text/javascript">
@@ -193,7 +198,7 @@ li.oe_heading a.oe_body{
 					});
 					
 		</script>
-
+<div style="font-family:'a시월구일1',고딕 ;">
 <div class="oe_wrapper" style="position:relative ; z-index: 300">
 			<div class="mainHeader" style="position: fixed; background-color:black ; height: 50px; z-index: 99">
 			<div class="mainLogo" style="position: absolute; left: 95px; top: 2.5px; z-index: 99;background-color: transparent;" ><a href="index.do"><img alt="index.do" src="logo/newLogo2.png" width="20%" height="auto" ></a> </div>
@@ -315,4 +320,5 @@ li.oe_heading a.oe_body{
       <div style="background-color : black; margin-bottom:0.1%;">
        	<br/><br/>
        </div> 
+       </div>
 	
