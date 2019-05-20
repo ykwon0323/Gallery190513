@@ -54,14 +54,14 @@
     
     SELECT E_NO, E_TITLE, E_EXPLAIN, A_NO, A_NAME, E_CLICK, E_IMG
   	FROM(SELECT ROWNUM AS RN, E_NO, E_TITLE, E_EXPLAIN, A_NO, A_NAME, E_CLICK, E_IMG
-  	FROM GALLERY.EXHIBITION ORDER BY E_NO DESC) WHERE CEIL(RN/20) = #{e_pcount}
+  	FROM GALLERY.EXHIBITION ORDER BY E_NO DESC) WHERE CEIL(RN/12) = #{e_pcount}
     
   </select>
   
   
   <select id="selectExhibitionList_pagenum" resultType="int">
   
-  SELECT CEIL(COUNT(*)/20) AS COUNT  FROM GALLERY.EXHIBITION
+  SELECT CEIL(COUNT(*)/12) AS COUNT  FROM GALLERY.EXHIBITION
   
   </select> 
   </mapper>
