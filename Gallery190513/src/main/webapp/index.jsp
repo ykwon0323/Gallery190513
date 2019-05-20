@@ -7,6 +7,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+	@font-face{
+	 font-family:'a시월구일1';
+	 font-style:normal;
+	 font-weight:400;
+	 src:url('../font/a시월구일1.ttf');
+}
+</style>
 <title>방구석갤러리</title>
 </head>
 <body style="margin:0; padding: 0;">
@@ -15,7 +23,8 @@
 							  height: 100%;
 							  overflow-x:hidden;
 							  overflow-y:scroll;
-							  border: none; ">
+							  border: none;
+							  font-family:'a시월구일1',고딕  ">
 <!-- <form name=sendForm action="index.do" method="post">
 	</form>
 <script  type="text/javascript">
