@@ -10,6 +10,7 @@ import java.util.UUID;
 
 import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -188,7 +189,7 @@ public class HomeController4 {
 
 
 	@RequestMapping(value = "/insertGallery.do", method = RequestMethod.POST)
-	public String insertGallery(Locale locale, Model model, MultipartHttpServletRequest mtfRequest,
+	public String insertGallery(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model, MultipartHttpServletRequest mtfRequest,
 			HttpSession session)  {
 		logger.info("insertGallery 가자 {}.", locale);
   
@@ -206,8 +207,7 @@ public class HomeController4 {
 		List<MultipartFile> fileList = mtfRequest.getFiles("file");
 		
 		
-		//파일저장 경로
-		String path = "D:/PROJECT/galleryupload/";
+		
 
 		
 		
@@ -231,7 +231,10 @@ public class HomeController4 {
 				e.printStackTrace();
 			}
 		}*/
+		String path = request.getSession().getServletContext().getRealPath("");
+		System.out.println("gallerypload path : ["+path+"] ");
 		
+		//파일저장 경로
 		
 		for (int i = 0; i < fileList.size(); i++) {
 			
@@ -239,8 +242,8 @@ public class HomeController4 {
 			
 			String stored_fname= createUUId()
 					+(imgdbname.substring(imgdbname.lastIndexOf(".")));
-
-			String saveDirectory = path + stored_fname;
+			
+			String saveDirectory = path+"galleryupload/"+ stored_fname;
 			
 			try {
 				
@@ -467,7 +470,7 @@ public class HomeController4 {
 
 
 	@RequestMapping(value = "/updateGallery.do", method = RequestMethod.POST)
-	public String updateGallery(Locale locale, Model model,  MultipartHttpServletRequest mtfRequest)  {
+	public String updateGallery(HttpServletRequest request, HttpServletResponse response,Locale locale, Model model,  MultipartHttpServletRequest mtfRequest)  {
 		logger.info("updateGallery 가자 {}.", locale);
 		
 		
@@ -500,8 +503,9 @@ public class HomeController4 {
 		
 		
 		//파일저장 경로   
-		String path = "D:/PROJECT/galleryupload/";
-
+		String path = request.getSession().getServletContext().getRealPath("");
+		System.out.println("gallerypload path : ["+path+"] ");
+	
 		
 		for (int i = 0; i < fileList.size(); i++) {
 			
@@ -510,7 +514,7 @@ public class HomeController4 {
 			String stored_fname= createUUId()
 					+(imgdbname.substring(imgdbname.lastIndexOf(".")));
 
-			String saveDirectory = path + stored_fname;
+			String saveDirectory = path +"galleryupload/"+ stored_fname;
 			
 			try {
 				

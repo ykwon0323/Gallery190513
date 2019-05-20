@@ -447,9 +447,10 @@ public class HomeController2 {
 		
 
 		List<MultipartFile> fileList = mtfRequest.getFiles("file");
-		
+		String path = request.getSession().getServletContext().getRealPath("");
+		System.out.println("gallerypload path : ["+path+"] ");
 					//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		String path = "D:/PROJECT/galleryupload/";
+		
 		//C:\Users\itcam\git\gallery\Gallery\src\main\webapp\ //uploadFiles
 						//C:/Users/itcam/git/gallery/Gallery/src/main/webapp/uploadFiles
 		 for (int i = 0; i < fileList.size(); i++) {
@@ -465,7 +466,7 @@ public class HomeController2 {
 	         String stored_fname= createUUId()
 	                 +(imgdbname.substring(imgdbname.lastIndexOf(".")));
 	         
-	         String saveDirectory = path +stored_fname;
+	         String saveDirectory = path+"galleryupload/"+stored_fname;
 	         
 	         
 	         try {
@@ -568,9 +569,9 @@ public class HomeController2 {
 		galleryDto.setG_tel(g_tel);
 		
 		List<MultipartFile> fileList = mtfRequest.getFiles("file");
-		
+		String path = request.getSession().getServletContext().getRealPath("");
+		System.out.println("galleryupload path : ["+path+"] ");
 					//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		String path = "D:/PROJECT/galleryupload/";
 		
 		 for (int i = 0; i < fileList.size(); i++) {
 			 
@@ -600,7 +601,7 @@ public class HomeController2 {
 	         String stored_fname= createUUId()
 	                 +(imgdbname.substring(imgdbname.lastIndexOf(".")));
 	         
-	         String saveDirectory = path +stored_fname;
+	         String saveDirectory = path +"galleryupload/"+stored_fname;
 	         
 	         try {
 	            
@@ -825,10 +826,11 @@ public class HomeController2 {
 		String stored_fname=createUUId()
 				+(e_img.substring(e_img.lastIndexOf(".")));
 		System.out.println(stored_fname);
-		
+		String path = request.getSession().getServletContext().getRealPath("");
+		System.out.println("exhibitionupload path : ["+path+"] ");
 		
 							//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		File file = new File("D:/PROJECT/exhibitionupload/"+stored_fname);
+		File file = new File(path+"exhibitionupload/"+stored_fname);
 								
 		
 		
@@ -907,9 +909,10 @@ public class HomeController2 {
 		String stored_fname=createUUId()
 				+(e_img.substring(e_img.lastIndexOf(".")));
 		System.out.println(stored_fname);
-		
+		String path = request.getSession().getServletContext().getRealPath("");
+		System.out.println("exhibitionupload path : ["+path+"] ");
 						//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		File file=new File("D:/PROJECT/exhibitionupload/"+stored_fname);
+		File file=new File(path+"exhibitionupload/"+stored_fname);
 		
 		try {
 			multifile.transferTo(file);
@@ -1093,7 +1096,9 @@ public class HomeController2 {
 			//D:/PROJECT/itemupload/
 		//1C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/itemupload/
 						//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		File file=new File("D:/PROJECT/itemupload/"+stored_fname);
+		String path = request.getSession().getServletContext().getRealPath("");
+		System.out.println("itemupload path : ["+path+"] ");
+		File file=new File(path+"itemupload/"+stored_fname);
 		try {
 			multifile.transferTo(file);
 		}catch(IllegalStateException e) {
@@ -1182,7 +1187,9 @@ public class HomeController2 {
 		//C:/Users/itcam/git/Gallery5/Gallery5/src/main/webapp/itemupload/
 		//D:/PROJECT/itemupload/
 						//C:\Users\itcam\git\Gallery5\Gallery5\src\main\webapp\galleryupload
-		File file=new File("D:/PROJECT/itemupload/"+stored_fname);
+		String path = request.getSession().getServletContext().getRealPath("");
+		System.out.println("itemupload path : ["+path+"] ");
+		File file=new File(path+"itemupload/"+stored_fname);
 		try {
 			multifile.transferTo(file);
 		}catch(IllegalStateException e) {
