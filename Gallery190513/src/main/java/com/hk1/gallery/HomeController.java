@@ -260,9 +260,10 @@ public class HomeController {
 		//파일객체 구하기		
 				
 		//1절대경로 D:/PROJECT/itemupload 로 저장 한다 
-		//2절대경로에 저장되어있기 때문에 자신이 올린 파일을 직접 maven project itemupload 폴더에 넣어주어야한다
-		
-		File f = new File("D:/PROJECT/itemupload/"+stored_fname);
+		//2절대경로에 저장되어있기 때문에 자신이 올린 파일을 직접 maven project itemupload 폴더에 넣어주어야한다​
+		String path = request.getSession().getServletContext().getRealPath("");
+		System.out.println("itemupload path : ["+path+"] ");
+		File f = new File(path+"itemupload/"+stored_fname);
 		
 		
 		itemDto.setI_img(stored_fname);
@@ -366,8 +367,10 @@ public class HomeController {
 				.substring(origin_fname.lastIndexOf("."));
 		int a_no =Integer.parseInt(request.getParameter("a_no"));
 		
+		String path = request.getSession().getServletContext().getRealPath("");
+		System.out.println("exhibitionupload path : ["+path+"] ");
 		//파일객체 구하기	C:\Users\hk-edu\git\Gallery5\Gallery5\src\main\webapp\exhibitionupload
-		File f = new File("D:/PROJECT/exhibitionupload/"+stored_fname);
+		File f = new File(path+"exhibitionupload/"+stored_fname);
 		
 	
 		try {
@@ -518,9 +521,10 @@ public class HomeController {
 			
 			
 			//파일객체 구하기 C:\Users\hk-edu\git\Gallery5\Gallery5\src\main\webapp\exhibitionupload
+			String path = request.getSession().getServletContext().getRealPath("");
+			System.out.println("exhibitionupload path : ["+path+"] ");
 			
-			
-			File f = new File("D:/PROJECT/itemupload/"+stored_fname);
+			File f = new File(path+"exhibitionupload/"+stored_fname);
 	
 				try {
 						multifile.transferTo(f);	

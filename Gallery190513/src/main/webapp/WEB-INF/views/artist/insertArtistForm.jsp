@@ -35,7 +35,7 @@ $(function() {
 </script>
 <link rel="stylesheet" href="artist/css/insertArtistForm.css">
 </head>
-<body>
+<body style="overflow-x:hidden;">
 
 <jsp:include page="/WEB-INF/views/header.jsp" />
 

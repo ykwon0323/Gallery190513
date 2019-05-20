@@ -143,7 +143,7 @@ function detail_artist(){
 
 </head>
 <jsp:include page="/WEB-INF/views/header.jsp" />
-<body>
+<body style="overflow-x:hidden;">
 
 
 <div class="alldetail_container"  style="width: 1200px; text-align: center;">

@@ -6,14 +6,14 @@
 <%@page import="com.hk1.gallery.dto.GalleryDto"%>
 <%@page import="com.hk1.gallery.dto.DabgeulDto"%>
 <%@page import="java.util.List"%>   
-<!DOCTYPE html>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>인덱스</title>
 </head>
 <% List<CallendarDto>list =(List<CallendarDto>)request.getAttribute("list"); %>
-<body>
+<body >
 
 <h1>일정 리스트</h1>
 

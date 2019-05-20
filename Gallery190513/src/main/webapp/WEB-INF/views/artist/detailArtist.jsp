@@ -12,7 +12,6 @@
 	<%List<ExhibitionDto> elist =(List<ExhibitionDto>)request.getAttribute("exhibitionDto"); %>
 	<%MemberDto loginMember = (MemberDto)session.getAttribute("loginMember"); %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -131,7 +130,7 @@ function detail_artist(){
 
 </head>
 <jsp:include page="/WEB-INF/views/header.jsp" />
-<body>
+<body style="overflow-x:hidden;">
 
 <div class="row justify-content-center pb-5" style="padding-top: 2%;">
 			<div class="col heading-section text-center ftco-animate"
